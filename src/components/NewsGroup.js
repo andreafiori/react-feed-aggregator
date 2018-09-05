@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { getNewsFeedsByGroup, getNewsGroupByKey } from '../feeds/NewsFeedManager.js';
+import { newsGroups, feeds } from '../feeds/NewsFeedManager.js';
+import { getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager.js';
 import FeedsCategoryList from './FeedsCategoryList.js';
 import Breadcrumbs from './Breadcrumbs.js';
 
@@ -9,8 +10,8 @@ class NewsGroup extends Component {
     super(props);
 
     this.state = {
-      group: getNewsGroupByKey(props.match.params.group),
-      feeds: getNewsFeedsByGroup(props.match.params.group),
+      group: getNewsGroupByKey(newsGroups, props.match.params.group),
+      feeds: getNewsFeedsByGroup(feeds, props.match.params.group),
       breadcrumbs: [
         { label: 'News', href: '/news', title: 'Back to news feeds main page', active: false },
         { label: 'News', href: null, title: null, active: true }

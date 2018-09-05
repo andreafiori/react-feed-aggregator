@@ -80,11 +80,17 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
-            <Route exact path="/news" component={News} />
-            <Route exact path="/news/:group" component={NewsGroup} key="NewsGroup" />
-            <Route path="/news/:group/:slug" component={NewsGroupDetails} key="NewsDetails" />
+
+            <Route exact path="/news" component={News} key="NewsGroups" />
+            <Route path="/news/:group" component={NewsGroup} key="NewsGroupDetails" />
+            <Route path="/news/:group/:slug" component={NewsGroupDetails} key="NewsFeedsDetails" />
+
             <Route path="/software-development" component={SoftwareDevelopment} key="SoftwareDevelopment" />
-            <Route path="/cyber-security" component={CyberSecurity} key="CyberSecurity" />
+
+            <Route exact path="/cyber-security" component={CyberSecurity} key="CyberSecurity" />
+            <Route path="/cyber-security/:group" component={CyberSecurity} key="CyberSecurityGroupDetails" />
+            <Route path="/cyber-security/:group/:slug" component={CyberSecurity} key="CyberSecurityFeedsDetails" />
+
             <Route path="/sport" component={Sport} key="Sport" />
             <Route path="/jobs" component={Jobs} key="Jobs" />
             <Route path="/videogames" component={VideoGames} key="VideoGames" />

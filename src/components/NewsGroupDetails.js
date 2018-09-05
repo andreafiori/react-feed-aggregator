@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 import { rss2Json } from '../api/RssParser.js';
-import { getNewsFeedsByGroup, getNewsGroupByKey } from '../feeds/NewsFeedManager.js';
+import { getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager.js';
+import { newsGroups, feeds } from '../feeds/NewsFeedManager.js';
 import FeedsCategoryList from './FeedsCategoryList.js';
 import FeedsFromApi from './FeedsFromApi.js';
 import LoadingSpinner from './LoadingSpinner.js';
 import Breadcrumbs from './Breadcrumbs.js';
 
 class NewsGroupDetails extends Component {
-
   constructor(props) {
     super(props);
 
-    let currentNewsGroup = getNewsGroupByKey(props.match.params.group)
+    let currentNewsGroup = getNewsGroupByKey(newsGroups, props.match.params.group)
 
     this.state = {
       group: props.match.params.group,
       slug: props.match.params.slug,
       currentNewsGroup: currentNewsGroup,
-      currentFeedsList: getNewsFeedsByGroup(props.match.params.group),
+      currentFeedsList: getNewsFeedsByGroup(feeds, props.match.params.group),
       breadcrumbs: [
         { label: 'News', href: '/news', title: 'Back to the news main page', active: false },
         { label: currentNewsGroup.title, href: currentNewsGroup.path, title: currentNewsGroup.title, active: false },
@@ -28,18 +28,26 @@ class NewsGroupDetails extends Component {
     };
   }
 
+  /**
+   * Load first data on loading page
+   */
   componentWillMount() {
-    /* Get feed by slug this.props.match.params.slug */
     this.setupCurrentNewsGroup();
   }
 
+  /**
+   * Check state and update it if needed
+   * 
+   * @param {*} prevProps 
+   * @param {*} prevState 
+   */
   componentDidUpdate(prevProps, prevState) {
-    // this is the initial render without a previous prop change
+    // This is the initial render without a previous prop change
     if (prevProps === undefined) {
       return false;
     }
 
-    // set new state
+    // Set new state
     this.setupCurrentNewsGroup();
   }
 

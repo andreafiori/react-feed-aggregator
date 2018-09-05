@@ -56,10 +56,10 @@ export const WallStreetJournalNewsFeeds = [
 		title: 'Blog',
 		feeds: [
 			{
-				label: 'Opinion',
-				title: 'Opinion',
+				label: '',
+				title: '',
 				path: '/news/wall-street-journal/opinion',
-				url: 'http://www.wsj.com/xml/rss/3_7041.xml'
+				url: ''
 			},
 			
 		]

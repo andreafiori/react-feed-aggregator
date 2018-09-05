@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { getAllNewsGroupsAsArray } from '../feeds/NewsFeedManager.js';
+import { getAllNewsGroupsAsArray } from '../feeds/FeedsManager.js';
+import { newsGroups } from '../feeds/NewsFeedManager.js';
 import NewsGroupList from './NewsGroupList.js';
 import Breadcrumbs from './Breadcrumbs.js';
 
@@ -8,10 +9,8 @@ class News extends Component {
   constructor(props) {
     super(props);
 
-    let newsGroups = getAllNewsGroupsAsArray();
-
     this.state = {
-      newsGroups: newsGroups,
+      newsGroups: getAllNewsGroupsAsArray(newsGroups),
       breadcrumbs: [
         { label: 'News', href: null, title: null, active: true }
       ]
@@ -20,7 +19,7 @@ class News extends Component {
   }
 
   render() {
-    let { newsGroups, breadcrumbs } = this.state;
+    const { newsGroups, breadcrumbs } = this.state;
 
     return (
       <div>
@@ -36,7 +35,6 @@ class News extends Component {
         </div>
 
       </div>
-
     );
   }
 
