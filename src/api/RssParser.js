@@ -1,8 +1,5 @@
 import axios from 'axios';
 
-/**
- * Parse an RSS document using rss2jsong API
- */
 export const rss2Json = function (url) {
 
   try {

@@ -54,7 +54,7 @@ class NewsGroupDetails extends Component {
   setupCurrentNewsGroup() {
     let slug = this.props.match.params.slug;
     let group = this.props.match.params.group;
-    if (slug !== this.state.slug || this.state.newsFromApi === null) {
+    if ( (slug !== this.state.slug || this.state.newsFromApi === null) && this.state.error === null) {
 
       let currentFeedsList = this.state.currentFeedsList;
       for(let i = 0; i < currentFeedsList.length; i++) {
@@ -106,20 +106,16 @@ class NewsGroupDetails extends Component {
             {error !== null &&
               <div className="alert alert-danger">
                 <h3>Error occurred</h3>
-                <p>{ JSON.stringify(error) }</p>
+                <p>{ error.message }</p>
               </div>
             }
 
             {newsFromApi === null && error === null &&
-              <div>
-                <LoadingSpinner />
-              </div>
+              <LoadingSpinner />
             }
 
             {newsFromApi !== null &&
-              <div>
-                <FeedsFromApi newsGroup={currentNewsGroup} newsFromApi={newsFromApi} />
-              </div>
+              <FeedsFromApi newsGroup={currentNewsGroup} newsFromApi={newsFromApi} />
             }
           </div>
 

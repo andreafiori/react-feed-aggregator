@@ -7,17 +7,17 @@ export const CnnNewsGroup = {
 	category: 'World',
 	path: '/news/cnn',
 	country: 'U.S.A',
-	website: '',
-	youtube: '',
-	facebook: '',
-	twitter: '',
-	wikipedia: '',
+	website: 'https://www.cnn.com',
+	youtube: 'https://www.youtube.com/user/CNN',
+	facebook: 'https://www.facebook.com/cnninternational',
+	twitter: 'https://twitter.com/cnni',
+	wikipedia: 'https://en.wikipedia.org/wiki/CNN',
 	rss: 'http://edition.cnn.com/services/rss/',
 };
 
 export const CnnNewsFeeds = [
 	{
-		category: 'CNN news',
+		title: 'CNN news',
 		feeds: [
 			{
 				label: 'Top stories',

@@ -66,6 +66,8 @@ Single file:
 - XMLHttpRequest https://www.xml.com/pub/a/2006/09/13/rss-and-ajax-a-simple-news-reader.html
 - XMLHttpRequest HTML5Rocks https://www.html5rocks.com/en/tutorials/cors/
 - CORS https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
+- https://www.robinwieruch.de/react-fetching-data/
+- https://github.com/abdmob/x2js
 
 ## Additional dependencies
 

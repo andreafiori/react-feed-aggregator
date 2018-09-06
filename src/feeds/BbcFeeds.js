@@ -1,6 +1,4 @@
-/**
- * BBC news feeds 
- */
+
 export const BbcNewsGroup = {
 	image: 				'bbc.gif',
 	title: 				'BBC',
@@ -20,7 +18,7 @@ export const BbcNewsGroup = {
 
 export const BbcNewsFeeds = [
 	{
-		title: 'BBC',
+		title: 'Popular', // Popular BBC News Feeds
 		feeds: [
 			{
 				label: 'Top stories',
@@ -82,6 +80,71 @@ export const BbcNewsFeeds = [
 				path: '/news/bbc/entertainment-and-arts',
 				url: 'http://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml'
 			}
+		]
+	},
+	{
+		title: 'Global and UK News',
+		feeds: [
+			{
+				label: 'Africa',
+				title: 'Africa',
+				path: '/news/bbc/africa',
+				url: 'http://feeds.bbci.co.uk/news/world/africa/rss.xml'
+			},
+			{
+				label: 'Asia',
+				title: 'Asia',
+				path: '/news/bbc/asia',
+				url: 'http://feeds.bbci.co.uk/news/world/asia/rss.xml'
+			},
+			{
+				label: 'Europe',
+				title: 'Europe',
+				path: '/news/bbc/europe',
+				url: 'http://feeds.bbci.co.uk/news/world/europe/rss.xml'
+			},
+			{
+				label: 'Latin America',
+				title: 'Latin America',
+				path: '/news/bbc/latin-america',
+				url: 'http://feeds.bbci.co.uk/news/world/latin_america/rss.xml'
+			},
+			{
+				label: 'Middle East',
+				title: 'Middle East',
+				path: '/news/bbc/middle-east',
+				url: 'http://feeds.bbci.co.uk/news/world/middle_east/rss.xml'
+			},
+			{
+				label: 'US & Canada',
+				title: 'US & Canada',
+				path: '/news/bbc/us-and-canada',
+				url: 'http://feeds.bbci.co.uk/news/world/us_and_canada/rss.xml'
+			},
+			{
+				label: 'England',
+				title: 'England',
+				path: '/news/bbc/england',
+				url: 'http://feeds.bbci.co.uk/news/england/rss.xml'
+			},
+			{
+				label: 'Northern Ireland',
+				title: 'Northern Ireland',
+				path: '/news/bbc/england',
+				url: 'http://feeds.bbci.co.uk/news/northern_ireland/rss.xml'
+			},
+			{
+				label: 'Scotland',
+				title: 'Scotland',
+				path: '/news/bbc/scotland',
+				url: 'http://feeds.bbci.co.uk/news/scotland/rss.xml'
+			},
+			{
+				label: 'Wales',
+				title: 'Wales',
+				path: '/news/bbc/wales',
+				url: 'http://feeds.bbci.co.uk/news/wales/rss.xml'
+			},
 		]
 	}
 ];

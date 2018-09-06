@@ -82,14 +82,16 @@ class App extends Component {
             <Route exact path="/about" component={About} />
 
             <Route exact path="/news" component={News} key="NewsGroups" />
-            <Route path="/news/:group" component={NewsGroup} key="NewsGroupDetails" />
-            <Route path="/news/:group/:slug" component={NewsGroupDetails} key="NewsFeedsDetails" />
+            <Route exact path="/news/:group" component={NewsGroup} key="NewsGroupDetails" />
+            <Route exact path="/news/:group/:slug" component={NewsGroupDetails} key="NewsFeedsDetails" />
 
             <Route path="/software-development" component={SoftwareDevelopment} key="SoftwareDevelopment" />
+            <Route path="/software-development/:group" component={SoftwareDevelopment} key="SoftwareDevelopment" />
+            <Route path="/software-development/:group/:slug" component={SoftwareDevelopment} key="SoftwareDevelopment" />
 
             <Route exact path="/cyber-security" component={CyberSecurity} key="CyberSecurity" />
-            <Route path="/cyber-security/:group" component={CyberSecurity} key="CyberSecurityGroupDetails" />
-            <Route path="/cyber-security/:group/:slug" component={CyberSecurity} key="CyberSecurityFeedsDetails" />
+            <Route exact path="/cyber-security/:group" component={CyberSecurity} key="CyberSecurityGroupDetails" />
+            <Route exact path="/cyber-security/:group/:slug" component={CyberSecurity} key="CyberSecurityFeedsDetails" />
 
             <Route path="/sport" component={Sport} key="Sport" />
             <Route path="/jobs" component={Jobs} key="Jobs" />

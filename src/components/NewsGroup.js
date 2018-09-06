@@ -9,12 +9,14 @@ class NewsGroup extends Component {
   constructor(props) {
     super(props);
 
+    let currentNewsGroup = getNewsGroupByKey(newsGroups, props.match.params.group);
+
     this.state = {
-      group: getNewsGroupByKey(newsGroups, props.match.params.group),
+      group: currentNewsGroup,
       feeds: getNewsFeedsByGroup(feeds, props.match.params.group),
       breadcrumbs: [
         { label: 'News', href: '/news', title: 'Back to news feeds main page', active: false },
-        { label: 'News', href: null, title: null, active: true }
+        { label: currentNewsGroup.title, href: null, title: null, active: true }
       ]
     };
   }

@@ -102,41 +102,34 @@ export const SansNewsFeeds = [
 					path: '/cyber-security/sans/press-room-announcements',
 					url: 'http://feeds.feedburner.com/SansInstitutePress'
 				},
+				{
+					label: 'Last 25 Papers added to Reading Room',
+					title: 'Last 25 Papers added to Reading Room',
+					path: '/cyber-security/sans/last-papers-added-reading-room',
+					url: 'https://www.sans.org/reading-room/rss/'
+				},
 			]
 	}
 ];
 
 /**
-	// Resources
-	[
-			'label'         => 'Last 25 Papers added to Reading Room',
-			'slug'          => 'last-papers-added-reading-room',
-			'url'           => 'https://www.sans.org/reading-room/rss/',
-			'description'   => '',
-	],
-
-	// Security Thought Leader Interviews http://feeds2.feedburner.com/SansInstitute-Security-Thought-Leaders/
-
-	// Technology Institute
+	// Technology Institute http://feeds2.feedburner.com/SansInstitute-Security-Thought-Leaders/
 
 	// Leadership Laboratory (not an XML): http://feeds.feedburner.com/SansTechnologyInstitute
 	[
 			'label'         => 'Musings',
 			'slug'          => 'musings',
 			'url'           => 'http://feeds.feedburner.com/SansInstituteMusings',
-			'description'   => '',
 	],
 	[
 			'label'         => 'Computer Forensics',
 			'slug'          => 'computer-forensics',
 			'url'           => 'https://digital-forensics.sans.org/blog/feed/',
-			'description'   => '',
 	],
 	[
 			'label'         => 'Software Security',
 			'slug'          => 'software-security',
 			'url'           => 'https://ics.sans.org/blog/feed/',
-			'description'   => '',
 	],
 
  */
