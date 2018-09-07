@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { rss2Json } from '../api/RssParser.js';
-import { getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager.js';
+import { callPromise, buildFeedObject } from '../api/RssParser.js';
+import { getNewsFeedBySlug, getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager.js';
 import { newsGroups, feeds } from '../feeds/NewsFeedManager.js';
 import FeedsCategoryList from './FeedsCategoryList.js';
 import FeedsFromApi from './FeedsFromApi.js';
@@ -11,12 +11,15 @@ class NewsGroupDetails extends Component {
   constructor(props) {
     super(props);
 
-    let currentNewsGroup = getNewsGroupByKey(newsGroups, props.match.params.group)
+    let currentNewsGroup = getNewsGroupByKey(newsGroups, props.match.params.group);
+
+    let currentFeed = getNewsFeedBySlug(getNewsFeedsByGroup(feeds, props.match.params.group), props.match.params.slug);
 
     this.state = {
       group: props.match.params.group,
       slug: props.match.params.slug,
       currentNewsGroup: currentNewsGroup,
+      currentFeed: currentFeed,
       currentFeedsList: getNewsFeedsByGroup(feeds, props.match.params.group),
       breadcrumbs: [
         { label: 'News', href: '/news', title: 'Back to the news main page', active: false },
@@ -26,6 +29,7 @@ class NewsGroupDetails extends Component {
       newsFromApi: null,
       error: null,
     };
+
   }
 
   /**
@@ -63,12 +67,12 @@ class NewsGroupDetails extends Component {
           if (lastPathElement === slug) {
 
             let self = this;
-            rss2Json(currentFeedsList[i].feeds[j].url)
+            callPromise(currentFeedsList[i].feeds[j].url)
               .then(function (response) {
                 self.setState({
                   group: group,
                   slug: slug,
-                  newsFromApi: response.data,
+                  newsFromApi: buildFeedObject(response.data),
                   error: null,
                 });
               })
@@ -93,7 +97,7 @@ class NewsGroupDetails extends Component {
 
   render() {
 
-    const { currentNewsGroup, currentFeedsList, newsFromApi, breadcrumbs, error } = this.state;
+    const { currentFeed, currentNewsGroup, currentFeedsList, newsFromApi, breadcrumbs, error } = this.state;
 
     return (
       <div>
@@ -115,7 +119,7 @@ class NewsGroupDetails extends Component {
             }
 
             {newsFromApi !== null &&
-              <FeedsFromApi newsGroup={currentNewsGroup} newsFromApi={newsFromApi} />
+              <FeedsFromApi currentFeed={currentFeed} newsGroup={currentNewsGroup} newsFromApi={newsFromApi} />
             }
           </div>
 

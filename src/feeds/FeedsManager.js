@@ -18,3 +18,19 @@ export const getNewsGroupByKey = function(groups, groupToSearch) {
 export const getNewsFeedsByGroup = function(feeds, group) {
   return (group in feeds) ? feeds[group] : false;
 }
+
+/**
+ * Get Feed property block from the object list (local)
+ * @param {*} feedsList 
+ */
+export const getNewsFeedBySlug = function(feedsList, slug) {
+  for(let i = 0; i < feedsList.length; i++) {
+    for(let j = 0; j < feedsList[i].feeds.length; j++) {
+      let lastPathElement = feedsList[i].feeds[j].path.split('/').pop();
+      if (lastPathElement === slug) {
+        return feedsList[i].feeds[j];
+      }
+    }
+  }
+  return false;
+}

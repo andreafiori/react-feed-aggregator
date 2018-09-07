@@ -21,6 +21,8 @@ Run the project on http://localhost:3000
 
 	npm start
 
+Disable CORS if you want to run successful REST calls to all feed URLs.
+
 ## Run the tests
 
 	npm test
@@ -55,6 +57,13 @@ Single file:
 
 	./node_modules/.bin/eslint src/components/<filename.js>
 
+## Browsers
+
+- Chrome
+- Firefox
+- Opera
+- IE 11
+
 ## Resources
 
 - [ReactJS](https://reactjs.org/)
@@ -68,6 +77,11 @@ Single file:
 - CORS https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
 - https://www.robinwieruch.de/react-fetching-data/
 - https://github.com/abdmob/x2js
+- https://www.hongkiat.com/blog/rss-reader-in-javascript/
+- https://www.npmjs.com/package/xml-js
+- https://github.com/hongkiat/js-rss-reader/blob/master/rss.js OK DOMPARSER
+- RSS format fields https://feedforall.com/rss-fields.htm
+- DOMParser Query selector https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector
 
 ## Additional dependencies
 
@@ -84,6 +98,9 @@ Single file:
 - Dotenv API enviroment prod and dev
 - Testing
 - Linting
+- News group Images
+- New Favicon\s
+- Meta tags?
 - Github deploy
 - Travis check
 - Deploy and demo on shared hosting

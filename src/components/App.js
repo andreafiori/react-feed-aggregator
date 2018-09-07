@@ -112,7 +112,7 @@ class App extends Component {
         </Container>
 
         <footer className="blog-footer">
-          <p>&copy; { (new Date()).getFullYear() } News Aggregator. <Link to="/about" title="Information about the news aggregator project">About</Link> | <a rel="noopener noreferrer" href="http://www.andreafiori.net" target="_blank">Webmaster</a>.</p>
+          <p>&copy; { (new Date()).getFullYear() } News Aggregator. <Link to="/about" title="Information about the news aggregator project">About</Link> | <a rel="noopener noreferrer" href="" target="_blank">Github</a> | <a rel="noopener noreferrer" href="http://www.andreafiori.net" target="_blank">Webmaster</a>.</p>
           <p>
             <a href="/" title="Back to top of the screen">Back to top</a>
           </p>
