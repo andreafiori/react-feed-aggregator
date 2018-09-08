@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-import {
-  Route,
-  Link,
-  Switch,
-  Redirect
-} from 'react-router-dom';
+import { Route, Link, Switch, Redirect } from 'react-router-dom';
 import {
   Container,
   Collapse,
@@ -15,15 +10,17 @@ import {
   NavItem,
   NavLink
 } from 'reactstrap';
-import News from './News.js';
-import NewsGroup from './NewsGroup.js';
-import CyberSecurity from './CyberSecurity.js';
+import News from '../news/News.js';
+import NewsGroup from '../news/NewsGroup.js';
+import CyberSecurity from './../cyber-security/CyberSecurity.js';
 import VideoGames from './VideoGames.js';
 import Sport from './Sport.js';
 import Jobs from './Jobs.js';
 import { Home, About, WillMatch, NoMatch } from './Pages.js';
-import NewsGroupDetails from './NewsGroupDetails.js';
+import NewsGroupDetails from '../news/NewsGroupDetails.js';
 import SoftwareDevelopment from './SoftwareDevelopment.js';
+import CyberSecurityGroup from '../cyber-security/CyberSecurityGroup.js';
+import CyberSecurityGroupDetails from '../cyber-security/CyberSecurityGroupDetails.js';
 
 class App extends Component {
   constructor(props) {
@@ -90,8 +87,8 @@ class App extends Component {
             <Route path="/software-development/:group/:slug" component={SoftwareDevelopment} key="SoftwareDevelopment" />
 
             <Route exact path="/cyber-security" component={CyberSecurity} key="CyberSecurity" />
-            <Route exact path="/cyber-security/:group" component={CyberSecurity} key="CyberSecurityGroupDetails" />
-            <Route exact path="/cyber-security/:group/:slug" component={CyberSecurity} key="CyberSecurityFeedsDetails" />
+            <Route exact path="/cyber-security/:group" component={CyberSecurityGroup} key="CyberSecurityGroupDetails" />
+            <Route exact path="/cyber-security/:group/:slug" component={CyberSecurityGroupDetails} key="CyberSecurityFeedsDetails" />
 
             <Route path="/sport" component={Sport} key="Sport" />
             <Route path="/jobs" component={Jobs} key="Jobs" />

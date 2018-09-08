@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
-import { newsGroups } from '../feeds/CyberSecurityFeedManager.js';
 import { getAllNewsGroupsAsArray } from '../feeds/FeedsManager.js';
-import NewsGroupList from './NewsGroupList.js';
-import Breadcrumbs from './Breadcrumbs.js';
+import { newsGroups } from '../feeds/NewsFeedManager.js';
+import NewsList from '../components/NewsList.js';
+import Breadcrumbs from '../components/Breadcrumbs.js';
 
-class CyberSecurity extends Component {
-	constructor(props) {
+class News extends Component {
+
+  constructor(props) {
     super(props);
 
     this.state = {
       newsGroups: getAllNewsGroupsAsArray(newsGroups),
       breadcrumbs: [
-        { label: 'Cyber Security', href: null, title: null, active: true }
+        { label: 'News', href: null, title: null, active: true }
       ]
     };
 
@@ -28,7 +29,7 @@ class CyberSecurity extends Component {
         <div className="row">
 
           <div className="col-sm-12 col-md-12 col-lg-12">
-            <NewsGroupList newsGroups={newsGroups} />
+            <NewsList newsGroups={newsGroups} />
           </div>
 
         </div>
@@ -36,6 +37,7 @@ class CyberSecurity extends Component {
       </div>
     );
   }
+
 }
 
-export default CyberSecurity;
+export default News;

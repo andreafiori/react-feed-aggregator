@@ -1,8 +1,7 @@
 /**
-List: https://feedforall.com/rss-feeds-to-locate-jobs.htm
-https://www.jobs.ac.uk/feeds
-Weok in startups feeds https://workinstartups.com/
-
+	List: https://feedforall.com/rss-feeds-to-locate-jobs.htm
+	https://www.jobs.ac.uk/feeds
+	Weok in startups feeds https://workinstartups.com/
  */
 import React, { Component } from 'react';
 

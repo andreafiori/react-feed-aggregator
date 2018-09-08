@@ -1,30 +1,32 @@
 import React, { Component } from 'react';
 import { callPromise, buildFeedObject } from '../api/RssParser.js';
 import { getNewsFeedBySlug, getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager.js';
-import { newsGroups, feeds } from '../feeds/NewsFeedManager.js';
-import FeedsCategoryList from './FeedsCategoryList.js';
-import FeedsFromApi from './FeedsFromApi.js';
-import LoadingSpinner from './LoadingSpinner.js';
-import Breadcrumbs from './Breadcrumbs.js';
+import { CyberSecurityNewsGroups, CyberSecurityNewsFeeds } from '../feeds/CyberSecurityFeedManager.js';
+import FeedsCategoryList from '../components/FeedsCategoryList.js';
+import FeedsFromApi from '../components/FeedsFromApi.js';
+import LoadingSpinner from '../components/LoadingSpinner.js';
+import Breadcrumbs from '../components/Breadcrumbs.js';
 
-class NewsGroupDetails extends Component {
+class CyberSecurityGroupDetails extends Component {
   constructor(props) {
     super(props);
 
-    let currentNewsGroup = getNewsGroupByKey(newsGroups, props.match.params.group);
+    let currentNewsGroup = getNewsGroupByKey(CyberSecurityNewsGroups, props.match.params.group);
 
-    let currentFeed = getNewsFeedBySlug(getNewsFeedsByGroup(feeds, props.match.params.group), props.match.params.slug);
+    let newsFeedsByGroup = getNewsFeedsByGroup(CyberSecurityNewsFeeds, props.match.params.group);
+
+    let currentFeed = getNewsFeedBySlug(newsFeedsByGroup, props.match.params.slug);
 
     this.state = {
       group: props.match.params.group,
       slug: props.match.params.slug,
       currentNewsGroup: currentNewsGroup,
       currentFeed: currentFeed,
-      currentFeedsList: getNewsFeedsByGroup(feeds, props.match.params.group),
+      currentFeedsList: getNewsFeedsByGroup(CyberSecurityNewsFeeds, props.match.params.group),
       breadcrumbs: [
-        { label: 'News', href: '/news', title: 'Back to the news main page', active: false },
+        { label: 'Cyber Security', href: '/Cyber Security', title: 'Back to the Cyber Security news list', active: false },
         { label: currentNewsGroup.title, href: currentNewsGroup.path, title: currentNewsGroup.title, active: false },
-        { label: 'Feeds', href: null, title: 'Feeds', active: true },
+        { label: 'News list', href: null, title: 'News list', active: true },
       ],
       newsFromApi: null,
       error: null,
@@ -58,36 +60,29 @@ class NewsGroupDetails extends Component {
   setupCurrentNewsGroup() {
     let slug = this.props.match.params.slug;
     let group = this.props.match.params.group;
+
     if ( (slug !== this.state.slug || this.state.newsFromApi === null) && this.state.error === null) {
 
-      let currentFeedsList = this.state.currentFeedsList;
-      for(let i = 0; i < currentFeedsList.length; i++) {
-        for(let j = 0; j < currentFeedsList[i].feeds.length; j++) {
-          let lastPathElement = currentFeedsList[i].feeds[j].path.split('/').pop();
-          if (lastPathElement === slug) {
+      let currentFeedsLIst = getNewsFeedBySlug(this.state.currentFeedsList, slug);
 
-            let self = this;
-            callPromise(currentFeedsList[i].feeds[j].url)
-              .then(function (response) {
-                self.setState({
-                  group: group,
-                  slug: slug,
-                  newsFromApi: buildFeedObject(response.data),
-                  error: null,
-                });
-              })
-              .catch(function (error) {
-                self.setState({
-                  group: group,
-                  slug: slug,
-                  newsFromApi: null,
-                  error: error
-                });
-              });
-
-          }
-        }
-      }
+      let self = this;
+      callPromise(currentFeedsLIst.url)
+        .then(function (response) {
+          self.setState({
+            group: group,
+            slug: slug,
+            newsFromApi: buildFeedObject(response.data),
+            error: null,
+          });
+        })
+        .catch(function (error) {
+          self.setState({
+            group: group,
+            slug: slug,
+            newsFromApi: null,
+            error: error
+          });
+        });
 
     }
 
@@ -135,4 +130,4 @@ class NewsGroupDetails extends Component {
 
 }
 
-export default NewsGroupDetails;
+export default CyberSecurityGroupDetails;

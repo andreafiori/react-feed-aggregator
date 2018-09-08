@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { formatDate } from '../api/DateUtils';
 
 /**
  * Show the list of news feeds from the RSS URL
@@ -44,7 +45,7 @@ class FeedsFromApi extends Component {
 									<a href={item.link} rel="noopener noreferrer" target="_blank">{item.title}</a>
 								</h3>
 								
-								<p><i className="fa fa-calendar"></i> Created: <time>{item.pubDate}</time></p>
+								<p><i className="fa fa-calendar"></i> <time>{ formatDate(item.pubDate) }</time></p>
 
 								<p>{ item.description  }</p>
 							</div>

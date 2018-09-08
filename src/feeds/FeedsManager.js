@@ -23,12 +23,12 @@ export const getNewsFeedsByGroup = function(feeds, group) {
  * Get Feed property block from the object list (local)
  * @param {*} feedsList 
  */
-export const getNewsFeedBySlug = function(feedsList, slug) {
-  for(let i = 0; i < feedsList.length; i++) {
-    for(let j = 0; j < feedsList[i].feeds.length; j++) {
-      let lastPathElement = feedsList[i].feeds[j].path.split('/').pop();
+export const getNewsFeedBySlug = function(currentFeedsList, slug) {
+  for(let i = 0; i < currentFeedsList.length; i++) {
+    for(let j = 0; j < currentFeedsList[i].feeds.length; j++) {
+      let lastPathElement = currentFeedsList[i].feeds[j].path.split('/').pop();
       if (lastPathElement === slug) {
-        return feedsList[i].feeds[j];
+        return currentFeedsList[i].feeds[j];
       }
     }
   }

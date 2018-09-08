@@ -21,7 +21,13 @@ class FeedsCategoryList extends Component {
 					</ul>
 				</div>
 			);
-		};
+		} else {
+			return(
+				<div>
+					<h3>No Categories were found :(</h3>
+				</div>
+			);
+		}
 
 	}
 }

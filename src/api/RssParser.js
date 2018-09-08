@@ -25,7 +25,7 @@ export const buildFeedObject = function(xmlString) {
     objToReturn.image = doc.querySelector('channel image url').innerHTML;
   }
   
-  objToReturn.link = stripTagsAndCData(doc.querySelector('channel link').innerHTML);
+  objToReturn.link = doc.querySelector('channel link').innerHTML;
   objToReturn.title = stripTagsAndCData(doc.querySelector('channel title').innerHTML);
   objToReturn.description = stripTagsAndCData(doc.querySelector('channel description').innerHTML);
 
@@ -37,9 +37,9 @@ export const buildFeedObject = function(xmlString) {
     const pubDate = (pubDateTag) ? pubDateTag.textContent : null;
 
     objToReturn.items.push({
-      title: i('title').textContent,
+      title: stripTagsAndCData(i('title').textContent),
       link: i('link').textContent,
-      description: i('description').textContent,
+      description: stripTagsAndCData(i('description').textContent),
       pubDate: pubDate,
     });
 
