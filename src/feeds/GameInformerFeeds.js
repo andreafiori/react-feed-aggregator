@@ -7,9 +7,9 @@ export const GameInformerNewsGroup = {
 	path:         '/videogames/game-informer',
 	country:      'World',
 	website:      'https://www.gameinformer.com',
-	youtube:      '',
-	facebook:     '',
-  twitter:      '',
+	youtube:      'https://www.youtube.com/gameinformer',
+	facebook:     'http://facebook.com/officialgameinformer',
+  twitter:      'http://twitter.com/GameInformer',
   gplus:        '',
 	wikipedia:    '',
 	linkedin:			'',
@@ -22,12 +22,34 @@ export const GameInformerNewsFeeds = [
 		feeds: [
 			{
 				label: 'News',
-				path: '/videogames/game-informert/game-informer-news',
-				url: ''
+				path: '/videogames/game-informer/all-news',
+				url: 'https://www.gameinformer.com/news.xml'
 			},
-			// IGN
-			// The Games Machine
-			// IGN E3
+			{
+				label: 'Previews',
+				path: '/videogames/game-informer/previews',
+				url: 'https://www.gameinformer.com/previews.xml'
+			},
+			{
+				label: 'Reviews',
+				path: '/videogames/game-informer/reviews',
+				url: 'https://www.gameinformer.com/reviews.xml'
+			},
+			{
+				label: 'Features',
+				path: '/videogames/game-informer/features',
+				url: 'https://www.gameinformer.com/features.xml'
+			},
+			{
+				label: 'Videos',
+				path: '/videogames/game-informer/videos',
+				url: 'https://www.gameinformer.com/videos.xml'
+			},
+			{
+				label: 'Podcast',
+				path: '/videogames/game-informer/podcast',
+				url: 'https://www.gameinformer.com/gishow.xml'
+			},
 		]
 	},
 

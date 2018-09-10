@@ -8,12 +8,13 @@ export const WorkinstartupsNewsGroups = {
 	country: 			'U.K.',
 	website: 			'https://www.workinstartups.com/',
 	youtube: 			'',
-	facebook: 		'',
-	twitter: 			'',
+	facebook: 		'https://www.facebook.com/workinstartups',
+	twitter: 			'https://twitter.com/#!/workinstartups',
 	wikipedia: 		'',
 	gplus:				'',
 	linkedin:			'',
-	rss:					'',
+	vimeo:				'https://vimeo.com/user9542396',
+	rss:					'', // Icon on the left side of every web page
 };
 
 export const WorkInStartupsFeeds = [
@@ -82,5 +83,4 @@ export const WorkInStartupsFeeds = [
 			},
 		]
   },
-
 ];

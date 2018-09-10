@@ -95,13 +95,13 @@ Single file:
 
 ## TODO
 
+- Move feeds files into the related folder with git mv and delete the feeds dir at the end
 - Routing https://www.turtle-techies.com/post/react-navbar-with-bootstrap-4/
 - Navbar https://github.com/asafg6/react-bootstrap-navbar-example
 - https://stackoverflow.com/questions/651563/getting-the-last-element-of-a-split-string-array/651646
 - Dotenv API enviroment prod and dev
 - Testing
 - Linting
-- News group Images
 - New Favicon\s
 - Meta tags?
 - Github deploy

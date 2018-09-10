@@ -4,7 +4,7 @@ export const IgnNewsGroups = {
 	description:  'IGN news feeds',
 	group:        'videogames',
 	category:     'World',
-	path:         '/vidoegames/ign',
+	path:         '/videogames/ign/',
 	country:      'World',
 	website:      'https://www.ign.com/',
 	youtube:      '',
@@ -12,19 +12,29 @@ export const IgnNewsGroups = {
   twitter:      '',
   gplus:        '',
 	wikipedia:    '',
-	rss:          '',
+	rss:          'https://corp.ign.com/feeds/',
 };
 
 export const IgnNewsFeeds = [
   {
-    title: 'Gazzetta.it',
+    title: 'Main Feeds',
     feeds: [
       {
-        label: '',
-        path: '/sport/gazzetta-it/',
+        label: 'All',
+        path: '/videogames/ign/all',
         url: ''
       },
 
     ]
-  },
+	},
+	/* {
+    title: 'Gaming',
+    feeds: [
+      {
+        label: '',
+        path: '/videogames/ign/',
+        url: ''
+      },
+    ]
+  }, */
 ];

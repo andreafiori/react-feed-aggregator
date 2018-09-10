@@ -1,7 +1,7 @@
 export const DzoneNewsGroup = {
 	image: 				'dzone.gif',
 	title: 				'DZone',
-	description:	'DZone news',
+	description:	'Latest news from the various zones',
 	group: 				'dzone',
 	category: 		'World',
 	path: 				'/software-development/dzone',

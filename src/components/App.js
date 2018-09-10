@@ -99,6 +99,16 @@ const VideoGames = Loadable({
   loading: Loading,
 });
 
+const VideoGamesGroup = Loadable({
+  loader: () => import('../videogames/VideoGamesGroup.js'),
+  loading: Loading,
+});
+
+const VideoGamesGroupDetails = Loadable({
+  loader: () => import('../videogames/VideoGamesGroupDetails.js'),
+  loading: Loading,
+});
+
 const Sport = Loadable({
   loader: () => import('../sport/Sport.js'),
   loading: Loading,
@@ -173,6 +183,8 @@ class App extends Component {
             <Route exact path="/cyber-security/:group/:slug" component={CyberSecurityGroupDetails} key="CyberSecurityFeedsDetails" />
 
             <Route exact path="/videogames" component={VideoGames} key="VideoGames" />
+            <Route exact path="/videogames/:group" component={VideoGamesGroup} key="VideoGamesGroup" />
+            <Route exact path="/videogames/:group/:slug" component={VideoGamesGroupDetails} key="VideoGames" />
 
             <Route exact path="/sport" component={Sport} key="Sport" />
             <Route exact path="/sport/:group" component={Sport} key="SportGrous" />
