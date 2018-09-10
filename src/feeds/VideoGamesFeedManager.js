@@ -1,7 +1,9 @@
+import { IgnNewsGroups, IgnNewsFeeds } from '../feeds/IgnFeeds';
+
 export const VideogamesNewsGroups = {
-	// ign: IgnNewsGroups
+	ign: IgnNewsGroups
 }
 
 export const VideogamesNewsFeeds = {
-	// ign: IgnNewsFeeds
+	ign: IgnNewsFeeds
 }

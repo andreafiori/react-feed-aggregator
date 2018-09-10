@@ -1,9 +1,9 @@
-import { SansNewsGroup, SansNewsFeeds } from './SansFeeds.js';
+import { DzoneNewsGroup, DzoneNewsFeeds } from './DzoneFeeds';
 
-export const CyberSecurityNewsGroups = {
-	sans: SansNewsGroup,
+export const SoftwareDevelopmentNewsGroups = {
+	dzone: DzoneNewsGroup,
 };
 
-export const CyberSecurityNewsFeeds = {
-	sans: SansNewsFeeds,
+export const SoftwareDevelopmentNewsFeeds = {
+	dzone: DzoneNewsFeeds,
 };

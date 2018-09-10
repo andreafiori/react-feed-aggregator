@@ -82,6 +82,9 @@ Single file:
 - https://github.com/hongkiat/js-rss-reader/blob/master/rss.js OK DOMPARSER
 - RSS format fields https://feedforall.com/rss-fields.htm
 - DOMParser Query selector https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector
+- Code Splitting Dynamic Import https://tylermcginnis.com/react-router-code-splitting/
+- React Loadable https://github.com/jamiebuilds/react-loadable
+- Code Splitting https://reactjs.org/docs/code-splitting.html
 
 ## Additional dependencies
 

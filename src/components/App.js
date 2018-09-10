@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Link, Switch, Redirect } from 'react-router-dom';
+import Loadable from 'react-loadable';
 import {
   Container,
   Collapse,
@@ -10,17 +11,98 @@ import {
   NavItem,
   NavLink
 } from 'reactstrap';
-import News from '../news/News.js';
-import NewsGroup from '../news/NewsGroup.js';
-import CyberSecurity from './../cyber-security/CyberSecurity.js';
-import VideoGames from './VideoGames.js';
-import Sport from './Sport.js';
-import Jobs from './Jobs.js';
-import { Home, About, WillMatch, NoMatch } from './Pages.js';
-import NewsGroupDetails from '../news/NewsGroupDetails.js';
-import SoftwareDevelopment from './SoftwareDevelopment.js';
-import CyberSecurityGroup from '../cyber-security/CyberSecurityGroup.js';
-import CyberSecurityGroupDetails from '../cyber-security/CyberSecurityGroupDetails.js';
+
+const Loading = () => <div><i className="fa fa-spinner fa-spin"></i> Loading...</div>;
+
+const News = Loadable({
+  loader: () => import('../news/News.js'),
+  loading: Loading,
+});
+
+const NewsGroup = Loadable({
+  loader: () => import('../news/NewsGroup.js'),
+  loading: Loading,
+});
+
+const NewsGroupDetails = Loadable({
+  loader: () => import('../news/NewsGroupDetails.js'),
+  loading: Loading,
+});
+
+const CyberSecurity = Loadable({
+  loader: () => import('./../cyber-security/CyberSecurity.js'),
+  loading: Loading,
+});
+
+const CyberSecurityGroup = Loadable({
+  loader: () => import('./../cyber-security/CyberSecurityGroup.js'),
+  loading: Loading,
+});
+
+const CyberSecurityGroupDetails = Loadable({
+  loader: () => import('./../cyber-security/CyberSecurityGroupDetails.js'),
+  loading: Loading,
+});
+
+const SoftwareDevelopment = Loadable({
+  loader: () => import('./../software-development/SoftwareDevelopment'),
+  loading: Loading,
+});
+
+const SoftwareDevelopmentGroup = Loadable({
+  loader: () => import('./../software-development/SoftwareDevelopmentGroup'),
+  loading: Loading,
+});
+
+const SoftwareDevelopmentGroupDetails = Loadable({
+  loader: () => import('./../software-development/SoftwareDevelopmentGroupDetails'),
+  loading: Loading,
+});
+
+const Home = Loadable({
+  loader: () => import('./Home.js'),
+  loading: Loading,
+});
+
+const About = Loadable({
+  loader: () => import('./About.js'),
+  loading: Loading,
+});
+
+const WillMatch = Loadable({
+  loader: () => import('./WillMatch.js'),
+  loading: Loading,
+});
+
+const NoMatch = Loadable({
+  loader: () => import('./NoMatch.js'),
+  loading: Loading,
+});
+
+const Jobs = Loadable({
+  loader: () => import('../jobs/Jobs.js'),
+  loading: Loading,
+});
+
+const JobsGroup = Loadable({
+  loader: () => import('../jobs/JobsGroup.js'),
+  loading: Loading,
+});
+
+const JobsGroupDetails = Loadable({
+  loader: () => import('../jobs/JobsGroupDetails.js'),
+  loading: Loading,
+});
+
+const VideoGames = Loadable({
+  loader: () => import('../videogames/VideoGames.js'),
+  loading: Loading,
+});
+
+const Sport = Loadable({
+  loader: () => import('../sport/Sport.js'),
+  loading: Loading,
+});
 
 class App extends Component {
   constructor(props) {
@@ -34,7 +116,7 @@ class App extends Component {
       routes: [
         { path: "/news", text: "News", isActive: false, title: "News and magazine" },
         { path: "/sport", text: "Sport", isActive: false, title: "Sport news" },
-        { path: "/software-development", text: "Programming", isActive: false, title: "Software Development news" },
+        { path: "/software-development", text: "Software Development", isActive: false, title: "Software Development news" },
         { path: "/cyber-security", text: "Cyber Security", isActive: false, title: "Cyber Security news" },
         { path: "/videogames", text: "Videogames", isActive: false, title: "Videogames" },
         { path: "/jobs", text: "Jobs", isActive: false, title: "Jobs" },
@@ -82,17 +164,23 @@ class App extends Component {
             <Route exact path="/news/:group" component={NewsGroup} key="NewsGroupDetails" />
             <Route exact path="/news/:group/:slug" component={NewsGroupDetails} key="NewsFeedsDetails" />
 
-            <Route path="/software-development" component={SoftwareDevelopment} key="SoftwareDevelopment" />
-            <Route path="/software-development/:group" component={SoftwareDevelopment} key="SoftwareDevelopment" />
-            <Route path="/software-development/:group/:slug" component={SoftwareDevelopment} key="SoftwareDevelopment" />
+            <Route exact path="/software-development" component={SoftwareDevelopment} key="SoftwareDevelopment" />
+            <Route exact path="/software-development/:group" component={SoftwareDevelopmentGroup} key="SoftwareDevelopmentGroup" />
+            <Route exact path="/software-development/:group/:slug" component={SoftwareDevelopmentGroupDetails} key="SoftwareDevelopmentFeedsList" />
 
             <Route exact path="/cyber-security" component={CyberSecurity} key="CyberSecurity" />
             <Route exact path="/cyber-security/:group" component={CyberSecurityGroup} key="CyberSecurityGroupDetails" />
             <Route exact path="/cyber-security/:group/:slug" component={CyberSecurityGroupDetails} key="CyberSecurityFeedsDetails" />
 
-            <Route path="/sport" component={Sport} key="Sport" />
-            <Route path="/jobs" component={Jobs} key="Jobs" />
-            <Route path="/videogames" component={VideoGames} key="VideoGames" />
+            <Route exact path="/videogames" component={VideoGames} key="VideoGames" />
+
+            <Route exact path="/sport" component={Sport} key="Sport" />
+            <Route exact path="/sport/:group" component={Sport} key="SportGrous" />
+            <Route exact path="/sport/:group/:slug" component={Sport} key="SportFeeds" />
+
+            <Route exact path="/jobs" component={Jobs} key="Jobs" />
+            <Route exact path="/jobs/:group" component={JobsGroup} key="JobsGroup" />
+            <Route exact path="/jobs/:group/:slug" component={JobsGroupDetails} key="JobsFeeds" />
 
             <Redirect from="/old-match" to="/will-match" />
             <Route path="/will-match" component={WillMatch} />
@@ -109,7 +197,7 @@ class App extends Component {
         </Container>
 
         <footer className="blog-footer">
-          <p>&copy; { (new Date()).getFullYear() } News Aggregator. <Link to="/about" title="Information about the news aggregator project">About</Link> | <a rel="noopener noreferrer" href="" target="_blank">Github</a> | <a rel="noopener noreferrer" href="http://www.andreafiori.net" target="_blank">Webmaster</a>.</p>
+          <p>&copy; { (new Date()).getFullYear() } News Aggregator. <Link to="/about" title="Information about the news aggregator project">About</Link> | <a rel="noopener noreferrer" href="https://github.com/andreafiori/feed-aggregator" target="_blank">Github</a> | <a rel="noopener noreferrer" href="http://www.andreafiori.net" target="_blank">Webmaster</a>.</p>
           <p>
             <a href="/" title="Back to top of the screen">Back to top</a>
           </p>

@@ -20,6 +20,10 @@ class NewsGroupList extends Component {
             <p className="card-text mb-auto">{ group.description }</p>
 
             <div>
+            { group.website && 
+              <span><a href={group.website} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-primary"><i className="fa fa-globe"></i> Website</a>&nbsp;</span>
+            }
+
             { group.youtube && 
               <span><a href={group.youtube} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-danger"><i className="fa fa-youtube"></i> Youtube</a>&nbsp;</span>
             }
@@ -43,9 +47,9 @@ class NewsGroupList extends Component {
       );
     } else {
       return (
-        <div className="alert alert-danger">
-          <h3>Error occurrend</h3>
-          <p>No news group</p>
+        <div className="alert alert-warning">
+          <h3>Error occurred</h3>
+          <p>No news group. Check the news group list.</p>
         </div>
       );
     }

@@ -34,10 +34,10 @@ class CyberSecurity extends Component {
           <div className="col-sm-12 col-md-12 col-lg-3">
             <h3 className="font-italic">Attack Maps</h3>
             <ul className="list-unstyled">
-              <li><a href="http://map.norsecorp.com/" target="_blank" title="Real-time visibility into global cyber attacks from the world\'s largest dedicated threat intelligence network">Norse Attack Map</a></li>
-              <li><a href="https://threatmap.fortiguard.com/" target="_blank" title="Real time threat map">Fortinet</a></li>
-              <li><a href="http://www.digitalattackmap.com/" target="_blank" title="Digital attack map">Digital attack map</a></li>
-              <li><a href="https://threatmap.checkpoint.com/ThreatPortal/livemap.html" target="_blank" title="Digital attack map">Threat Cloud attack map</a></li>
+              <li><a href="http://map.norsecorp.com/" rel="noopener noreferrer" target="_blank" title="Real-time visibility into global cyber attacks from the world\'s largest dedicated threat intelligence network">Norse Attack Map</a></li>
+              <li><a href="https://threatmap.fortiguard.com/" rel="noopener noreferrer" target="_blank" title="Real time threat map">Fortinet</a></li>
+              <li><a href="http://www.digitalattackmap.com/" rel="noopener noreferrer" target="_blank" title="Digital attack map">Digital attack map</a></li>
+              <li><a href="https://threatmap.checkpoint.com/ThreatPortal/livemap.html" rel="noopener noreferrer" target="_blank" title="Digital attack map">Threat Cloud attack map</a></li>
             </ul>
           </div>
 

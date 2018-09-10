@@ -24,7 +24,7 @@ class FeedsCategoryList extends Component {
 		} else {
 			return(
 				<div>
-					<h3>No Categories were found :(</h3>
+					<h3>No Categories</h3>
 				</div>
 			);
 		}

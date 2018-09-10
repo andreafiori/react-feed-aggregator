@@ -1,11 +1,25 @@
 import axios from 'axios';
 import { stripTagsAndCData } from './StringUtils.js';
 
-export const callPromise = function (url) {
+/**
+ * Check if there is an error on doc selector tag
+ * 
+ * @param {object} i 
+ * @param {string} tag
+ */
+function checkTag(i, tag) {
+  try {
+    return stripTagsAndCData( i(tag).textContent );
+  } catch(e) {
+    // Log error...
+  }
+}
+
+export const callPromise = (url) => {
     return axios.get(url);
 }
 
-export const buildFeedObject = function(xmlString) {
+export const buildFeedObject = (xmlString) => {
 
   // Default static object
   let objToReturn = {
@@ -33,13 +47,13 @@ export const buildFeedObject = function(xmlString) {
   doc.querySelectorAll('item').forEach((item) => {
     let i = item.querySelector.bind(item);
 
-    let pubDateTag = i('pubDate');
+    const pubDateTag = i('pubDate');
     const pubDate = (pubDateTag) ? pubDateTag.textContent : null;
 
     objToReturn.items.push({
       title: stripTagsAndCData(i('title').textContent),
       link: i('link').textContent,
-      description: stripTagsAndCData(i('description').textContent),
+      description: checkTag(i, 'description'),
       pubDate: pubDate,
     });
 

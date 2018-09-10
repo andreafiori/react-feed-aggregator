@@ -1,7 +1,7 @@
 export const DarkreadingNewsGroup = {
 	image: 				'darkreading.gif',
 	title: 				'Dark Reading',
-	description:	'Darkreading news',
+	description:	'Dark Reading | Security | Protect The Business',
 	group: 				'darkreading',
 	category: 		'World',
 	path: 				'/cyber-security/darkreading',
@@ -18,7 +18,7 @@ export const DarkreadingNewsGroup = {
 
 export const DarkreadingNewsFeeds = [
 	{
-		title: 'Dark Readings news',
+		title: 'Categories',
 		feeds: [
 			{
 				label: 	'Attacks / Breaches',
