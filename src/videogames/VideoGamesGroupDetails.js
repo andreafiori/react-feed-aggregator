@@ -15,7 +15,7 @@ class VideoGamesGroupDetails extends Component {
 
     let newsFeedsByGroup = getNewsFeedsByGroup(VideogamesNewsFeeds, props.match.params.group);
 
-    let currentFeed = getNewsFeedBySlug(VideogamesNewsGroups, props.match.params.slug);
+    let currentFeed = getNewsFeedBySlug(newsFeedsByGroup, props.match.params.slug);
 
     this.state = {
       group: props.match.params.group,

@@ -114,6 +114,17 @@ const Sport = Loadable({
   loading: Loading,
 });
 
+const SportGroup = Loadable({
+  loader: () => import('../sport/SportGroup.js'),
+  loading: Loading,
+});
+
+const SportGroupDetails = Loadable({
+  loader: () => import('../sport/SportGroupDetails.js'),
+  loading: Loading,
+});
+
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -187,8 +198,8 @@ class App extends Component {
             <Route exact path="/videogames/:group/:slug" component={VideoGamesGroupDetails} key="VideoGames" />
 
             <Route exact path="/sport" component={Sport} key="Sport" />
-            <Route exact path="/sport/:group" component={Sport} key="SportGrous" />
-            <Route exact path="/sport/:group/:slug" component={Sport} key="SportFeeds" />
+            <Route exact path="/sport/:group" component={SportGroup} key="SportGrous" />
+            <Route exact path="/sport/:group/:slug" component={SportGroupDetails} key="SportFeeds" />
 
             <Route exact path="/jobs" component={Jobs} key="Jobs" />
             <Route exact path="/jobs/:group" component={JobsGroup} key="JobsGroup" />

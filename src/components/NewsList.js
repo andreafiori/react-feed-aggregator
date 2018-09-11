@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 /**
  * News Group list
+ * TODO: validate news groups input
  */
 class NewsList extends Component {
   static defaultProps = {
@@ -38,9 +39,9 @@ class NewsList extends Component {
         }
 
         { (!newsGroups.length || newsGroups.length === 0) &&
-          <div className="alert alert-danger">
-            <h3>Error</h3>
-            <p>No news group were found</p>
+          <div className="alert alert-warning">
+            <h3>No news group were found</h3>
+            <p>Please come back later. We will add new feeds ASAP.</p>
           </div>
         } 
       </div>

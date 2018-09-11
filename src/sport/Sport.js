@@ -1,11 +1,38 @@
 import React, { Component } from 'react';
+import { getAllNewsGroupsAsArray } from '../feeds/FeedsManager.js';
+import NewsList from '../components/NewsList.js';
+import Breadcrumbs from '../components/Breadcrumbs.js';
+import { SportFeedNewsGroup } from '../feeds/SportFeedManager.js';
 
 class Sport extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      newsGroups: getAllNewsGroupsAsArray(SportFeedNewsGroup),
+      breadcrumbs: [
+        { label: 'Sport', href: null, title: null, active: true }
+      ]
+    };
+
+  }
+
   render() {
-    return(
+    const { newsGroups, breadcrumbs } = this.state;
+
+    return (
       <div>
-        <h2>Sport newspapers, magazines and media</h2>
-        <p>The best sport news you can find online.</p>
+
+        <Breadcrumbs elements={breadcrumbs} />
+          
+        <div className="row">
+
+          <div className="col-sm-12 col-md-12 col-lg-12">
+            <NewsList newsGroups={newsGroups} />
+          </div>
+
+        </div>
+
       </div>
     );
   }

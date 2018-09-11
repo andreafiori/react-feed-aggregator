@@ -16,7 +16,11 @@ function checkTag(i, tag) {
 }
 
 export const callPromise = (url) => {
+  try {
     return axios.get(url);
+  } catch(e) {
+    // Log error
+  }
 }
 
 export const buildFeedObject = (xmlString) => {
@@ -50,6 +54,7 @@ export const buildFeedObject = (xmlString) => {
     const pubDateTag = i('pubDate');
     const pubDate = (pubDateTag) ? pubDateTag.textContent : null;
 
+    // TODO validate object before push...
     objToReturn.items.push({
       title: stripTagsAndCData(i('title').textContent),
       link: i('link').textContent,
