@@ -53,12 +53,12 @@ export const GazzettaItNewsFeeds = [
       {
         label: 'Automobilismo',
         path: '/sport/gazzetta-it/automobilismo',
-        url: 'https://www.gazzetta.it/rss/formula-1.xml'
+        url: 'https://www.gazzetta.it/rss/automobilismo.xml'
       },
       {
         label: 'Formula 1',
         path: '/sport/gazzetta-it/formula-one',
-        url: ''
+        url: 'https://www.gazzetta.it/rss/formula-1.xml'
       },
       {
         label: 'Motociclismo',
@@ -68,12 +68,12 @@ export const GazzettaItNewsFeeds = [
       {
         label: 'Motomondiale',
         path: '/sport/gazzetta-it/motomondiale',
-        url: 'https://www.gazzetta.it/rss/passione-motori.xml'
+        url: 'https://www.gazzetta.it/rss/Motomondiale.xml'
       },
       {
         label: 'Passione Motori',
         path: '/sport/gazzetta-it/passione-motori',
-        url: ''
+        url: 'https://www.gazzetta.it/rss/passione-motori.xml'
       },
       {
         label: 'Ciclismo',

@@ -30,7 +30,6 @@ class News extends Component {
 
           <div className="col-sm-12 col-md-12 col-lg-12">
             <NewsList newsGroups={newsGroups} />
-            <h3>TV News Channels</h3>
           </div>
 
         </div>

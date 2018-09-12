@@ -28,12 +28,12 @@ class NewsGroupList extends Component {
               <span><a href={group.youtube} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-danger"><i className="fa fa-youtube"></i> Youtube</a>&nbsp;</span>
             }
 
-            { group.facebook && 
-              <span><a href={group.facebook} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-info"><i className="fa fa-facebook"></i> Facebook</a>&nbsp;</span>
-            }
-
             { group.wikipedia && 
               <span><a href={group.wikipedia} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-secondary"><i className="fa fa-wikipedia-w"></i> Wikipedia</a>&nbsp;</span>
+            }
+  
+            { group.twitter && 
+              <span><a href={group.twitter} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-info"><i className="fa fa-twitter"></i> Twitter</a>&nbsp;</span>
             }
 
             { group.rss && 
