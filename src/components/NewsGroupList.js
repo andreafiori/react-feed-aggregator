@@ -13,7 +13,7 @@ class NewsGroupList extends Component {
         <div className="card flex-md-row mb-4 shadow-sm h-md-250">
           <img className="card-img-left flex-auto d-none d-lg-block" src={require('../images/' + group.image)} alt="" />
           <div className="card-body d-flex flex-column align-items-start">
-            <strong className="d-inline-block mb-2 text-primary">Category</strong>
+            <strong className="d-inline-block mb-2 text-primary">{group.category}</strong>
             <h3 className="mb-0">
               { group.title }
             </h3>

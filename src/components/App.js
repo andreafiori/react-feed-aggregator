@@ -12,7 +12,7 @@ import {
   NavLink
 } from 'reactstrap';
 
-const Loading = () => <div><i className="fa fa-spinner fa-spin"></i> Loading...</div>;
+const Loading = () => <div><h2><i className="fa fa-spinner fa-spin"></i> Loading...</h2></div>;
 
 const News = Loadable({
   loader: () => import('../news/News.js'),

@@ -3,23 +3,34 @@ import { Link } from "react-router-dom";
 
 /**
  * News Group list
+ * 
  * TODO: validate news groups input
  */
 class NewsList extends Component {
   static defaultProps = {
-    newsGroups: null
+    newsGroups: null,
+    columnSize: 6,
   };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      columnSize: (props.columnSize) ? props.columnSize : 6,
+    };
+  }
 
   render() {
 
     const { newsGroups } = this.props;
+    const { columnSize } = this.state;
 
     return (
       <div>
         { newsGroups.length > 0 && 
           <div className="row">
             { newsGroups.map((item, i) =>
-              <div className="col-sm-12 col-md-6 col-lg-6" key={'newsgroup-' + i}>
+              <div className={'col-sm-12 col-md-' + columnSize + ' col-lg-' + columnSize} key={'newsgroup-' + i}>
                 <div className="card flex-md-row mb-4 shadow-sm h-md-250">
                   <Link to={item.path} className="text-dark" title={'Read ' + item.title + ' news'}>
                     <img className="card-img-right flex-auto d-none d-lg-block" src={require('../images/' + item.image)} alt={item.title} />

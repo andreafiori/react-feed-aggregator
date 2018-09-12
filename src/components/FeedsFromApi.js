@@ -45,9 +45,9 @@ class FeedsFromApi extends Component {
 									<a href={item.link} rel="noopener noreferrer" target="_blank">{item.title}</a>
 								</h3>
 								
-								<p><i className="fa fa-calendar"></i> <time>{ formatDate(item.pubDate) }</time></p>
+								<div><i className="fa fa-calendar"></i> <time>{ formatDate(item.pubDate) }</time></div>
 
-								<p>{ item.description  }</p>
+								<div>{ item.description  }</div>
 
 								<div className="text-right">
 									<a href={item.link} rel="noopener noreferrer" target="_blank" className="btn btn-sm btn-primary">Read more</a>

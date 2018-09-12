@@ -11,17 +11,17 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 ## Installation
 
-Install dependencies:
+Install NodeJS and the dependencies with NPM:
 
 	npm install
 
 ## Run the project
 
-Run the project on http://localhost:3000
+Run:
 
 	npm start
 
-Disable CORS if you want to run successful REST calls to all feed URLs.
+Disable CORS if you want to run successful REST calls to all feed URLs: on Visual Studio Code you can launch a Chrome instance with the configured debugger (.vscode/launch.json).
 
 ## Run the tests
 

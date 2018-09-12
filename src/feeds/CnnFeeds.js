@@ -4,7 +4,7 @@ export const CnnNewsGroup = {
 	title: 'CNN',
 	description: 'CNN.com RSS feeds',
 	group: 'cnn',
-	category: 'World',
+	category: 'U.S.A',
 	path: '/news/cnn',
 	country: 'U.S.A',
 	website: 'https://www.cnn.com',

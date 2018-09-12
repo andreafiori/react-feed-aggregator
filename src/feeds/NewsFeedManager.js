@@ -12,10 +12,18 @@ export const newsGroups = {
   ansa: AnsaNewsGroup,
 };
 
+// List http://worldsoccertalk.com/2008/01/14/best-british-newspapers-soccer-football-news/
+// TV channels list https://en.wikipedia.org/wiki/List_of_news_television_channels
+// Weather app https://github.com/Kennypee/Weather-Scanner
 export const feeds = {
   bbc: BbcNewsFeeds,
   cnn: CnnNewsFeeds,
   'new-york-times': NewYorkTimesNewsFeeds,
   'wall-street-journal': WallStreetJournalNewsFeeds,
   ansa: AnsaNewsFeeds,
+  /*
+  Rai televideo http://www.servizitelevideo.rai.it/televideo/pub/rsslista.jsp
+  Radio Rai http://www.radio.rai.it/radio3/podcast/rssradio3.jsp
+  Corriere della sera https://www.corriere.it/rss/
+  */
 };

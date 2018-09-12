@@ -1,7 +1,7 @@
 export const ThreatPostNewsGroup = {
   image:        'threat-post.gif',
 	title:        'Threat Post',
-	description:  '',
+	description:  'Threat Post news feeds',
 	group:        'threat-post',
 	category:     'U.S.A',
 	path:         '/cyber-security/threat-post',
@@ -56,57 +56,45 @@ export const ThreatPostNewsFeeds = [
 				description: 'Threat post Internet of Things news',
 				url: 'https://threatpost.com/category/iot/feed'
 			},
-			
+			/*
+			Not working feed:
+			[
+				'label'         => 'Malware',
+				'slug'          => 'threat-post-malware',
+				'url'           => 'https://threatpost.com/category/malware/feed',
+				'description'   => 'Threat post Malware news',
+			], */
+			{
+				label: 'Mobile Security',
+				path: '/cyber-security/threat-post/mobile-security',
+				description: 'Threat post Mobile Security news',
+				url: 'https://threatpost.com/category/mobile-security/feed',
+			},
+			{
+				label: 'Privacy',
+				path: '/cyber-security/threat-post/privacy',
+				description: 'Threat post Privacy news',
+				url: 'https://threatpost.com/category/privacy/feed',
+			},
+			{
+				label: 'Vulnerabilities',
+				path: '/cyber-security/threat-post/threat-post-vulnerabilitie',
+				description: 'Threat post Vulnerabilities news',
+				url: 'https://threatpost.com/category/vulnerabilities/feed',
+			},
+			{
+				label: 'Web Security',
+				path: '/cyber-security/threat-post/web-security',
+				description: 'Threat post Vulnerabilities news',
+				url: 'https://threatpost.com/category/web-security/feed',
+			},
+			{
+				label: 'Videos',
+				path: '/cyber-security/threat-post/videos',
+				description: 'Threat post Videos',
+				url: 'https://threatpost.com/category/videos/feed',
+			},
 		]
 	},
 
 ];
-
-/*
-	
-	// NON FUNZIONANTE?
-	[
-			'label'         => 'Malware',
-			'slug'          => 'threat-post-malware',
-			'url'           => 'https://threatpost.com/category/malware/feed',
-			'description'   => 'Threat post Malware news',
-			'keywords'      => 'malware,virus,feed,threat post,hacking,cyber,security',
-	],
-
-	[
-			'label'         => 'Mobile Security',
-			'slug'          => 'threat-post-mobile-security',
-			'url'           => 'https://threatpost.com/category/mobile-security/feed',
-			'description'   => 'Threat post Mobile Security news',
-			'keywords'      => 'mobile,security,feed,threat post,hacking,cyber,security',
-	],
-	[
-			'label'         => 'Privacy',
-			'slug'          => 'threat-post-privacy',
-			'url'           => 'https://threatpost.com/category/privacy/feed',
-			'description'   => 'Threat post Privacy news',
-			'keywords'      => 'privacy,feed,threat post,hacking,cyber,security',
-	],
-	[
-			'label'         => 'Vulnerabilities',
-			'slug'          => 'threat-post-vulnerabilities',
-			'url'           => 'https://threatpost.com/category/vulnerabilities/feed',
-			'description'   => 'Threat post Vulnerabilities news',
-			'keywords'      => 'vulnerabilities,feed,threat post,hacking,cyber,security',
-	],
-	[
-			'label'         => 'Web Security',
-			'slug'          => 'threat-post-web-security',
-			'url'           => 'https://threatpost.com/category/web-security/feed',
-			'description'   => 'Threat post Vulnerabilities news',
-			'keywords'      => 'web security,feed,threat post,hacking,cyber,security',
-	],
-	[
-			'label'         => 'Videos',
-			'slug'          => 'threat-post-videos',
-			'url'           => 'https://threatpost.com/category/videos/feed',
-			'description'   => 'Threat post Videos',
-			'keywords'      => 'feed,threat post,hacking,cyber,security',
-	],
-
-*/

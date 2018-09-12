@@ -48,12 +48,12 @@ export const GazzettaItNewsFeeds = [
       {
         label: 'Calcio Estero',
         path: '/sport/gazzetta-it/calcio-estero',
-        url: ''
+        url: 'https://www.gazzetta.it/rss/calcio-estero.xml'
       },
       {
         label: 'Automobilismo',
         path: '/sport/gazzetta-it/automobilismo',
-        url: ''
+        url: 'https://www.gazzetta.it/rss/formula-1.xml'
       },
       {
         label: 'Formula 1',
@@ -63,12 +63,12 @@ export const GazzettaItNewsFeeds = [
       {
         label: 'Motociclismo',
         path: '/sport/gazzetta-it/motociclismo',
-        url: ''
+        url: 'https://www.gazzetta.it/rss/motociclismo.xml'
       },
       {
         label: 'Motomondiale',
         path: '/sport/gazzetta-it/motomondiale',
-        url: ''
+        url: 'https://www.gazzetta.it/rss/passione-motori.xml'
       },
       {
         label: 'Passione Motori',
@@ -78,77 +78,82 @@ export const GazzettaItNewsFeeds = [
       {
         label: 'Ciclismo',
         path: '/sport/gazzetta-it/ciclismo',
-        url: ''
+        url: 'https://www.gazzetta.it/rss/ciclismo.xml'
       },
       {
         label: 'Basket',
         path: '/sport/gazzetta-it/Basket',
-        url: ''
+        url: 'https://www.gazzetta.it/rss/basket.xml'
       },
       {
         label: 'NBA',
         path: '/sport/gazzetta-it/nba',
-        url: ''
+        url: 'https://www.gazzetta.it/rss/nba.xml'
       },
       {
         label: 'Eurolega',
         path: '/sport/gazzetta-it/eurolega',
-        url: ''
+        url: 'https://www.gazzetta.it/rss/eurolega.xml'
       },
       {
         label: 'Tennis',
         path: '/sport/gazzetta-it/tennis',
-        url: ''
+        url: 'https://www.gazzetta.it/rss/tennis.xml'
       },
       {
         label: 'Altre passioni',
         path: '/sport/gazzetta-it/altre-passioni',
-        url: ''
+        url: 'https://www.gazzetta.it/rss/altre-passioni.xml'
       },
       {
         label: 'Atletica',
         path: '/sport/gazzetta-it/atletica',
-        url: ''
+        url: 'https://www.gazzetta.it/rss/atletica.xml'
       },
       {
         label: 'Golf',
         path: '/sport/gazzetta-it/golf',
-        url: ''
+        url: 'https://www.gazzetta.it/rss/golf.xml'
+      },
+      {
+        label: 'Nuoto',
+        path: '/sport/gazzetta-it/nuoto',
+        url: 'https://www.gazzetta.it/rss/nuoto.xml'
       },
       {
         label: 'Sport invernali',
         path: '/sport/gazzetta-it/sport-invernali',
-        url: ''
+        url: 'https://www.gazzetta.it/rss/sport-invernali.xml'
       },
       {
         label: 'Sport USA',
         path: '/sport/gazzetta-it/sport-usa',
-        url: ''
+        url: 'https://www.gazzetta.it/rss/sport-usa.xml'
       },
       {
         label: 'Volley',
         path: '/sport/gazzetta-it/volley',
-        url: ''
+        url: 'https://www.gazzetta.it/rss/volley.xml'
       },
       {
         label: 'Taekwondo',
         path: '/sport/gazzetta-it/taekwondo',
-        url: ''
+        url: 'https://www.gazzetta.it/rss/taekwondo.xml'
       },
       {
         label: 'Sport vari',
         path: '/sport/gazzetta-it/sport-vari',
-        url: ''
+        url: 'https://www.gazzetta.it/rss/altri-sport.xml'
       },
       {
         label: 'Milano e Lombardia',
         path: '/sport/gazzetta-it/milano-lombardia',
-        url: ''
+        url: 'https://www.gazzetta.it/rss/milano.xml'
       },
       {
         label: 'Video',
         path: '/sport/gazzetta-it/video',
-        url: ''
+        url: 'https://static.video.gazzettaobjects.it/widget/content/playlist/playlist_7797cecc-79ec-11e3-b322-c9e919454f4d_dateDesc.rss'
       },
     ]
   },
@@ -157,38 +162,38 @@ export const GazzettaItNewsFeeds = [
     feeds: [
       {
         label: 'Inter',
-        path: '/sport/gazzetta-it/',
-        url: ''
+        path: '/sport/gazzetta-it/inter',
+        url: 'https://www.gazzetta.it/rss/Squadre/Inter.xml'
       },
       {
         label: 'Milan',
-        path: '/sport/gazzetta-it/',
-        url: ''
+        path: '/sport/gazzetta-it/milan',
+        url: 'https://www.gazzetta.it/rss/Squadre/Milan.xml'
       },
       {
         label: 'Juventus',
-        path: '/sport/gazzetta-it/',
-        url: ''
+        path: '/sport/gazzetta-it/juventus',
+        url: 'https://www.gazzetta.it/rss/Squadre/Juventus.xml'
       },
       {
         label: 'Napoli',
-        path: '/sport/gazzetta-it/',
-        url: ''
+        path: '/sport/gazzetta-it/napoli',
+        url: 'https://www.gazzetta.it/rss/Squadre/Napoli.xml'
       },
       {
         label: 'Roma',
-        path: '/sport/gazzetta-it/',
-        url: ''
+        path: '/sport/gazzetta-it/roma',
+        url: 'https://www.gazzetta.it/rss/Squadre/Roma.xml'
       },
       {
         label: 'Lazio',
-        path: '/sport/gazzetta-it/',
-        url: ''
+        path: '/sport/gazzetta-it/lazio',
+        url: 'https://www.gazzetta.it/rss/Squadre/Lazio.xml'
       },
       {
         label: 'Fiorentina',
-        path: '/sport/gazzetta-it/',
-        url: ''
+        path: '/sport/gazzetta-it/fiorentina',
+        url: 'https://www.gazzetta.it/rss/Squadre/Fiorentina.xml'
       },
     ]
   }
