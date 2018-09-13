@@ -1,6 +1,6 @@
 export const PHPNewsGroup = {
 	image: 				'php-news.gif',
-	title: 				'PHP news',
+	title: 				'PHP News',
 	description:	'Latest PHP news, language and frameworks',
 	group: 				'php-news',
 	category: 		'Web',
@@ -49,7 +49,7 @@ export const PHPNewsFeeds = [
 				label: 'Laracasts',
 				title: 'Latest news from Zend Security',
 				path: '/software-development/php-news/zend-security',
-				url: ''
+				url: 'https://laracasts.com/feed'
 			},
 			{
 				label: 'Sitepoint PHP',
@@ -62,13 +62,33 @@ export const PHPNewsFeeds = [
 				label: 'Reddit PHP',
 				title: 'Latest news from Reddit',
 				path: '/software-development/php-news/reddit-php',
-				url: 'https://www.reddit.com/r/PHP/.rss'
-			}, */
+				url: 'https://www.reddit.com/r/PHP/.rss' // http://feeds.feedburner.com/phpclassesblog-xml?format=xml
+			},
+			*/
+			// PHP UK conference https://www.youtube.com/feeds/videos.xml?user=phpukconference
 			{
-				label: 'Reddit PHP',
-				title: 'Latest news from Reddit',
+				label: 'Laravel News',
+				title: 'Latest news from Laravel News',
+				path: '/software-development/php-news/laravel-news',
+				url: 'https://feed.laravel-news.com/'
+			},
+			{
+				label: 'Laravel Daily',
+				title: 'Latest news from Laravel Daily',
+				path: '/software-development/php-news/laravel-daily',
+				url: 'https://laraveldaily.com/feed/'
+			},
+			{
+				label: 'PHP Classes',
+				title: 'Latest news from PHP Classes',
 				path: '/software-development/php-news/php-classes',
 				url: 'http://feeds.feedburner.com/phpclassesblog-xml?format=xml'
+			},
+			{
+				label: 'PHP Storm Blog',
+				title: 'Latest news from PHP Storm Blog',
+				path: '/software-development/php-news/php-storm-blog',
+				url: 'https://blog.jetbrains.com/phpstorm/feed/'
 			},
 			{
 				label: 'PHP pot',
@@ -84,10 +104,71 @@ export const PHPNewsFeeds = [
 			},
 			{
 				label: 'Voices of the elePHPant',
-				title: 'Latest news from Voices of the elePHPant',
+				title: 'Latest news from Voices of the elePHPant podcasts',
 				path: '/software-development/php-news/voices-of-the-elephpant',
 				url: 'https://voicesoftheelephpant.com/feed/'
 			},
+			{
+				label: 'KillerPHP.com',
+				title: 'Latest articles from KillerPHP.com',
+				path: '/software-development/php-news/killer-php-com',
+				url: 'https://www.killerphp.com/feed/'
+			},
+			{
+				label: 'Murze.be Blog',
+				title: 'Latest articles from Murze.be, a blog on Laravel & PHP',
+				path: '/software-development/php-news/killer-php-com',
+				url: ''
+			},
+			{
+				label: 'PHP Gurukul',
+				title: 'Latest articles from PHP gurukul',
+				path: '/software-development/php-news/php-gurukul',
+				url: 'https://phpgurukul.com/feed'
+			},
+			{
+				label: 'PHPDeveloper.org',
+				title: 'Latest articles from PHP gurukul',
+				path: '/software-development/php-news/php-developer-org',
+				url: 'http://phpdeveloper.org/feed'
+			},
+			// Generic software dev, not PHP specific...
+			/* {
+				label: 'Code Diesel',
+				title: 'Latest articles from Code Diesel',
+				path: '/software-development/php-news/code-diesel',
+				url: 'https://www.codediesel.com/feed/'
+			}, */
 		]
 	},
+	{
+		title: 'People',
+		feeds: [
+			{
+				label: 'Rob Allen',
+				title: 'Rob Allen Akrabat blog feed',
+				path: '/software-development/php-news/rob-allen',
+				website: 'https://www.akrabat.com/',
+				url: 'https://akrabat.com/feed/'
+			},
+			{
+				label: 'Fabien Potencier',
+				title: 'Fabien Potencier blog feed',
+				path: '/software-development/php-news/fabien-potencier',
+				url: 'http://feeds.fabien.potencier.org/aidedecamp?format=xml'
+			},
+			{
+				label: 'Sebastian Bergmann',
+				title: 'Sebastian Bergmann blog feed',
+				path: '/software-development/php-news/sebastian-bergmann',
+				url: 'https://sebastian-bergmann.de/atom.xml?format=xml'
+			},
+			{
+				label: 'Adam Wathan',
+				title: 'Adam Wathan blog feed',
+				path: '/software-development/php-news/adma-wathan',
+				url: 'https://adamwathan.me/rss/'
+			},
+		]
+	}
 ];

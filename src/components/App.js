@@ -64,6 +64,11 @@ const Home = Loadable({
   loading: Loading,
 });
 
+const OpenWeatherContainer = Loadable({
+  loader: () => import('./OpenWeatherContainer.js'),
+  loading: Loading,
+});
+
 const About = Loadable({
   loader: () => import('./About.js'),
   loading: Loading,
@@ -180,6 +185,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
+            <Route exact path="/open-weather" component={OpenWeatherContainer} />
 
             <Route exact path="/news" component={News} key="NewsGroups" />
             <Route exact path="/news/:group" component={NewsGroup} key="NewsGroupDetails" />

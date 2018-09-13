@@ -90,6 +90,24 @@ class NewsGroupDetails extends Component {
     window.scrollTo(0, 0);
   }
 
+  resetState(e) {
+    e.preventDefault();
+
+    console.log('Reset State?');
+
+    this.setState({
+      group: this.props.match.params.group,
+      slug: this.props.match.params.slug,
+      currentNewsGroup: null,
+      currentFeed: null,
+      currentFeedsList: null,
+      newsFromApi: null,
+      error: null
+    });
+
+    return true;
+  }
+
   render() {
 
     const { currentFeed, currentNewsGroup, currentFeedsList, newsFromApi, breadcrumbs, error } = this.state;
@@ -119,7 +137,7 @@ class NewsGroupDetails extends Component {
           </div>
 
           <div className="col-sm-12 col-md-4 col-lg-3">
-            <FeedsCategoryList items={currentFeedsList} />
+            <FeedsCategoryList resetState={this.resetState} items={currentFeedsList} />
           </div>
         </div>
 

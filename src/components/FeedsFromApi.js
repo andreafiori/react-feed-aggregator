@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { formatDate } from '../api/DateUtils';
 
-/**
- * Show the list of news feeds from the RSS URL
- */
 class FeedsFromApi extends Component {
 	static defaultProps = {
 		currentFeed: null,
@@ -32,9 +29,19 @@ class FeedsFromApi extends Component {
 						</div>
 
 						<div className="col-sm-12 col-md-12 col-lg-12">
-							<a href={currentFeed.url} target="_blank" className="btn btn-sm btn-warning" rel="">
-								<i className="fa fa-rss"></i> RSS feed
-							</a>
+							{ currentFeed.website && 
+								<span>
+									<a href={currentFeed.website} target="_blank" className="btn btn-sm btn-primary" rel="noopener noreferrer" title="">
+										<i className="fa fa-globe"></i> Website
+									</a>&nbsp;
+								</span>
+							}
+
+							<span>
+								<a href={currentFeed.url} target="_blank" className="btn btn-sm btn-warning" rel="noopener noreferrer" title="">
+									<i className="fa fa-rss"></i> RSS feed
+								</a>
+							</span>
 						</div>
 						
 					</div>

@@ -15,6 +15,9 @@ export const newsGroups = {
 // List http://worldsoccertalk.com/2008/01/14/best-british-newspapers-soccer-football-news/
 // TV channels list https://en.wikipedia.org/wiki/List_of_news_television_channels
 // Weather app https://github.com/Kennypee/Weather-Scanner
+// http://www.foxnews.com/about/rss/
+// http://abcnews.go.com/Site/page/rss--3520115
+// http://www.reuters.com/tools/rss
 export const feeds = {
   bbc: BbcNewsFeeds,
   cnn: CnnNewsFeeds,

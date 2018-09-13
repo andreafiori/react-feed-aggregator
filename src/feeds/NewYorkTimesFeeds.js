@@ -12,12 +12,10 @@ export const NewYorkTimesNewsGroup = {
 	twitter: 			'https://twitter.com/nytimes',
 	wikipedia: 		'https://en.wikipedia.org/wiki/The_New_York_Times',
 	gplus:				'',
-	rss: 					'https://archive.nytimes.com/www.nytimes.com/services/xml/rss/index.html?8dpc',
+	rss: 					'http://www.nytimes.com/services/xml/rss/',
 };
 
-
 export const NewYorkTimesNewsFeeds = [
-	// Category and related feeds
 	{
 		categoty: 'U.S.A',
 		title: 'New York Times',
@@ -32,7 +30,6 @@ export const NewYorkTimesNewsFeeds = [
 	},
 	{
 		categoty: 'NYT World',
-		title: 'World',
 		feeds: [
 			{
 				label: 'World',

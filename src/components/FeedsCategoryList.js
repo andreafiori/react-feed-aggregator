@@ -15,7 +15,7 @@ class FeedsCategoryList extends Component {
 					<ul className="list-unstyled">
 						{item.feeds.map((feed, i) =>
 							<li key={'news-item-' + i}>
-								<Link to={feed.path} title={feed.title}>{feed.label}</Link>
+								<Link onClick={this.props.resetState} to={feed.path} title={feed.title}>{feed.label}</Link>
 							</li>
 						)}
 					</ul>
