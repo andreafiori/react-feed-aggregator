@@ -3,7 +3,7 @@ export const PHPNewsGroup = {
 	title: 				'PHP News',
 	description:	'Latest PHP news, language and frameworks',
 	group: 				'php-news',
-	category: 		'Web',
+	category: 		'Backend',
 	path: 				'/software-development/php-news',
 	country: 			'World',
 	website: 			'',

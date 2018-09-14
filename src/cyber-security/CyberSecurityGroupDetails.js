@@ -25,7 +25,7 @@ class CyberSecurityGroupDetails extends Component {
       currentFeedsList: getNewsFeedsByGroup(CyberSecurityNewsFeeds, props.match.params.group),
       breadcrumbs: [
         { label: 'Cyber Security', href: '/Cyber Security', title: 'Back to the Cyber Security news list', active: false },
-        { label: currentNewsGroup.title, href: currentNewsGroup.path, title: currentNewsGroup.title, active: false },
+        { label: currentNewsGroup.title, href: currentNewsGroup.path ? currentNewsGroup.path : '', title: currentNewsGroup.title, active: false },
         { label: 'News list', href: null, title: 'News list', active: true },
       ],
       newsFromApi: null,
@@ -106,6 +106,9 @@ class CyberSecurityGroupDetails extends Component {
               <div className="alert alert-danger">
                 <h3>Error occurred</h3>
                 <p>{ error.message }</p>
+                <a href={currentFeed.url} className="btn btn-sm btn-warning" target="_blank" rel="" title="">
+                  <i className="fa fa-rss"></i> Rss
+                </a>
               </div>
             }
 

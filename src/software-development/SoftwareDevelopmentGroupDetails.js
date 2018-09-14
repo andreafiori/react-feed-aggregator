@@ -90,12 +90,6 @@ class SoftwareDevelopmentGroupDetails extends Component {
     window.scrollTo(0, 0);
   }
 
-  hasError(group, slug) {
-    // TODO scorrere array this.state.error e vedere se ha un oggetto contenente slug e group correnti
-  }
-
-  // addError(group, slug, error) {} Aggiunge oggetto alla lista di errori
-
   render() {
 
     const { currentFeed, currentNewsGroup, currentFeedsList, newsFromApi, breadcrumbs, error } = this.state;

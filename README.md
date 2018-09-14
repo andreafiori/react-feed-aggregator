@@ -85,9 +85,14 @@ Single file:
 - Code Splitting Dynamic Import https://tylermcginnis.com/react-router-code-splitting/
 - React Loadable https://github.com/jamiebuilds/react-loadable
 - Code Splitting https://reactjs.org/docs/code-splitting.html
+- Routing https://www.turtle-techies.com/post/react-navbar-with-bootstrap-4/
+- Navbar https://github.com/asafg6/react-bootstrap-navbar-example
+- https://stackoverflow.com/questions/651563/getting-the-last-element-of-a-split-string-array/651646
+- 
 
 ## Additional dependencies
 
+- [React Loadable](https://github.com/jamiebuilds/react-loadable) code splitting and dynamic imports
 - [Reactstrap](https://reactstrap.github.io/)
 - [Font Awesome](https://fontawesome.com/)
 - [Axios HTTP client](https://github.com/axios/axios)
@@ -95,15 +100,12 @@ Single file:
 
 ## TODO
 
-- Move feeds files into the related folder with git mv and delete the feeds dir at the end
-- Routing https://www.turtle-techies.com/post/react-navbar-with-bootstrap-4/
-- Navbar https://github.com/asafg6/react-bootstrap-navbar-example
-- https://stackoverflow.com/questions/651563/getting-the-last-element-of-a-split-string-array/651646
-- Dotenv API enviroment prod and dev
-- Testing
-- Linting
+- Scroll to top \ Back to top links
+- Dotenv API enviroment prod and dev?
 - New Favicon\s
 - Meta tags?
-- Github deploy
-- Travis check
+- Testing
+- Linting
+- Github deploy "homepage": "https://www.andreafiori.net/projects/feed-aggregator",
+- Travis
 - Deploy and demo on shared hosting

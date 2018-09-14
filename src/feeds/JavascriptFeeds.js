@@ -3,9 +3,10 @@ export const JavascriptNewsGroup = {
 	title:        'Javascript News',
 	description:  'Javascript RSS feeds',
 	group:        'javascript',
-	category:     'World',
+	category:     'Frontend',
 	path:         '/software-development/javascript',
-	country:      'World',
+  country:      'World',
+  hideDescription: true,
 	website:      '',
 	youtube:      '',
 	facebook:     '',
@@ -15,17 +16,16 @@ export const JavascriptNewsGroup = {
 	rss:          '',
 };
 
-// List: https://blog.feedspot.com/javascript_rss_feeds/
 export const JavascriptNewsFeeds = [
 	{
 		title: 'Websites',
 		feeds: [
-			{
-				label: 'Reedit Javascript',
-				title: 'Reedit Javascript',
+			/* {
+				label: 'Reddit Javascript',
+				title: 'Reddit Javascript',
 				path: '/software-development/javascript/reddit-js',
 				url: 'https://www.reddit.com/r/javascript/.rss?format=xml',
-      },
+      }, */
 			{
 				label: 'Sitepoint',
 				title: 'Sitepoint Javascript',
@@ -107,13 +107,14 @@ export const JavascriptNewsFeeds = [
         website: 'https://javascriptplayground.com/',
 				url: 'http://feeds.feedburner.com/TheJavascriptPlayground/?x=1&format=xml',
       },
-      {
+      /* {
 				label: 'JS Diaries',
 				title: 'Latest article from JS Diaries',
         path: '/software-development/javascript/js-diaries',
         website: 'http://jsdiaries.com/',
+        twitter: 'https://twitter.com/jsdiaries',
 				url: 'http://jsdiaries.com/feed',
-      },
+      }, */
     ]
   },
   {

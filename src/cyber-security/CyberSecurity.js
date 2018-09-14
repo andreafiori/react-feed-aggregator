@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { CyberSecurityNewsGroups } from '../feeds/CyberSecurityFeedManager.js';
 import { getAllNewsGroupsAsArray } from '../feeds/FeedsManager.js';
 import NewsList from '../components/NewsList.js';
 import Breadcrumbs from '../components/Breadcrumbs.js';
+import { CyberSecurityNewsGroups } from '../feeds/CyberSecurityFeedManager.js';
 
 class CyberSecurity extends Component {
 	constructor(props) {
@@ -12,13 +12,19 @@ class CyberSecurity extends Component {
       newsGroups: getAllNewsGroupsAsArray(CyberSecurityNewsGroups),
       breadcrumbs: [
         { label: 'Cyber Security', href: null, title: null, active: true }
+      ],
+      attackMaps: [
+        { label: 'Norse Attack Map', href: 'http://map.norsecorp.com/', title: 'Real-time visibility into global cyber attacks from the world\'s largest dedicated threat intelligence network'},
+        { label: 'Fortinet Threat Map', href: 'https://threatmap.fortiguard.com/', title: 'Fortinet Real time threat map'},
+        { label: 'Digital Attack Map', href: 'http://www.digitalattackmap.com/', title: 'Digital Attack Map'},
+        { label: 'Threat Cloud Attack Map', href: 'https://threatmap.checkpoint.com/ThreatPortal/livemap.html', title: 'Threat Cloud Attack Map'},
       ]
     };
 
   }
 
   render() {
-    const { newsGroups, breadcrumbs } = this.state;
+    const { newsGroups, breadcrumbs, attackMaps } = this.state;
 
     return (
       <div>
@@ -30,15 +36,21 @@ class CyberSecurity extends Component {
           <div className="col-sm-12 col-md-12 col-lg-9">
             <NewsList newsGroups={newsGroups} />
           </div>
-          
+
           <div className="col-sm-12 col-md-12 col-lg-3">
             <h3 className="font-italic">Attack Maps</h3>
             <ul className="list-unstyled">
-              <li><a href="http://map.norsecorp.com/" rel="noopener noreferrer" target="_blank" title="Real-time visibility into global cyber attacks from the world\'s largest dedicated threat intelligence network">Norse Attack Map</a></li>
-              <li><a href="https://threatmap.fortiguard.com/" rel="noopener noreferrer" target="_blank" title="Real time threat map">Fortinet</a></li>
-              <li><a href="http://www.digitalattackmap.com/" rel="noopener noreferrer" target="_blank" title="Digital attack map">Digital attack map</a></li>
-              <li><a href="https://threatmap.checkpoint.com/ThreatPortal/livemap.html" rel="noopener noreferrer" target="_blank" title="Digital attack map">Threat Cloud attack map</a></li>
+              { attackMaps.map((item, i) =>
+                <li key={'attack-map' + i}><a href={item.href} rel="noopener noreferrer" target="_blank" title={item.title}>{item.label}</a></li>
+              )}
             </ul>
+
+            {/*
+            <h3 className="font-italic">Learning</h3>
+            <h3 className="font-italic">Certification</h3>
+            <h3 className="font-italic">Links</h3>
+            */}
+
           </div>
 
         </div>

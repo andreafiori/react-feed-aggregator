@@ -3,7 +3,7 @@ export const DzoneNewsGroup = {
 	title: 				'DZone',
 	description:	'Latest news from the various zones',
 	group: 				'dzone',
-	category: 		'World',
+	category: 		'Full stack',
 	path: 				'/software-development/dzone',
 	country: 			'U.S.A',
 	website: 			'https://www.dzone.com/',

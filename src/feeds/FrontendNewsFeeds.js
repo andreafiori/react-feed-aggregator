@@ -1,9 +1,9 @@
 export const FrontendNewsGroup = {
 	image: 				'frontend-news.gif',
-	title: 				'Frontend news',
+	title: 				'Frontend News',
 	description:	'Latest Frontend news: HTML5, CSS3, Javascript language and frameworks',
 	group: 				'frontend-news',
-	category: 		'Web',
+	category: 		'Frontend',
 	path: 				'/software-development/frontend-news',
 	country: 			'World',
 	website: 			'',
