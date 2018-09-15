@@ -94,7 +94,7 @@ class FeedsFromApi extends Component {
 								
 								<div><i className="fa fa-calendar"></i> <time>{ formatDate(item.pubDate) }</time></div>
 
-								{ currentFeed.hideDescription === true && 
+								{ !currentFeed.hideDescription && 
 									<div>{ item.description  }</div>
 								}
 

@@ -26,7 +26,7 @@ function checkTagItem(i, tag) {
 function checkTag(domParser, tag, throwError) {
   const tagToCheck = domParser.querySelector(tag);
   const result = (tagToCheck) ? stripTagsAndCData(tagToCheck.innerHTML) : null;
-  if (throwError === true) {
+  if (result === null && throwError === true) {
     throw new UserException(tag + ' tag is required');
   }
   return result;
@@ -51,8 +51,6 @@ export const buildFeedObject = (xmlString) => {
   const DOMPARSER = new DOMParser().parseFromString.bind(new DOMParser());
   let doc = DOMPARSER(xmlString, 'text/xml');
   
-  console.log( doc.querySelector('channel title').innerHTML );
-
   objToReturn.title = checkTag(doc, 'channel title', true);
   objToReturn.link = checkTag(doc, 'channel link', true);
   objToReturn.description = checkTag(doc, 'channel description');

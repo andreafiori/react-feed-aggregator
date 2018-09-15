@@ -25,8 +25,8 @@ class JobsGroupDetails extends Component {
       currentFeedsList: getNewsFeedsByGroup(JobsNewsFeeds, props.match.params.group),
       breadcrumbs: [
         { label: 'Jobs', href: '/jobs', title: 'Back to the jobs main page', active: false },
-        { label: currentNewsGroup.title, href: currentNewsGroup.path, title: currentNewsGroup.title, active: false },
-        { label: 'List', href: null, title: 'List', active: true },
+        { label: currentNewsGroup.title, href: currentNewsGroup.path ? currentNewsGroup.path : '', title: currentNewsGroup.title, active: false },
+        { label: currentFeed.label, href: null, title: 'List', active: true },
       ],
       newsFromApi: null,
       error: null,

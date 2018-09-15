@@ -24,9 +24,9 @@ class CyberSecurityGroupDetails extends Component {
       currentFeed: currentFeed,
       currentFeedsList: getNewsFeedsByGroup(CyberSecurityNewsFeeds, props.match.params.group),
       breadcrumbs: [
-        { label: 'Cyber Security', href: '/Cyber Security', title: 'Back to the Cyber Security news list', active: false },
+        { label: 'Cyber Security', href: '/cyber-security', title: 'Back to the Cyber Security news list', active: false },
         { label: currentNewsGroup.title, href: currentNewsGroup.path ? currentNewsGroup.path : '', title: currentNewsGroup.title, active: false },
-        { label: 'News list', href: null, title: 'News list', active: true },
+        { label: currentFeed.label, href: null, title: '', active: true },
       ],
       newsFromApi: null,
       error: null,
@@ -63,15 +63,19 @@ class CyberSecurityGroupDetails extends Component {
 
     if ( (slug !== this.state.slug || this.state.newsFromApi === null) && this.state.error === null) {
 
-      let currentFeedsLIst = getNewsFeedBySlug(this.state.currentFeedsList, slug);
+      let currentFeedsList = getNewsFeedBySlug(this.state.currentFeedsList, slug);
 
       let self = this;
-      callPromise(currentFeedsLIst.url)
+      callPromise(currentFeedsList.url)
         .then(function (response) {
+          let newsFromApi = buildFeedObject(response.data)
           self.setState({
             group: group,
             slug: slug,
-            newsFromApi: buildFeedObject(response.data),
+            newsFromApi: newsFromApi,
+            currentNewsGroup: getNewsGroupByKey(CyberSecurityNewsGroups, group),
+            currentFeed: currentFeedsList,
+            /* currentFeedsList: newsFromApi, */
             error: null,
           });
         })

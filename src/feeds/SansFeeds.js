@@ -67,11 +67,9 @@ export const SansNewsFeeds = [
 				label: 'Security Awareness Tip of the Day',
 				title: 'Security Awareness Tip of the Day',
 				path: '/cyber-security/sans/security-awareness-tip-of-the-day',
-				url: 'http://feeds2.feedburner.com/security-awareness-tip-of-the-day'
+				url: 'http://feeds2.feedburner.com/security-awareness-tip-of-the-day' // https://www.sans.org/tip-of-the-day/rss
 			},
-			// Other feeds are link \ not working
-
-
+			// Other feeds are not working
 			{
 				label: 'Free Upcoming Webcasts Feed',
 				title: 'Free Upcoming Webcasts Feed',
