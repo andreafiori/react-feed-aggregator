@@ -264,19 +264,113 @@ export const CyberSecurityWebsitesFeeds = [
 				website: 'https://heimdalsecurity.com/blog/',
 				url: 'https://heimdalsecurity.com/blog/feed'
 			}, 
+			{
+				label: 		'Seqrite Blog',
+				title: 		'Seqrite Blog RSS Feed',
+				path: 		'/cyber-security/websites/seqrite-blog',
+				website:	'https://blogs.seqrite.com/',
+				facebook: 'https://www.facebook.com/seqrite',
+				twitter: 	'https://twitter.com/Seqrite',
+				youtube: 	'https://www.youtube.com/channel/UCPgS-p40ag_l8i3mhMWW7Gg',
+				gplus: 		'https://plus.google.com/114969253508422817802/posts',
+				linkedin:	'https://www.linkedin.com/company/seqrite',
+				url: 			'https://blogs.seqrite.com/feed/',
+			},
+			{
+				label: 		'DataSunrise',
+				title: 		'DataSunrise RSS Feed',
+				path: 		'/cyber-security/websites/data-sunrise',
+				website:	'https://www.datasunrise.com/blog/',
+				facebook: 'https://www.facebook.com/datasunrise',
+				twitter: 	'https://twitter.com/datasunrise',
+				gplus: 		'https://plus.google.com/+Datasunrise-Database-Security-Suite/posts',
+				linkedin:	'https://www.linkedin.com/company/datasunrise-inc',
+				url: 			'https://www.datasunrise.com/feed',
+			},
+			{
+				label: 		'IT Security Central',
+				title: 		'IT Security Central RSS Feed',
+				path: 		'/cyber-security/websites/it-security-central',
+				website:	'https://itsecuritycentral.teramind.co/',
+				facebook: 'https://www.facebook.com/pages/Teramind/1523438361205247',
+				twitter: 	'https://twitter.com/teramindco',
+				youtube: 	'https://www.youtube.com/channel/UCSkRq9qTqFJyyjQdovb0-Lg',
+				gplus: 		'https://plus.google.com/+TeramindCo',
+				linkedin:	'https://www.linkedin.com/company/5090184?trk=tyah&trkInfo=tarId%3A1408638847886%2Ctas%3Ateramind%2Cidx%3A1-1-1',
+				url: 			'https://itsecuritycentral.teramind.co/feed',
+			},
+			{
+				label: 		'Lastline Cyber Security Blog',
+				title: 		'Lastline Cyber Security Blog | Malware Research & Analysis RSS Feed',
+				path: 		'/cyber-security/websites/last-line-blog',
+				website:	'https://www.lastline.com/blog/',
+				url: 			'https://www.lastline.com/category/blog/feed/',
+			},
+			{
+				label: 		'Cloudbric Blog',
+				title: 		'Cloudbric Blog | Website Protection RSS Feed',
+				path: 		'/cyber-security/websites/cloudbric',
+				website:	'https://www.cloudbric.com/blog/',
+				url: 			'https://www.cloudbric.com/feed',
+			},
+			{
+				label: 		'Hacking vision',
+				title: 		'Hacking Vision RSS Feed',
+				path: 		'/cyber-security/websites/hack-vision',
+				website:	'https://hackingvision.com/',
+				url: 			'https://hackingvision.com/feed',
+			},
+			{
+				label: 		'Hacker Combat',
+				title: 		'Hacker Combat | Cyber Security and Hacking News RSS Feed',
+				path: 		'/cyber-security/websites/hacker-combat',
+				website:	'https://www.hackercombat.com/',
+				url: 			'https://hackercombat.com/feed',
+			},
+			{
+				label: 		'Application and Cybersecurity Blog',
+				title: 		'Application and Cybersecurity Blog | Security Innovation RSS Feed',
+				path: 		'/cyber-security/websites/application-and-cybersecurity-blog',
+				website:	'https://blog.securityinnovation.com/',
+				url: 			'https://blog.securityinnovation.com/rss.xml',
+			},
+			{
+				label: 		'CloudMask Blog',
+				title: 		'CloudMask Blog RSS Feed',
+				path: 		'/cyber-security/websites/cloudmask-blog',
+				website:	'https://www.cloudmask.com/',
+				url: 			'https://www.cloudmask.com/blog/rss.xml',
+			},
+			{
+				label: 		'MyTopPosts | Cyber Security',
+				title: 		'MyTopPosts | Cyber Security RSS Feed',
+				path: 		'/cyber-security/websites/my-top-posts',
+				website:	'http://www.mytopposts.com/category/cyber-security',
+				url: 			'http://www.mytopposts.com/category/cyber-security/feed',
+			},
+			// Security weekly http://securityweekly.com/podcast/psw.xml | http://securityweekly.com/podcast/psw.xml
+			// Empty
 			/* {
-				label: '',
-				title: '',
-				path: '/cyber-security/websites/',
-				website: '',
+				label: 		'',
+				title: 		'',
+				path: 		'/cyber-security/websites/',
+				website:	'',
 				facebook: '',
-				twitter: '',
-				linkedin: '',
-				gplus: '',
-				url: ''
+				twitter: 	'',
+				youtube: 	'',
+				gplus: 		'',
+				linkedin:	'',
+				url: 			'',
 			}, */
 		]
 	},
+	// TODO: move some items here
+	/* {
+		title: 'Blogs',
+		feeds: [
+			
+		]
+	}, */
 	{
 		title: 'Antivirus',
 		feeds: [

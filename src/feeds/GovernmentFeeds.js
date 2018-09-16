@@ -43,6 +43,29 @@ export const GovernmentNewsFeeds = [
 				path: 		'/cyber-security/government/dni-gov',
 				url: 			'https://www.dni.gov/index.php/newsroom?format=feed&type=rss',
 			},
+			{
+				label: 		'IT Governance Blog',
+				title: 		'IT Governance Blog | Cyber Security RSS Feed',
+				path: 		'/cyber-security/government/it-governance-blog',
+				website:	'https://www.itgovernance.co.uk/blog/category/cyber-security/',
+				facebook: 'https://www.facebook.com/ITGovernanceLtd',
+				twitter: 	'https://twitter.com/ITGovernance',
+				youtube: 	'http://www.youtube.com/itgovernanceltd',
+				gplus: 		'https://plus.google.com/b/115408617138137442943/+ITGovernancecouk',
+				linkedin:	'https://www.linkedin.com/company/it-governance',
+				url: 			'https://www.itgovernance.co.uk/blog/feed/',
+			},
+			// NIST (goverment) https://www.nist.gov/ | https://www.nist.gov/pao/nist-rss-feeds
+			{
+				label: 		'National Cybersecurity Institute',
+				title: 		'National Cybersecurity Institute RSS Feed',
+				path: 		'/cyber-security/government/national-cybersecurity-institute',
+				website:	'http://www.nationalcybersecurityinstitute.org/',
+				facebook: 'https://www.facebook.com/pages/National-Cybersecurity-Institute/1422466254632382',
+				twitter: 	'https://twitter.com/nci_excelsior',
+				linkedin:	'https://www.linkedin.com/company/national-cybersecurity-institute?trk=company_name',
+				url: 			'http://www.nationalcybersecurityinstitute.org/feed',
+			},
 		]
 	},
 	{
@@ -77,5 +100,3 @@ export const GovernmentNewsFeeds = [
 		]
 	}
 ];
-
-// NIST (goverment) https://www.nist.gov/pao/nist-rss-feeds

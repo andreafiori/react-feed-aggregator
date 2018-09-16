@@ -21,13 +21,13 @@ export const PythonNewsFeeds = [
 		title: 'Websites',
 		feeds: [
 			/* {
-				label: 'Reedit Python',
-				title: 'Reedit Python',
+				label: 'Reddit Python',
+				title: 'Reddit Python',
 				path: '/software-development/python/reddit-Python',
 				website: '',
 				url: '',
 			},
-			// Use another RSS format
+			// TODO: check feed, it uses atom format
 			{
 				label: 'Python Software Foundation',
 				title: 'Python Software Foundation News RSS Feed',

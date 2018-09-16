@@ -4,7 +4,6 @@ import { formatDate } from '../api/DateUtils';
 class FeedsFromApi extends Component {
 	static defaultProps = {
 		currentFeed: null,
-		newsGroup: null,
 		newsFromApi: null,
 	}
 
@@ -12,7 +11,7 @@ class FeedsFromApi extends Component {
 
 		const { currentFeed, newsFromApi } = this.props;
 
-		if (this.props.newsFromApi !== null) {
+		if (newsFromApi.items &&  newsFromApi.items.length > 0) {
 			return (
 				<div>
 
@@ -89,7 +88,7 @@ class FeedsFromApi extends Component {
 						{ newsFromApi.items.map((item, i) => 
 							<div key={'news-item-link-'+i} className="feed-block">
 								<h3>
-									<a href={item.link} rel="noopener noreferrer" target="_blank">{item.title}</a>
+									<a href={item.link} rel="noopener noreferrer" target="_blank" title={item.title + ', read more'}>{item.title}</a>
 								</h3>
 								
 								<div><i className="fa fa-calendar"></i> <time>{ formatDate(item.pubDate) }</time></div>
@@ -104,6 +103,18 @@ class FeedsFromApi extends Component {
 							</div>
 						)}
 
+				</div>
+			);
+		} else {
+			return (
+				<div className="alert alert-warning">
+					<h3>No news to display</h3>
+					<p>No news to display at the moment. Please come back later.</p>
+					<div>
+						<a href={currentFeed.url} target="_blank" className="btn btn-sm btn-warning" rel="noopener noreferrer" title={currentFeed.label + ' RSS feed link'}>
+							<i className="fa fa-rss"></i> RSS
+						</a>
+					</div>
 				</div>
 			);
 		}

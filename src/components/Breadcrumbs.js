@@ -5,15 +5,25 @@ import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
 class Breadcrumbs extends Component {
 
   static defaultProps = {
-    breadcrumbs: []
+    elements: []
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      elements: this.props.elements
+      elements: this.props.elements,
+      elementsHasChanged: false,
     };
+  }
+
+  componentDidUpdate(prevProps) {
+    // NOT working because of async calls...
+    if (this.props.elements !== prevProps.elements) {
+      this.setState({
+        elements: this.props.elements,
+      });
+    }
   }
 
   render() {

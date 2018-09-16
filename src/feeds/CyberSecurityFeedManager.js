@@ -7,23 +7,23 @@ import { GovernmentNewsGroup, GovernmentNewsFeeds } from './GovernmentFeeds';
 import { TechWorldNewsGroup, TechWorldNewsFeeds } from './TechWorldFeeds';
 
 export const CyberSecurityNewsGroups = {
-	websites: CyberSecurityWebsitesNewsGroup,
-	'we-live-security': WeLiveSecurityNewsGroup,
-	government: GovernmentNewsGroup,
-	sans: SansNewsGroup,
-	darkreading: DarkreadingNewsGroup,
-	'tech-world': TechWorldNewsGroup,
-	// fortinet: FortinetNewsGroup,
-	'threat-post': ThreatPostNewsGroup,
+	'websites': 					CyberSecurityWebsitesNewsGroup,
+	'we-live-security':		WeLiveSecurityNewsGroup,
+	'government': 				GovernmentNewsGroup,
+	'sans': 							SansNewsGroup,
+	'darkreading': 				DarkreadingNewsGroup,
+	'tech-world': 				TechWorldNewsGroup,
+	'threat-post': 				ThreatPostNewsGroup,
+	// fortinet: 					FortinetNewsGroup,
 };
 
 export const CyberSecurityNewsFeeds = {
-	websites: CyberSecurityWebsitesFeeds,
-	'we-live-security': WeLiveSecurityNewsFeeds,
-	government: GovernmentNewsFeeds,
-	sans: SansNewsFeeds,
-	darkreading: DarkreadingNewsFeeds,
-	'tech-world': TechWorldNewsFeeds,
-	// fortinet: FortinetNewsFeeds, // TO REMOVE or Merge
-	'threat-post': ThreatPostNewsFeeds,
+	'websites': 					CyberSecurityWebsitesFeeds,
+	'we-live-security': 	WeLiveSecurityNewsFeeds,
+	'government': 				GovernmentNewsFeeds,
+	'sans': 							SansNewsFeeds,
+	'darkreading': 				DarkreadingNewsFeeds,
+	'tech-world': 				TechWorldNewsFeeds,
+	'threat-post': 				ThreatPostNewsFeeds,
+	// 'fortinet': 					FortinetNewsFeeds,
 };

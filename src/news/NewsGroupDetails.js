@@ -23,15 +23,20 @@ class NewsGroupDetails extends Component {
       currentNewsGroup: currentNewsGroup,
       currentFeed: currentFeed,
       currentFeedsList: getNewsFeedsByGroup(feeds, props.match.params.group),
-      breadcrumbs: [
-        { label: 'News', href: '/news', title: 'Back to the news main page', active: false },
-        { label: currentNewsGroup.title, href: currentNewsGroup.path ? currentNewsGroup.path : '', title: currentNewsGroup.title, active: false },
-        { label: currentFeed.label, href: null, title: '', active: true },
-      ],
+      breadcrumbs: this.setupBreadCrumbs(currentNewsGroup, currentFeed),
       newsFromApi: null,
       error: null,
     };
 
+  }
+
+  setupBreadCrumbs(newsGroup, feed) {
+    return [
+      { label: 'News', href: '/news', title: 'Back to the news main page', active: false },
+      { label: newsGroup.title, href: newsGroup.path ? newsGroup.path : '', title: newsGroup.title, active: false },
+      // { label: feed.label, href: null, title: '', active: true },
+      { label: 'News list', href: null, title: '', active: true },
+    ];
   }
 
   /**
@@ -68,11 +73,16 @@ class NewsGroupDetails extends Component {
       let self = this;
       callPromise(currentFeedsLIst.url)
         .then(function (response) {
+          const currentNewsGroup = getNewsGroupByKey(newsGroups, group);
+          const feedsByGroup = getNewsFeedsByGroup(feeds, group);
+          const currentFeed = getNewsFeedBySlug(feedsByGroup, slug);
+          const newBreadcrumbs = self.setupBreadCrumbs(currentNewsGroup, currentFeed);
           self.setState({
             group: group,
             slug: slug,
             newsFromApi: buildFeedObject(response.data),
             error: null,
+            breadcrumbs: newBreadcrumbs
           });
         })
         .catch(function (error) {
@@ -88,24 +98,6 @@ class NewsGroupDetails extends Component {
 
     // Scroll to top
     window.scrollTo(0, 0);
-  }
-
-  resetState(e) {
-    e.preventDefault();
-
-    console.log('Reset State?');
-
-    this.setState({
-      group: this.props.match.params.group,
-      slug: this.props.match.params.slug,
-      currentNewsGroup: null,
-      currentFeed: null,
-      currentFeedsList: null,
-      newsFromApi: null,
-      error: null
-    });
-
-    return true;
   }
 
   render() {
@@ -137,7 +129,7 @@ class NewsGroupDetails extends Component {
           </div>
 
           <div className="col-sm-12 col-md-4 col-lg-3">
-            <FeedsCategoryList resetState={this.resetState} items={currentFeedsList} />
+            <FeedsCategoryList items={currentFeedsList} />
           </div>
         </div>
 

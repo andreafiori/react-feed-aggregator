@@ -98,41 +98,51 @@ class CyberSecurityGroupDetails extends Component {
 
     const { currentFeed, currentNewsGroup, currentFeedsList, newsFromApi, breadcrumbs, error } = this.state;
 
-    return (
-      <div>
+    if (currentFeed) {
+      return (
+        <div>
 
-        <Breadcrumbs elements={breadcrumbs} />
+          <Breadcrumbs elements={breadcrumbs} />
 
-        <div className="row">
-          <div className="col-sm-12 col-md-8 col-lg-9">
- 
-            {error !== null &&
-              <div className="alert alert-danger">
-                <h3>Error occurred</h3>
-                <p>{ error.message }</p>
-                <a href={currentFeed.url} className="btn btn-sm btn-warning" target="_blank" rel="" title="">
-                  <i className="fa fa-rss"></i> Rss
-                </a>
-              </div>
-            }
+          <div className="row">
+            <div className="col-sm-12 col-md-8 col-lg-9">
+  
+              {error !== null &&
+                <div className="alert alert-danger">
+                  <h3>Error occurred</h3>
+                  <p>{ error.message }</p>
+                  <a href={currentFeed.url} className="btn btn-sm btn-warning" target="_blank" rel="" title="">
+                    <i className="fa fa-rss"></i> Rss
+                  </a>
+                </div>
+              }
 
-            {newsFromApi === null && error === null &&
-              <LoadingSpinner />
-            }
+              {newsFromApi === null && error === null &&
+                <LoadingSpinner />
+              }
 
-            {newsFromApi !== null &&
-              <FeedsFromApi currentFeed={currentFeed} newsGroup={currentNewsGroup} newsFromApi={newsFromApi} />
-            }
+              {newsFromApi !== null &&
+                <FeedsFromApi currentFeed={currentFeed} newsGroup={currentNewsGroup} newsFromApi={newsFromApi} />
+              }
+            </div>
+
+            <div className="col-sm-12 col-md-4 col-lg-3">
+              <FeedsCategoryList items={currentFeedsList} />
+            </div>
           </div>
 
-          <div className="col-sm-12 col-md-4 col-lg-3">
-            <FeedsCategoryList items={currentFeedsList} />
-          </div>
         </div>
 
-      </div>
-
-    );
+      );
+    } else {
+      return (
+        <div className="alert alert-warning">
+          <h3>Feed not found</h3>
+          <p>The newsgroup were not found; there is not news to display</p>
+        </div>
+      );
+    }
+    
   }
 
 }

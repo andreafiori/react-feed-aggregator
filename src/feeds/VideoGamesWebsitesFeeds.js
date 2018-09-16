@@ -1,11 +1,11 @@
 export const VideoGamesWebsitesNewsGroup = {
 	image:        'videogames-websites.gif',
-	title:        'VideoGamesWebsites',
+	title:        'Videogames Websites',
 	description:  'Videogames websites and news',
 	group:        'videogames',
 	category:     'World',
 	path:         '/videogames/websites',
-	country:      'World',
+	country:      'Videogames',
 	website:      '',
 	youtube:      '',
 	facebook:     '',
@@ -21,15 +21,18 @@ export const VideoGamesWebsitesFeeds = [
 		feeds: [
 			{
 				label: 'Kotaku',
-				title: '',
-				path: '/videogames/websites/',
-				url: ''
+				title: 'Kotaku RSS Feeds',
+				path: '/videogames/websites/kotaku',
+				facebook: 'https://facebook.com/kotaku',
+				twitter: 'https://twitter.com/kotaku',
+				youtube: 'https://www.youtube.com/user/KotakuNYC',
+				url: 'https://kotaku.com/rss'
 			},
 			{
 				label: 'The Games Machine',
-				title: '',
+				title: 'The Games Machine RSS feed',
 				path: '/videogames/websites/the-games-machine',
-				url: ''
+				url: 'https://www.thegamesmachine.it/feed/'
 			},
 		]
 	}
