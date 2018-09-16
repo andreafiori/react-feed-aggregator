@@ -119,6 +119,60 @@ export const AutoSportNewsFeeds = [
 				path: '/sport/autosport/reviews',
 				url: '',
 			},
+			{
+				label: 'Autosport Show',
+				title: 'Autosport Show RSS Feed',
+				path: '/sport/autosport/autosport-show',
+				url: '',
+			},
+			{
+				label: 'National',
+				title: 'National RSS Feed',
+				path: '/sport/autosport/national',
+				url: '',
+			},
+			{
+				label: 'World Endurance Championship',
+				title: 'World Endurance Championship RSS Feed',
+				path: '/sport/autosport/world-endurance-championship',
+				url: '',
+			},
+			{
+				label: 'DTM',
+				title: 'DTM RSS Feed',
+				path: '/sport/autosport/dtm',
+				url: '',
+			},
+			{
+				label: 'IndyCar',
+				title: 'IndyCar RSS Feed',
+				path: '/sport/autosport/indycar',
+				url: '',
+			},
+			{
+				label: 'GT',
+				title: 'GT RSS Feed',
+				path: '/sport/autosport/gt',
+				url: '',
+			},
+			{
+				label: 'World Touring Car Cup',
+				title: 'World Touring Car Cup RSS Feed',
+				path: '/sport/autosport/gt',
+				url: '',
+			},
+			{
+				label: 'FV8 3.5',
+				title: 'FV8 3.5RSS Feed',
+				path: '/sport/autosport/fv-835',
+				url: '',
+			},
+			{
+				label: 'Supercars',
+				title: 'FV8 3.5RSS Feed',
+				path: '/sport/autosport/fv-835',
+				url: '',
+			},
 		]
 	}
 ];
