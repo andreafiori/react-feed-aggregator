@@ -76,14 +76,16 @@ export const PythonNewsFeeds = [
 				path: '/software-development/python/pycharm-blog',
 				website: 'https://blog.jetbrains.com/pycharm/',
 				url: 'https://blog.jetbrains.com/pycharm/feed',
-      },
-			{
+			},
+			// Atom format...
+			/* {
 				label: 'Planet SciPy',
 				title: 'Planet SciPy RSS Feed',
 				path: '/software-development/python/planet-scipy',
 				website: 'https://planet.scipy.org/',
-				url: 'http://planet.scipy.org/atom.xml?format=xml',
-      },
+				atomFormat: true,
+				url: 'http://planet.scipy.org/atom.xml',
+      }, */
 			{
 				label: 'Python – Red Hat Developer Blog',
 				title: 'Python – Red Hat Developer Blog RSS Feed',

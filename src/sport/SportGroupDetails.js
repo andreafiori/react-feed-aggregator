@@ -101,7 +101,7 @@ class SportGroupDetails extends Component {
 
         <div className="row">
           <div className="col-sm-12 col-md-8 col-lg-9">
- 
+
             {error !== null &&
               <div className="alert alert-danger">
                 <h3>Error occurred</h3>

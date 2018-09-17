@@ -141,6 +141,7 @@ class App extends Component {
       isOpen: false,
       routes: [
         { path: `${process.env.PUBLIC_URL}/news`, text: "News", isActive: false, title: "News and magazine" },
+        { path: `${process.env.PUBLIC_URL}/open-weather`, text: "Weather", isActive: false, title: "" },
         { path: `${process.env.PUBLIC_URL}/sport`, text: "Sport", isActive: false, title: "Sport news" },
         { path: `${process.env.PUBLIC_URL}/software-development`, text: "Software Development", isActive: false, title: "Software Development news" },
         { path: `${process.env.PUBLIC_URL}/cyber-security`, text: "Cyber Security", isActive: false, title: "Cyber Security news" },

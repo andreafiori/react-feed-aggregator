@@ -43,7 +43,7 @@ class OpenWeatherContainer extends Component {
     return (
 
       <div>
-         <div className="wrapper">
+        <div className="wrapper">
           <div className="main">
             <div className="container">
               <div className="row">

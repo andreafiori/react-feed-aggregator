@@ -2,6 +2,16 @@ import React from "react";
 
 class OpenWeatherForm extends React.Component {
 
+  constructor(props) {
+    super(props);
+    
+    this.state = {
+      breadcrumbs: [
+        { label: 'Weather', href: null, title: null, active: true }
+      ]
+    };
+  }
+
   render() {
     return (
       <form onSubmit={this.props.loadWeather} className="form-inline">

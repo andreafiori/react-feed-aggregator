@@ -1,9 +1,26 @@
 import React, { Component } from 'react';
+import Breadcrumbs from './Breadcrumbs';
 
 class About extends Component {
+
+  constructor(props) {
+    super(props);
+    
+    this.state = {
+      breadcrumbs: [
+        { label: 'About', href: null, title: null, active: true }
+      ]
+    };
+  }
+
   render() {
+
+    const { breadcrumbs } = this.state;
+
     return (
       <div>
+        <Breadcrumbs elements={breadcrumbs} />
+
         <h2>News Feed Aggregator</h2>
         <p>A ReactJS project to parse an RSS feed. You can easily select a newsgroup and the realted news category you want to read.</p>
         

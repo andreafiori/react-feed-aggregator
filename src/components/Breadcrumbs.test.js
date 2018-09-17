@@ -7,3 +7,7 @@ it('renders without crashing', () => {
   ReactDOM.render(<Breadcrumbs />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
+
+it('renders with elements', () => {
+  
+});
