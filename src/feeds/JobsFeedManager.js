@@ -6,15 +6,14 @@ export const JobsNewsGroups = {
   'jobs-ac-uk': JobsAcUkNewsGroup,
 };
 
-// List https://blog.feedspot.com/career_rss_feeds/
+/*
+  List https://blog.feedspot.com/career_rss_feeds/
+  'work-it-daily': https://www.workitdaily.com/blog/feed/
+  'ask-a-manager': http://www.askamanager.org/feed/
+  'personal-branding': http://www.personalbrandingblog.com/feed/ http://feeds.feedburner.com/personalbrandingblog?format=xml
+  Monster Honk Kong https://www.monster.com.hk/jobsearch/rss-feed.html
+*/
 export const JobsNewsFeeds = {
   'work-in-startups-com': WorkInStartupsFeeds,
   'jobs-ac-uk': JobsAcUkNewsFeeds,
-  /*
-  'work-it-daily': https://www.workitdaily.com/blog/feed/
-  'ask-a-manager': http://www.askamanager.org/feed
-  'personal-branding': http://www.personalbrandingblog.com/feed/ http://feeds.feedburner.com/personalbrandingblog?format=xml
-  Monster Honk Kong https://www.monster.com.hk/jobsearch/rss-feed.html
-  https://www.jobs.ac.uk/feeds
-  */
 };

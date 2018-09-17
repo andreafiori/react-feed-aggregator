@@ -23,15 +23,37 @@ class VideoGamesGroupDetails extends Component {
       currentNewsGroup: currentNewsGroup,
       currentFeed: currentFeed,
       currentFeedsList: getNewsFeedsByGroup(VideogamesNewsFeeds, props.match.params.group),
-      breadcrumbs: [
-        { label: 'News', href: '/news', title: 'Back to the news main page', active: false },
-        { label: currentNewsGroup.title, href: currentNewsGroup.path, title: currentNewsGroup.title, active: false },
-        { label: 'Feeds', href: null, title: 'Feeds', active: true },
-      ],
+      breadcrumbs: this.setupBreadcrumbs(currentNewsGroup),
       newsFromApi: null,
       error: null,
     };
 
+  }
+  
+  setupBreadcrumbs(newsGroup) {
+    let breadcrumbs = [
+      { label: 'News', href: '/news', title: 'Back to the news main page', active: false },
+    ];
+
+    if (newsGroup) {
+      breadcrumbs.push({
+        label: newsGroup.title,
+        href: newsGroup.path,
+        title: newsGroup.title,
+        active: false
+      });
+
+      breadcrumbs.push({
+        label: 'News list',
+        href: '',
+        title: '',
+        active: true
+      });
+    } else {
+      breadcrumbs.push({label: 'Error', active: true});
+    }
+
+    return breadcrumbs;
   }
 
   /**
@@ -92,7 +114,14 @@ class VideoGamesGroupDetails extends Component {
 
   render() {
 
-    const { currentFeed, currentNewsGroup, currentFeedsList, newsFromApi, breadcrumbs, error } = this.state;
+    const {
+      currentFeed,
+      currentNewsGroup,
+      currentFeedsList,
+      newsFromApi,
+      breadcrumbs,
+      error
+    } = this.state;
 
     return (
       <div>

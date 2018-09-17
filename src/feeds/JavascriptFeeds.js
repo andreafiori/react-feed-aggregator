@@ -1,7 +1,7 @@
 export const JavascriptNewsGroup = {
   image:        'javascript-rss.gif',
 	title:        'Javascript News',
-	description:  'Javascript RSS feeds',
+	description:  'Latest news from the best frontend websites and developers',
 	group:        'javascript',
 	category:     'Frontend',
 	path:         '/software-development/javascript',
@@ -35,7 +35,7 @@ export const JavascriptNewsFeeds = [
       },
 			{
 				label: 'JSFeeds.com',
-				title: 'Sitepoint Javascript',
+				title: 'JSFeeds.com from Sitepoint Javascript',
         path: '/software-development/javascript/sitepoint-javascript',
         website: 'http://www.jsfeeds.com/',
 				url: 'http://jsfeeds.com/feed',
@@ -86,13 +86,6 @@ export const JavascriptNewsFeeds = [
         website: 'https://www.emberjs.com/',
 				url: 'https://www.emberjs.com/blog/feed.xml?format=xml',
       },
-      /* {
-				label: 'JSConf',
-				title: 'Latest article from JSConf',
-        path: '/software-development/javascript/js-conf',
-        website: 'https://www.youtube.com/feeds/videos.xml?user=jsconfeu',
-				url: 'https://www.youtube.com/user/jsconfeu/videos',
-      }, */
       {
 				label: '2ality JS and more',
 				title: 'Latest article from 2ality',

@@ -1,6 +1,5 @@
 
-
-export const formatDate = function(dt) {
+export const formatDate = (dt) => {
 	let currentDate = new Date(dt);
 	let dd = currentDate.getDate();
 	

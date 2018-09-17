@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import { truncateString } from '../api/StringUtils';
 
-/**
- * News Group list
- * 
- * TODO: validate news groups input
- */
 class NewsList extends Component {
   static defaultProps = {
     newsGroups: null,
@@ -27,7 +23,7 @@ class NewsList extends Component {
 
     return (
       <div>
-        { newsGroups.length > 0 && 
+        { newsGroups && newsGroups.length > 0 && 
           <div className="row">
             { newsGroups.map((item, i) =>
               <div className={'col-sm-12 col-md-' + columnSize + ' col-lg-' + columnSize} key={'newsgroup-' + i}>
@@ -40,7 +36,7 @@ class NewsList extends Component {
                     <h3 className="mb-0">
                       <Link to={item.path} className="text-dark">{item.title}</Link>
                     </h3>
-                    <p className="card-text mb-auto">{item.description}</p>
+                    <p className="card-text mb-auto">{ truncateString(item.description, 15) }...</p>
                     <Link to={item.path} className="btn btn-sm btn-primary">&raquo; Read news</Link>
                   </div>
                 </div>
@@ -49,7 +45,7 @@ class NewsList extends Component {
           </div>
         }
 
-        { (!newsGroups.length || newsGroups.length === 0) &&
+        { (!newsGroups || !newsGroups.length || newsGroups.length === 0) &&
           <div className="alert alert-warning">
             <h3>No news group were found</h3>
             <p>Please come back later. We will add new feeds ASAP.</p>
