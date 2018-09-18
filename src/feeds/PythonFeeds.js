@@ -111,7 +111,7 @@ export const PythonNewsFeeds = [
 				label: 'Python Tips',
 				title: 'Python Tips | Your daily dose of bite sized python tips RSS Feed',
 				path: '/software-development/python/python-tips',
-				website: 'https://pythontips.com/',
+				website: 'https://www.pythontips.com/',
 				url: 'https://pythontips.com/feed',
       },
 			{

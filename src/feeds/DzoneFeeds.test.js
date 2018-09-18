@@ -1,10 +1,10 @@
-import {  } from './DzoneFeeds';
+
+import { isArraysEqual, isObjectsEqual } from './../utils/ArrayUtils';
 
 const assert = require('assert');
 
 describe('Dzone feeds test', function() {
-  // TODO check dzone object values: no doubles path or urls, check required keys
-  /* it('', () => {
-    assert( result === expected );
+  /* it('test arrays are the same', () => {
+    assert();
   }); */
 });

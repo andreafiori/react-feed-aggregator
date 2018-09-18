@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { formatDate } from '../api/DateUtils';
+import { formatDate } from '../utils/DateUtils';
 
 class FeedsFromApi extends Component {
   static defaultProps = {

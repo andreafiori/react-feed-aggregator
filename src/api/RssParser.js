@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { stripTagsAndCData } from './StringUtils.js';
+import { stripTagsAndCData } from '../utils/StringUtils';
 
 function UserException(message) {
   this.message = message;

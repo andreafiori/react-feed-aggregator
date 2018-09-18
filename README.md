@@ -88,7 +88,7 @@ Single file:
 - Routing https://www.turtle-techies.com/post/react-navbar-with-bootstrap-4/
 - Navbar https://github.com/asafg6/react-bootstrap-navbar-example
 - https://stackoverflow.com/questions/651563/getting-the-last-element-of-a-split-string-array/651646
-- 
+- Compare JS objects http://xahlee.info/js/js_comparison_equality_test_objects.html
 
 ## Additional dependencies
 

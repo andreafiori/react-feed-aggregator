@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import { truncateString } from '../api/StringUtils';
+import { truncateString } from '../utils/StringUtils';
 
 class NewsList extends Component {
   static defaultProps = {

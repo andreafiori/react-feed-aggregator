@@ -42,7 +42,8 @@ export const JavascriptNewsFeeds = [
       },
 			{
 				label: 'EchoJS.com',
-				title: 'EchoJS.com',
+        title: 'EchoJS.com',
+        hideDescription: true,
         path: '/software-development/javascript/echojs-com',
         website: 'https://echojs.com/',
 				url: 'https://echojs.com/rss',
