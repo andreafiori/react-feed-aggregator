@@ -9,5 +9,11 @@ it('renders without crashing', () => {
 });
 
 it('renders with elements', () => {
-  
+  const div = document.createElement('div');
+  const breadcrumbs = [
+    { label: 'Section', href: '/', title: 'Section description', active: false },
+    { label: 'Example', href: null, title: null, active: true }
+  ];
+  ReactDOM.render(<Breadcrumbs elements={breadcrumbs} />, div);
+  ReactDOM.unmountComponentAtNode(div);
 });

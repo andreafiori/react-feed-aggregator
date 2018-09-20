@@ -5,7 +5,7 @@ import { StringUtils } from '../utils/StringUtils';
 export class RssParser {
 
   constructor() {
-    this.objToReturn = {
+    this.domObject = {
       image: null,
       title: null,
       description: null,
@@ -55,10 +55,10 @@ export class RssParser {
 
     let doc = this.DOMPARSER(xmlString, 'text/xml');
     
-    this.objToReturn.title = this.checkTag(doc, 'channel title', true);
-    this.objToReturn.link = this.checkTag(doc, 'channel link', true);
-    this.objToReturn.description = this.checkTag(doc, 'channel description');
-    this.objToReturn.image = this.checkTag(doc, 'channel image url');
+    this.domObject.title = this.checkTag(doc, 'channel title', true);
+    this.domObject.link = this.checkTag(doc, 'channel link', true);
+    this.domObject.description = this.checkTag(doc, 'channel description');
+    this.domObject.image = this.checkTag(doc, 'channel image url');
   
     // Gather items values
     doc.querySelectorAll('item').forEach((item) => {
@@ -67,7 +67,7 @@ export class RssParser {
       const pubDateTag = i('pubDate');
       const pubDate = (pubDateTag) ? pubDateTag.textContent : null;
   
-      this.objToReturn.items.push({
+      this.domObject.items.push({
         title:        this.checkTagItem(i, 'title'),
         link:         i('link').textContent,
         description:  this.checkTagItem(i, 'description'),
@@ -76,7 +76,7 @@ export class RssParser {
   
     });
   
-    return this.objToReturn;
+    return this.domObject;
   }
 
   /**
