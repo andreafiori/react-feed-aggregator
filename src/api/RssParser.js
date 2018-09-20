@@ -1,77 +1,106 @@
 import axios from 'axios';
-import { stripTagsAndCData } from '../utils/StringUtils';
+import { UserException } from '../utils/Exceptions';
+import { StringUtils } from '../utils/StringUtils';
 
-function UserException(message) {
-  this.message = message;
-  this.name = 'UserException';
-}
+export class RssParser {
 
-/**
- * Check if there is an error on doc selector tag
- * 
- * @param {object} i 
- * @param {string} tag
- */
-function checkTagItem(i, tag) {
-  try {
-    return stripTagsAndCData( i(tag).textContent );
-  } catch(e) {
-    // Log error
-    console.log('CheckTagItem error:');
-    console.log('Tag: ' + tag);
-    console.log(e);
-  }
-}
-
-function checkTag(domParser, tag, throwError) {
-  const tagToCheck = domParser.querySelector(tag);
-  const result = (tagToCheck) ? stripTagsAndCData(tagToCheck.innerHTML) : null;
-  if (result === null && throwError === true) {
-    throw new UserException(tag + ' tag is required');
-  }
-  return result;
-}
-
-export const callPromise = (url) => {
-  return axios.get(url);
-}
-
-// TODO: feed atom parser
-export const buildFeedObject = (xmlString) => {
-
-  // Default static object
-  let objToReturn = {
-    image: null,
-    title: null,
-    description: null,
-    link: null,
-    items: []
-  };
-
-  const DOMPARSER = new DOMParser().parseFromString.bind(new DOMParser());
-  let doc = DOMPARSER(xmlString, 'text/xml');
+  constructor() {
+    this.objToReturn = {
+      image: null,
+      title: null,
+      description: null,
+      link: null,
+      items: []
+    };
   
-  objToReturn.title = checkTag(doc, 'channel title', true);
-  objToReturn.link = checkTag(doc, 'channel link', true);
-  objToReturn.description = checkTag(doc, 'channel description');
-  objToReturn.image = checkTag(doc, 'channel image url');
+    this.DOMPARSER = new DOMParser().parseFromString.bind(new DOMParser());
+  }
 
-  // RSS Items
-  doc.querySelectorAll('item').forEach((item) => {
-    let i = item.querySelector.bind(item);
+  // Check if there is an error on doc selector tag
+  checkTagItem(i, tag) {
+    try {
+      return StringUtils.stripTagsAndCData( i(tag).textContent );
+    } catch(e) {
+      // Log error
+      /*
+      console.log('CheckTagItem error:');
+      console.log('Tag: ' + tag);
+      console.log(e);
+      */
+    }
+  }
 
-    const pubDateTag = i('pubDate');
-    const pubDate = (pubDateTag) ? pubDateTag.textContent : null;
+  checkTag(domParser, tag, throwError) {
+    const tagToCheck = domParser.querySelector(tag);
+    const result = (tagToCheck) ? StringUtils.stripTagsAndCData(tagToCheck.innerHTML) : null;
+    if (result === null && throwError === true) {
+      throw new UserException(tag + ' tag is required');
+    }
+    return result;
+  }
 
-    // TODO validate object before push...
-    objToReturn.items.push({
-      title: checkTagItem(i, 'title'),
-      link: i('link').textContent,
-      description: checkTagItem(i, 'description'),
-      pubDate: pubDate
+  callPromise(url) {
+    return axios.get(url);
+  }
+
+  parseRssXmlString(xmlString, isAtomFormat = false) {
+    return (isAtomFormat === true) ? this.parseFeedAtomFormat(xmlString) : this.parseFeedRss(xmlString);
+  }
+
+  /**
+   * RSS format XML string parser
+   * @param {*} xmlString 
+   */
+  parseFeedRss(xmlString) {
+
+    let doc = this.DOMPARSER(xmlString, 'text/xml');
+    
+    this.objToReturn.title = this.checkTag(doc, 'channel title', true);
+    this.objToReturn.link = this.checkTag(doc, 'channel link', true);
+    this.objToReturn.description = this.checkTag(doc, 'channel description');
+    this.objToReturn.image = this.checkTag(doc, 'channel image url');
+  
+    // Gather items values
+    doc.querySelectorAll('item').forEach((item) => {
+      let i = item.querySelector.bind(item);
+  
+      const pubDateTag = i('pubDate');
+      const pubDate = (pubDateTag) ? pubDateTag.textContent : null;
+  
+      this.objToReturn.items.push({
+        title:        this.checkTagItem(i, 'title'),
+        link:         i('link').textContent,
+        description:  this.checkTagItem(i, 'description'),
+        pubDate:      pubDate
+      });
+  
     });
+  
+    return this.objToReturn;
+  }
 
-  });
-
-  return objToReturn;
+  /**
+   * Atom RSS format XML string parser 
+   * @param {*} xmlString 
+   */
+  static parseFeedAtomFormat(xmlString) {
+    let doc = this.DOMPARSER(xmlString, 'text/xml');
+    
+    this.objToReturn.title = this.checkTag(doc, 'feed title', true);
+    this.objToReturn.link = this.checkTag(doc, 'feed link', true);
+  
+    // Gather entry values
+    doc.querySelectorAll('entry').forEach((item) => {
+      let i = item.querySelector.bind(item);
+  
+      this.objToReturn.items.push({
+        title:        this.checkTagItem(i, 'title'),
+        link:         i('link').textContent,
+        description:  null,
+      });
+  
+    });
+  
+    return this.objToReturn;
+  }
 }

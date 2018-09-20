@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import { truncateString } from '../utils/StringUtils';
+import { StringUtils } from '../utils/StringUtils';
 
 class NewsList extends Component {
   static defaultProps = {
@@ -36,7 +36,7 @@ class NewsList extends Component {
                     <h3 className="mb-0">
                       <Link to={item.path} className="text-dark">{item.title}</Link>
                     </h3>
-                    <p className="card-text mb-auto">{ truncateString(item.description, 15) }...</p>
+                    <p className="card-text mb-auto">{ StringUtils.truncateString(item.description, 15) }...</p>
                     <Link to={item.path} className="btn btn-sm btn-primary">&raquo; Read news</Link>
                   </div>
                 </div>

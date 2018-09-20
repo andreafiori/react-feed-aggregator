@@ -73,6 +73,60 @@ export const CnnNewsFeeds = [
 				path: '/news/cnn/science-and-space',
 				url: 'http://rss.cnn.com/rss/edition_space.rss'
 			},
+			{
+				label: 'Entertainment',
+				title: 'CNN Entertainment news',
+				path: '/news/cnn/entertainment',
+				url: 'http://rss.cnn.com/rss/edition_entertainment.rss'
+			},
+			{
+				label: 'World Sport',
+				title: 'CNN World Sport news',
+				path: '/news/cnn/world-sport',
+				url: 'http://rss.cnn.com/rss/edition_sport.rss'
+			},
+			{
+				label: 'Football',
+				title: 'CNN Football news',
+				path: '/news/cnn/world-sport',
+				url: 'http://rss.cnn.com/rss/edition_football.rss'
+			},
+			{
+				label: 'Golf',
+				title: 'CNN Golf news',
+				path: '/news/cnn/golf',
+				url: 'http://rss.cnn.com/rss/edition_golf.rss'
+			},
+			{
+				label: 'Motorsport',
+				title: 'CNN Motorsport news',
+				path: '/news/cnn/motorsport',
+				url: 'http://rss.cnn.com/rss/edition_motorsport.rss'
+			},
+			{
+				label: 'Tennis',
+				title: 'CNN Tennis news',
+				path: '/news/cnn/tennis',
+				url: 'http://rss.cnn.com/rss/edition_tennis.rss'
+			},
+			{
+				label: 'Travel',
+				title: 'CNN Travel news',
+				path: '/news/cnn/travel',
+				url: 'http://rss.cnn.com/rss/edition_travel.rss'
+			},
+			{
+				label: 'Video',
+				title: 'CNN Travel news',
+				path: '/news/cnn/video',
+				url: 'http://rss.cnn.com/rss/cnn_freevideo.rss'
+			},
+			{
+				label: 'Most Recent',
+				title: 'CNN Most Recent news',
+				path: '/news/cnn/most-recent',
+				url: 'http://rss.cnn.com/rss/cnn_latest.rss'
+			},
 		]
 	
 	}

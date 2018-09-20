@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { callPromise, buildFeedObject } from '../api/RssParser.js';
+import { RssParser } from '../api/RssParser.js';
 import { getNewsFeedBySlug, getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager.js';
 import { newsGroups, feeds } from '../feeds/NewsFeedManager.js';
 import FeedsCategoryList from '../components/FeedsCategoryList.js';
@@ -26,6 +26,7 @@ class NewsGroupDetails extends Component {
       breadcrumbs: this.setupBreadCrumbs(currentNewsGroup, currentFeed),
       newsFromApi: null,
       error: null,
+      rssParser: new RssParser(),
     };
 
   }
@@ -63,15 +64,15 @@ class NewsGroupDetails extends Component {
   }
 
   setupCurrentNewsGroup() {
-    let slug = this.props.match.params.slug;
-    let group = this.props.match.params.group;
+    const {slug, group} = this.props.match.params;
+    const {rssParser} = this.state;
 
     if ( (slug !== this.state.slug || this.state.newsFromApi === null) && this.state.error === null) {
 
       let currentFeedsLIst = getNewsFeedBySlug(this.state.currentFeedsList, slug);
 
       let self = this;
-      callPromise(currentFeedsLIst.url)
+      rssParser.callPromise(currentFeedsLIst.url)
         .then(function (response) {
           const currentNewsGroup = getNewsGroupByKey(newsGroups, group);
           const feedsByGroup = getNewsFeedsByGroup(feeds, group);
@@ -80,7 +81,7 @@ class NewsGroupDetails extends Component {
           self.setState({
             group: group,
             slug: slug,
-            newsFromApi: buildFeedObject(response.data),
+            newsFromApi: rssParser.parseFeedRss(response.data),
             error: null,
             breadcrumbs: newBreadcrumbs
           });
@@ -102,7 +103,14 @@ class NewsGroupDetails extends Component {
 
   render() {
 
-    const { currentFeed, currentNewsGroup, currentFeedsList, newsFromApi, breadcrumbs, error } = this.state;
+    const {
+      currentFeed,
+      currentNewsGroup,
+      currentFeedsList,
+      newsFromApi,
+      breadcrumbs,
+      error
+    } = this.state;
 
     return (
       <div>

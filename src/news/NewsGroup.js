@@ -22,28 +22,66 @@ class NewsGroup extends Component {
     };
   }
 
+  setupBreadCrumbs(newsGroup) {
+    let breadcrumbs = [
+      { label: 'News', href: '/news', title: 'Back to news feeds main page', active: false },
+    ];
+
+    if (newsGroup) {
+      breadcrumbs.push({
+        label: newsGroup.title,
+        href: null,
+        title: null,
+        active: true
+      });
+    } else {
+      breadcrumbs.push({
+        label: 'No newsgroup',
+        href: null,
+        title: null,
+        active: true
+      });
+    }
+
+    return breadcrumbs;
+  }
+
   render() {
 
     const { group, feeds, breadcrumbs } = this.state;
 
-    return (
-      <div>
-
-        <Breadcrumbs elements={breadcrumbs} />
-
-        <div className="row">
-          <div className="col-sm-12 col-md-12 col-lg-9">
-            <NewsGroupList group={group} />
+    if (group) {
+      return (
+        <div>
+  
+          <Breadcrumbs elements={breadcrumbs} />
+  
+          <div className="row">
+            <div className="col-sm-12 col-md-12 col-lg-9">
+              <NewsGroupList group={group} />
+            </div>
+  
+            <div className="col-sm-12 col-md-12 col-lg-3">
+              <FeedsCategoryList items={feeds} />
+            </div>
           </div>
-
-          <div className="col-sm-12 col-md-12 col-lg-3">
-            <FeedsCategoryList items={feeds} />
-          </div>
+  
         </div>
+      );
+    } else {
+      return (
+        <div>
+          <Breadcrumbs elements={breadcrumbs} />
 
-      </div>
+          <div className="alert alert-warning">
+            <h3>No news group</h3>
+            <p>The selected newsgroup were not found.</p>
+          </div>
 
-    );
+        </div>
+      );
+    }
+    
   }
 
 }

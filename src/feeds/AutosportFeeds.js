@@ -48,7 +48,7 @@ export const AutoSportNewsFeeds = [
 				url: 'https://www.autosport.com/rss/feed/wrc',
 			},
 			{
-				label: 'WNASCAR',
+				label: 'NASCAR',
 				title: 'Autosport - NASCAR RSS Feed',
 				path: '/sport/autosport/nascar',
 				url: 'https://www.autosport.com/rss/feed/nascar',

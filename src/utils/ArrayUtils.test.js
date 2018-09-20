@@ -1,4 +1,4 @@
-import { isArraysEqual, isObjectsEqual } from './ArrayUtils';
+import { ArrayUtils } from './ArrayUtils';
 
 const assert = require('assert');
 
@@ -26,11 +26,11 @@ describe('ArrayUtils test', function() {
     // Remove last array element
     sampleArrayOne.splice(-1, 1);
 
-    assert( isArraysEqual(sampleArrayOne, sampleArrayTwo) );
+    assert( ArrayUtils.areArraysEqual(sampleArrayOne, sampleArrayTwo) );
   });
 
   it('test arrays are NOT the same', () => {
-    assert( !isArraysEqual(sampleArrayOne, sampleArrayTwo) );
+    assert( !ArrayUtils.areArraysEqual(sampleArrayOne, sampleArrayTwo) );
   });
 
 });

@@ -20,15 +20,19 @@ class CyberSecurity extends Component {
         { label: 'Threat Cloud Attack Map', href: 'https://threatmap.checkpoint.com/ThreatPortal/livemap.html', title: 'Threat Cloud Attack Map'},
       ],
       training: [
-        { label: 'CompTIA', href: '', title: ''},
-        { label: 'Cybrary', href: '', title: ''},
-        { label: 'ElearnSecurity', href: '', title: ''},
+        { label: 'CompTIA', href: 'https://www.comptia.org/', title: 'Go to the CompTIA website'},
+        { label: 'Cybrary', href: 'https://www.cybrary.it/', title: ''},
+        { label: 'E-learn Security', href: 'http://www.elearnsecurity.com/', title: ''},
       ],
       certifications: [
-        { label: 'CEH', href: '', title: ''},
-        { label: 'Sans', href: '', title: ''},
-        { label: 'GIAC', href: '', title: ''},
-        { label: 'Tiger Scheme', href: '', title: ''},
+        { label: 'CEH', href: 'https://www.eccouncil.org/', title: ''},
+        { label: 'Sans', href: 'https://www.sans.org/', title: ''},
+        { label: 'GIAC', href: 'https://www.giac.org/', title: ''},
+        { label: 'CREST', href: 'http://www.crest-approved.org/', title: ''},
+        { label: 'Tiger Scheme', href: 'https://www.tigerscheme.org/', title: ''},
+        { label: 'Mile 2', href: 'https://mile2.com/', title: ''},
+        { label: 'ISC 2', href: 'http://www.isc2.org/', title: ''},
+        { label: 'Isaca', href: 'http://www.isaca.org/', title: ''},
       ]
     };
 

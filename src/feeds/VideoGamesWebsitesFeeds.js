@@ -60,21 +60,21 @@ export const VideoGamesWebsitesFeeds = [
         label: 'Xbox Live\'s Major Nelson',
         title: 'Xbox Live\'s Major Nelson RSS Feed',
         path: '/videogames/websites/xbox-live-major-nelson',
-        website: '',
+        website: 'https://majornelson.com/',
         /* facebook: '',
         twitter: '',
         youtube: '', */
-        url: ''
+        url: 'https://majornelson.com/feed'
       },
       {
         label: 'VG247',
         title: 'XVG247 RSS Feed',
         path: '/videogames/websites/xbox-live-major-nelson',
-        website: '',
+        website: 'http://www.vg247.com/',
         /* facebook: '',
         twitter: '',
         youtube: '', */
-        url: ''
+        url: 'http://www.vg247.com/feed/'
       },
       {
         label: 'Eurogamer',
@@ -106,126 +106,129 @@ export const VideoGamesWebsitesFeeds = [
         youtube: '',
         url: 'https://feeds.feedburner.com/Destructoid-Rss'
       },
-      {
+      // Youtube channel
+      /* {
         label: 'GameTrailers',
         title: 'GameTrailers RSS Feed',
         path: '/videogames/websites/',
-        website: '',
+        website: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCJx5KP-pCUmL9eZUv-mIcNw',
         facebook: '',
         twitter: '',
         youtube: '',
-        url: ''
-      },
+        url: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCJx5KP-pCUmL9eZUv-mIcNw'
+      }, */
       {
         label: 'Rock, Paper, Shotgun',
         title: 'Rock, Paper, Shotgun RSS Feed',
         path: '/videogames/websites/rock-paper-shotgun',
-        website: '',
+        website: 'https://www.rockpapershotgun.com/',
         facebook: '',
         twitter: '',
         youtube: '',
-        url: ''
+        url: 'https://www.rockpapershotgun.com/feed'
       },
       {
         label: 'PCGamesN',
         title: 'PCGamesN RSS Feed',
         path: '/videogames/websites/pc-gamer-n',
-        website: '',
+        website: 'https://www.pcgamesn.com/',
         facebook: '',
         twitter: '',
         youtube: '',
-        url: ''
+        url: 'https://www.pcgamesn.com/rss'
       },
       {
         label: 'Kotaku',
         title: 'Kotaku | The Gamer\'s Guide RSS Feed',
         path: '/videogames/websites/kotaku',
-        website: '',
+        website: 'http://kotaku.com/',
         facebook: '',
         twitter: '',
         youtube: '',
-        url: ''
+        url: 'https://kotaku.com/rss'
       }, 
       {
         label: 'Fextralife',
         title: 'Fextralife RSS Feed',
         path: '/videogames/websites/fextralife',
-        website: '',
+        website: 'http://fextralife.com/',
         facebook: '',
         twitter: '',
         youtube: '',
-        url: ''
+        url: 'http://fextralife.com/feed'
       },
       {
         label: 'Green Man Gaming Blog',
         title: 'Green Man Gaming Blog RSS Feed',
         path: '/videogames/websites/green-man-gaming-blog',
-        website: '',
-        facebook: '',
-        twitter: '',
-        youtube: '',
-        url: ''
+        website: 'https://www.greenmangaming.com/blog/',
+        facebook: 'https://www.facebook.com/GreenManGaming',
+        twitter: 'https://twitter.com/greenmangaming',
+        youtube: 'https://www.youtube.com/channel/UCbONsRevt2_YIN6sLigGIzQ',
+        url: 'https://www.greenmangaming.com/blog/feed'
       },
       {
         label: 'SKOAR!',
         title: 'SKOAR! RSS Feed',
         path: '/videogames/websites/skoar',
-        website: '',
-        facebook: '',
-        twitter: '',
-        youtube: '',
-        url: ''
+        website: 'http://skoar.digit.in/',
+        facebook: 'https://www.facebook.com/SKOAR',
+        twitter: 'https://twitter.com/skoar',
+        youtube: 'https://www.youtube.com/user/digit',
+        gplus: 'https://www.google.com/+SkoarIndia',
+        url: 'http://skoar.digit.in/feed'
       },
       {
         label: 'PlayerAuctions Blog',
         title: 'PlayerAuctions Blog | PC Game News, Guides, & Updates RSS Feed',
         path: '/videogames/websites/playerauctions-blog',
-        website: '',
+        website: 'https://blog.playerauctions.com/',
         facebook: '',
         twitter: '',
         youtube: '',
-        url: ''
+        url: 'https://blog.playerauctions.com/feed'
       },
       {
         label: 'Siliconera',
         title: 'Siliconera RSS Feed',
         path: '/videogames/websites/siliconera',
-        website: '',
+        website: 'http://www.siliconera.com/',
         facebook: '',
         twitter: '',
         youtube: '',
-        url: ''
+        url: 'http://www.siliconera.com/feed/'
       },
       {
         label: 'Gamers Heroes',
         title: 'Gamers Heroes - Gaming News, Honest Game Reviews, Hot Gaming Cosplay & More RSS Feed',
         path: '/videogames/websites/gamers-heroes',
-        website: '',
+        website: 'http://www.gamersheroes.com/',
         facebook: '',
         twitter: '',
         youtube: '',
-        url: ''
+        url: 'http://www.gamersheroes.com/feed'
       },
       {
         label: 'Gamasutra Console/PC News',
         title: 'Gamasutra Console/PC News RSS Feed',
         path: '/videogames/websites/gamasutra-console',
-        website: '',
+        website: 'http://www.gamasutra.com/topic/console-pc',
         facebook: '',
         twitter: '',
         youtube: '',
-        url: ''
+        url: 'http://feeds.feedburner.com/GamasutraConsolePCNews?format=xml'
       },
-      {
+      // Atom format...
+      /* {
         label: 'DualShockers',
         title: 'DualShockers RSS Feed',
         path: '/videogames/websites/dualshockers',
-        website: '',
+        website: 'http://www.dualshockers.com/',
         facebook: '',
         twitter: '',
         youtube: '',
-        url: ''
-      },
+        url: 'http://dualshockers.com/feed/atom'
+      }, */
       {
         label: 'Indie DB',
         title: 'Indie DB RSS Feed',
@@ -317,8 +320,8 @@ export const VideoGamesWebsitesFeeds = [
         url: ''
       },
       {
-        label: 'VideoGamer RSS Feed',
-        title: 'VideoGamer',
+        label: 'VideoGamer',
+        title: 'VideoGamer RSS Feed',
         path: '/videogames/websites/videogamer',
         website: '',
         facebook: '',
@@ -375,6 +378,18 @@ export const VideoGamesWebsitesFeeds = [
         twitter: '',
         youtube: '',
         url: ''
+      },
+      {
+        label: 'Unity Blog',
+        title: 'Unity Blog RSS Feed',
+        path: '/videogames/websites/unity-blog',
+        website: 'https://blogs.unity3d.com/',
+        facebook: 'http://www.facebook.com/unity3d',
+        twitter: 'http://www.twitter.com/unity3d',
+        youtube: 'https://www.youtube.com/user/Unity3D',
+        gplus: 'https://plus.google.com/u/0/104568650392955941577/',
+        linkedin: 'https://www.linkedin.com/company/unity-technologies',
+        url: 'https://blogs.unity3d.com/feed/'
       },
       {
         label: 'PCInvasion',
