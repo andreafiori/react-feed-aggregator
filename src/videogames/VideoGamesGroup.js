@@ -14,11 +14,32 @@ class VideoGamesGroup extends Component {
     this.state = {
       group: currentNewsGroup,
       feeds: getNewsFeedsByGroup(VideogamesNewsFeeds, props.match.params.group),
-      breadcrumbs: [
-        { label: 'News', href: '/news', title: 'Back to news feeds main page', active: false },
-        { label: currentNewsGroup.title, href: null, title: null, active: true }
-      ]
+      breadcrumbs: this.setupBreadCrumbs(currentNewsGroup)
     };
+  }
+
+  setupBreadCrumbs(newsGroup) {
+    let breadcrumbs = [
+      { label: 'Videogames', href: '/videogames', title: 'Back to videogames feeds main page', active: false },
+    ];
+
+    if (typeof newsGroup !== 'undefined') {
+      breadcrumbs.push({
+        label: newsGroup.title,
+        href: null,
+        title: null,
+        active: true
+      });
+    } else {
+      breadcrumbs.push({
+        label: 'No newsgroup',
+        href: null,
+        title: null,
+        active: true
+      });
+    }
+
+    return breadcrumbs;
   }
 
   render() {

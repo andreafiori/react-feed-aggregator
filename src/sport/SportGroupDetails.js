@@ -64,15 +64,15 @@ class SportGroupDetails extends Component {
 
     if ( (slug !== this.state.slug || this.state.newsFromApi === null) && this.state.error === null) {
 
-      let currentFeedsLIst = getNewsFeedBySlug(this.state.currentFeedsList, slug);
+      let currentFeedsList = getNewsFeedBySlug(this.state.currentFeedsList, slug);
 
       let self = this;
-      rssParser.callPromise(currentFeedsLIst.url)
+      rssParser.callPromise(currentFeedsList.url)
         .then(function (response) {
           self.setState({
             group: group,
             slug: slug,
-            newsFromApi: rssParser.parseFeedRss(response.data),
+            newsFromApi: rssParser.parseRssXmlString(response.data, currentFeedsList.isAtom),
             error: null,
           });
         })

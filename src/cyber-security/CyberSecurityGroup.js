@@ -15,7 +15,7 @@ class CyberSecurityGroup extends Component {
     this.state = {
       group: currentNewsGroup,
       feeds: getNewsFeedsByGroup(CyberSecurityNewsFeeds, props.match.params.group),
-      breadcrumbs: this.setupBreadCrumbs()
+      breadcrumbs: this.setupBreadCrumbs(currentNewsGroup)
     };
   }
 
@@ -24,7 +24,7 @@ class CyberSecurityGroup extends Component {
       { label: 'Cyber Security', href: '/cyber-security', title: 'Back to Cyber Security feeds main page', active: false },
     ];
 
-    if (newsGroup) {
+    if (typeof newsGroup !== 'undefined') {
       breadcrumbs.push({
         label: newsGroup.title,
         href: null,

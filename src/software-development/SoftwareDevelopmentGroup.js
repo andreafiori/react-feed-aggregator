@@ -15,7 +15,7 @@ class SoftwareDevelopmentGroup extends Component {
     this.state = {
       group: currentNewsGroup,
       feeds: getNewsFeedsByGroup(SoftwareDevelopmentNewsFeeds, props.match.params.group),
-      breadcrumbs: this.setupBreadCrumbs()
+      breadcrumbs: this.setupBreadCrumbs(currentNewsGroup)
     };
   }
 
@@ -24,7 +24,7 @@ class SoftwareDevelopmentGroup extends Component {
       { label: 'Software Development', href: '/software-development', title: 'Back to Software Development feeds main page', active: false },
     ];
 
-    if (newsGroup) {
+    if (typeof newsGroup !== 'undefined') {
       breadcrumbs.push({
         label: newsGroup.title,
         href: null,

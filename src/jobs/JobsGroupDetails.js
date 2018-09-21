@@ -24,7 +24,7 @@ class JobsGroupDetails extends Component {
       currentFeed: currentFeed,
       currentFeedsList: getNewsFeedsByGroup(JobsNewsFeeds, props.match.params.group),
       breadcrumbs: [
-        { label: 'Jobs', href: '/jobs', title: 'Back to the jobs main page', active: false },
+        
         { label: currentNewsGroup.title, href: currentNewsGroup.path ? currentNewsGroup.path : '', title: currentNewsGroup.title, active: false },
         { label: currentFeed.label, href: null, title: 'List', active: true },
       ],
@@ -33,6 +33,30 @@ class JobsGroupDetails extends Component {
       error: null,
     };
 
+  }
+
+  setupBreadCrumbs(newsGroup) {
+    let breadcrumbs = [
+      { label: 'Jobs', href: '/jobs', title: 'Back to the jobs main page', active: false },
+    ];
+
+    if (typeof newsGroup !== 'undefined') {
+      breadcrumbs.push({
+        label: newsGroup.title,
+        href: null,
+        title: null,
+        active: true
+      });
+    } else {
+      breadcrumbs.push({
+        label: 'No news group',
+        href: null,
+        title: null,
+        active: true
+      });
+    }
+
+    return breadcrumbs;
   }
 
   /**
@@ -64,15 +88,15 @@ class JobsGroupDetails extends Component {
 
     if ( (slug !== this.state.slug || this.state.newsFromApi === null) && this.state.error === null) {
 
-      let currentFeedsLIst = getNewsFeedBySlug(this.state.currentFeedsList, slug);
+      let currentFeedsList = getNewsFeedBySlug(this.state.currentFeedsList, slug);
 
       let self = this;
-      rssParser.callPromise(currentFeedsLIst.url)
+      rssParser.callPromise(currentFeedsList.url)
         .then(function (response) {
           self.setState({
             group: group,
             slug: slug,
-            newsFromApi: rssParser.parseFeedRss(response.data),
+            newsFromApi: rssParser.parseRssXmlString(response.data, currentFeedsList.isAtom),
             error: null,
           });
         })

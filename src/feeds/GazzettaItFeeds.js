@@ -65,11 +65,12 @@ export const GazzettaItNewsFeeds = [
         path: '/sport/gazzetta-it/motociclismo',
         url: 'https://www.gazzetta.it/rss/motociclismo.xml'
       },
-      {
+      // Not Working :()
+      /* {
         label: 'Motomondiale',
         path: '/sport/gazzetta-it/motomondiale',
         url: 'https://www.gazzetta.it/rss/Motomondiale.xml'
-      },
+      }, */
       {
         label: 'Passione Motori',
         path: '/sport/gazzetta-it/passione-motori',

@@ -32,7 +32,7 @@ export const AutoSportNewsFeeds = [
 			{
 				label: 'Formula 1',
 				title: 'Autosport - Formula 1 RSS Feed',
-				path: '/sport/autosport/',
+				path: '/sport/autosport/formula-one',
 				url: 'https://www.autosport.com/rss/feed/f1',
 			},
 			{
@@ -44,7 +44,7 @@ export const AutoSportNewsFeeds = [
 			{
 				label: 'World Rally Championship',
 				title: 'Autosport - World Rally Championship RSS Feed',
-				path: '/sport/autosport/',
+				path: '/sport/autosport/autosport-world-raòlly-championship',
 				url: 'https://www.autosport.com/rss/feed/wrc',
 			},
 			{
