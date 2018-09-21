@@ -26,6 +26,9 @@ export const getNewsFeedsByGroup = function(feeds, group) {
 export const getNewsFeedBySlug = function(currentFeedsList, slug) {
   for(let i = 0; i < currentFeedsList.length; i++) {
     for(let j = 0; j < currentFeedsList[i].feeds.length; j++) {
+      if (typeof currentFeedsList[i].feeds[j].path === 'undefined') {
+        continue;
+      }
       let lastPathElement = currentFeedsList[i].feeds[j].path.split('/').pop();
       if (lastPathElement === slug) {
         return currentFeedsList[i].feeds[j];

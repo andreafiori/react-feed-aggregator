@@ -26,7 +26,7 @@ class About extends Component {
         
         <h3>RSS feed format</h3>
         <p>RSS (<a rel="noopener noreferrer" target="_blank" href="https://validator.w3.org/feed/docs/rss2.html">Really Simple Syndication</a>) News feeds allow you to see when websites have added new content.</p>
-        <p><a rel="noopener noreferrer" target="_blank" href="https://en.wikipedia.org/wiki/Atom_(Web_standard)"></a>Atom format: </p>
+        <p><a rel="noopener noreferrer" target="_blank" href="https://en.wikipedia.org/wiki/Atom_(Web_standard)">Atom format</a>Atom format</p>
       </div>
     );
   }

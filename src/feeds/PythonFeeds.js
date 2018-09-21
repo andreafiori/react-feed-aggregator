@@ -20,21 +20,22 @@ export const PythonNewsFeeds = [
 	{
 		title: 'Websites',
 		feeds: [
-			/* {
+			{
 				label: 'Reddit Python',
 				title: 'Reddit Python',
-				path: '/software-development/python/reddit-Python',
-				website: '',
-				url: '',
+				path: '/software-development/python/reddit-python',
+				website: 'https://www.reddit.com/r/Python/',
+				isAtom: true,
+				url: 'https://www.reddit.com/r/Python/.rss',
 			},
-			// TODO: check feed, it uses atom format
 			{
 				label: 'Python Software Foundation',
 				title: 'Python Software Foundation News RSS Feed',
 				path: '/software-development/python/python-software-foundation',
 				website: 'http://pyfound.blogspot.com/',
+				isAtom: true,
 				url: 'http://feeds.feedburner.com/PythonSoftwareFoundationNews?format=xml',
-      }, */
+      },
 			{
 				label: 'Planet Python',
 				title: 'Planet Python RSS Feed',
@@ -77,15 +78,14 @@ export const PythonNewsFeeds = [
 				website: 'https://blog.jetbrains.com/pycharm/',
 				url: 'https://blog.jetbrains.com/pycharm/feed',
 			},
-			// Atom format...
-			/* {
+			{
 				label: 'Planet SciPy',
 				title: 'Planet SciPy RSS Feed',
 				path: '/software-development/python/planet-scipy',
 				website: 'https://planet.scipy.org/',
-				atomFormat: true,
+				isAtom: true,
 				url: 'http://planet.scipy.org/atom.xml',
-      }, */
+      },
 			{
 				label: 'Python – Red Hat Developer Blog',
 				title: 'Python – Red Hat Developer Blog RSS Feed',

@@ -218,8 +218,7 @@ export const VideoGamesWebsitesFeeds = [
         youtube: '',
         url: 'http://feeds.feedburner.com/GamasutraConsolePCNews?format=xml'
       },
-      // Atom format...
-      /* {
+      {
         label: 'DualShockers',
         title: 'DualShockers RSS Feed',
         path: '/videogames/websites/dualshockers',
@@ -227,8 +226,9 @@ export const VideoGamesWebsitesFeeds = [
         facebook: '',
         twitter: '',
         youtube: '',
+        isAtom: true,
         url: 'http://dualshockers.com/feed/atom'
-      }, */
+      },
       {
         label: 'Indie DB',
         title: 'Indie DB RSS Feed',

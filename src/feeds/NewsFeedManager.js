@@ -4,6 +4,7 @@ import { NewYorkTimesNewsGroup, NewYorkTimesNewsFeeds } from './NewYorkTimesFeed
 import { NewYorkPostNewsGroup, NewYorkPostFeeds } from './NewYorkPostFeeds';
 import { WallStreetJournalNewsGroup, WallStreetJournalNewsFeeds } from './WallStreetJournalFeeds.js';
 import { AnsaNewsGroup, AnsaNewsFeeds } from './AnsaFeeds.js';
+import { RaiTelevideoNewsGroup, RaiTelevideoNewsFeeds } from './RaiTelevideoFeeds.js';
 
 export const newsGroups = {
   'bbc': BbcNewsGroup,
@@ -12,6 +13,7 @@ export const newsGroups = {
   'new-york-post': NewYorkPostNewsGroup,
   'wall-street-journal': WallStreetJournalNewsGroup,
   'ansa': AnsaNewsGroup,
+  'rai-televideo': RaiTelevideoNewsGroup
 };
 
 // List http://worldsoccertalk.com/2008/01/14/best-british-newspapers-soccer-football-news/
@@ -20,6 +22,11 @@ export const newsGroups = {
 // http://www.foxnews.com/about/rss/
 // http://abcnews.go.com/Site/page/rss--3520115
 // http://www.reuters.com/tools/rss
+// https://www.nbc.com/ 
+/*
+  Radio Rai http://www.radio.rai.it/radio3/podcast/rssradio3.jsp
+  Corriere della sera https://www.corriere.it/rss/
+*/
 export const feeds = {
   'bbc': BbcNewsFeeds,
   'cnn': CnnNewsFeeds,
@@ -27,9 +34,6 @@ export const feeds = {
   'new-york-post': NewYorkPostFeeds,
   'wall-street-journal': WallStreetJournalNewsFeeds,
   'ansa': AnsaNewsFeeds,
-  /*
-  Rai televideo http://www.servizitelevideo.rai.it/televideo/pub/rsslista.jsp
-  Radio Rai http://www.radio.rai.it/radio3/podcast/rssradio3.jsp
-  Corriere della sera https://www.corriere.it/rss/
-  */
+  'rai-televideo': RaiTelevideoNewsFeeds
+  
 };

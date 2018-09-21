@@ -4,6 +4,7 @@ import { SoftwareDevelopmentNewsGroups, SoftwareDevelopmentNewsFeeds } from '../
 import FeedsCategoryList from '../components/FeedsCategoryList.js';
 import Breadcrumbs from '../components/Breadcrumbs.js';
 import NewsGroupList from '../components/NewsGroupList.js';
+import NewsGroupError from '../components/NewsGroupError.js';
 
 class SoftwareDevelopmentGroup extends Component {
   constructor(props) {
@@ -14,35 +15,63 @@ class SoftwareDevelopmentGroup extends Component {
     this.state = {
       group: currentNewsGroup,
       feeds: getNewsFeedsByGroup(SoftwareDevelopmentNewsFeeds, props.match.params.group),
-      breadcrumbs: [
-        { label: 'Software Development', href: '/software-development', title: 'Back to Software Development feeds main page', active: false },
-        { label: currentNewsGroup.title, href: null, title: null, active: true }
-      ]
+      breadcrumbs: this.setupBreadCrumbs()
     };
+  }
+
+  setupBreadCrumbs(newsGroup) {
+    let breadcrumbs = [
+      { label: 'Software Development', href: '/software-development', title: 'Back to Software Development feeds main page', active: false },
+    ];
+
+    if (newsGroup) {
+      breadcrumbs.push({
+        label: newsGroup.title,
+        href: null,
+        title: null,
+        active: true
+      });
+    } else {
+      breadcrumbs.push({
+        label: 'No newsgroup',
+        href: null,
+        title: null,
+        active: true
+      });
+    }
+
+    return breadcrumbs;
   }
 
   render() {
 
     const { group, feeds, breadcrumbs } = this.state;
 
-    return (
-      <div>
-
-        <Breadcrumbs elements={breadcrumbs} />
-
-        <div className="row">
-          <div className="col-sm-12 col-md-12 col-lg-9">
-            <NewsGroupList group={group} />
+    if (group) {
+      return (
+        <div>
+  
+          <Breadcrumbs elements={breadcrumbs} />
+  
+          <div className="row">
+            <div className="col-sm-12 col-md-12 col-lg-9">
+              <NewsGroupList group={group} />
+            </div>
+  
+            <div className="col-sm-12 col-md-12 col-lg-3">
+              <FeedsCategoryList items={feeds} />
+            </div>
           </div>
-
-          <div className="col-sm-12 col-md-12 col-lg-3">
-            <FeedsCategoryList items={feeds} />
-          </div>
+  
         </div>
-
-      </div>
-
-    );
+  
+      );
+    } else {
+      return (
+        <NewsGroupError breadcrumbs={breadcrumbs} />
+      );
+    }
+    
   }
 }
 

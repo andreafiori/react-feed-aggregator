@@ -83,24 +83,28 @@ export class RssParser {
    * Atom RSS format XML string parser 
    * @param {*} xmlString 
    */
-  static parseFeedAtomFormat(xmlString) {
+  parseFeedAtomFormat(xmlString) {
     let doc = this.DOMPARSER(xmlString, 'text/xml');
-    
-    this.objToReturn.title = this.checkTag(doc, 'feed title', true);
-    this.objToReturn.link = this.checkTag(doc, 'feed link', true);
+
+    this.domObject.title = this.checkTag(doc, 'title', true);
+    this.domObject.link = this.checkTag(doc, 'link', true);
   
     // Gather entry values
     doc.querySelectorAll('entry').forEach((item) => {
       let i = item.querySelector.bind(item);
+
+      const pubDateTag = i('updated');
+      const pubDate = (pubDateTag) ? pubDateTag.textContent : null;
   
-      this.objToReturn.items.push({
+      this.domObject.items.push({
         title:        this.checkTagItem(i, 'title'),
         link:         i('link').textContent,
-        description:  null,
+        description:  this.checkTagItem(i, 'summary'),
+        pubDate:      pubDate,
       });
   
     });
   
-    return this.objToReturn;
+    return this.domObject;
   }
 }

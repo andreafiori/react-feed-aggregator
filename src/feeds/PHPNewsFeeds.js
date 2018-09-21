@@ -47,9 +47,10 @@ export const PHPNewsFeeds = [
 			},
 			{
 				label: 'Laracasts',
-				title: 'Latest news from Zend Security',
-				path: '/software-development/php-news/zend-security',
-				url: 'https://laracasts.com/feed'
+				title: 'Latest news from Laracasts, Jeffrey Way',
+				path: '/software-development/php-news/laracasts',
+				url: 'https://laracasts.com/feed',
+				isAtom: true,
 			},
 			{
 				label: 'Sitepoint PHP',
