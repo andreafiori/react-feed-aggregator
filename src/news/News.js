@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { getAllNewsGroupsAsArray } from '../feeds/FeedsManager.js';
-import { newsGroups } from '../feeds/NewsFeedManager.js';
-import NewsList from '../components/NewsList.js';
-import Breadcrumbs from '../components/Breadcrumbs.js';
+import { getAllNewsGroupsAsArray } from '../feeds/FeedsManager';
+import { newsGroups } from '../feeds/NewsFeedManager';
+import NewsList from '../components/NewsList';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 class News extends Component {
 

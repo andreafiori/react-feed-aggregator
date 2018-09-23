@@ -15,32 +15,32 @@ import {
 const Loading = () => <div><h2><i className="fa fa-spinner fa-spin"></i> Loading...</h2></div>;
 
 const News = Loadable({
-  loader: () => import('../news/News.js'),
+  loader: () => import('../news/News'),
   loading: Loading,
 });
 
 const NewsGroup = Loadable({
-  loader: () => import('../news/NewsGroup.js'),
+  loader: () => import('../news/NewsGroup'),
   loading: Loading,
 });
 
 const NewsGroupDetails = Loadable({
-  loader: () => import('../news/NewsGroupDetails.js'),
+  loader: () => import('../news/NewsGroupDetails'),
   loading: Loading,
 });
 
 const CyberSecurity = Loadable({
-  loader: () => import('./../cyber-security/CyberSecurity.js'),
+  loader: () => import('./../cyber-security/CyberSecurity'),
   loading: Loading,
 });
 
 const CyberSecurityGroup = Loadable({
-  loader: () => import('./../cyber-security/CyberSecurityGroup.js'),
+  loader: () => import('./../cyber-security/CyberSecurityGroup'),
   loading: Loading,
 });
 
 const CyberSecurityGroupDetails = Loadable({
-  loader: () => import('./../cyber-security/CyberSecurityGroupDetails.js'),
+  loader: () => import('./../cyber-security/CyberSecurityGroupDetails'),
   loading: Loading,
 });
 
@@ -60,72 +60,72 @@ const SoftwareDevelopmentGroupDetails = Loadable({
 });
 
 const Home = Loadable({
-  loader: () => import('./Home.js'),
+  loader: () => import('./Home'),
   loading: Loading,
 });
 
 const OpenWeatherContainer = Loadable({
-  loader: () => import('./OpenWeatherContainer.js'),
+  loader: () => import('./OpenWeatherContainer'),
   loading: Loading,
 });
 
 const About = Loadable({
-  loader: () => import('./About.js'),
+  loader: () => import('./About'),
   loading: Loading,
 });
 
 const WillMatch = Loadable({
-  loader: () => import('./WillMatch.js'),
+  loader: () => import('./WillMatch'),
   loading: Loading,
 });
 
 const NoMatch = Loadable({
-  loader: () => import('./NoMatch.js'),
+  loader: () => import('./NoMatch'),
   loading: Loading,
 });
 
 const Jobs = Loadable({
-  loader: () => import('../jobs/Jobs.js'),
+  loader: () => import('../jobs/Jobs'),
   loading: Loading,
 });
 
 const JobsGroup = Loadable({
-  loader: () => import('../jobs/JobsGroup.js'),
+  loader: () => import('../jobs/JobsGroup'),
   loading: Loading,
 });
 
 const JobsGroupDetails = Loadable({
-  loader: () => import('../jobs/JobsGroupDetails.js'),
+  loader: () => import('../jobs/JobsGroupDetails'),
   loading: Loading,
 });
 
 const VideoGames = Loadable({
-  loader: () => import('../videogames/VideoGames.js'),
+  loader: () => import('../videogames/VideoGames'),
   loading: Loading,
 });
 
 const VideoGamesGroup = Loadable({
-  loader: () => import('../videogames/VideoGamesGroup.js'),
+  loader: () => import('../videogames/VideoGamesGroup'),
   loading: Loading,
 });
 
 const VideoGamesGroupDetails = Loadable({
-  loader: () => import('../videogames/VideoGamesGroupDetails.js'),
+  loader: () => import('../videogames/VideoGamesGroupDetails'),
   loading: Loading,
 });
 
 const Sport = Loadable({
-  loader: () => import('../sport/Sport.js'),
+  loader: () => import('../sport/Sport'),
   loading: Loading,
 });
 
 const SportGroup = Loadable({
-  loader: () => import('../sport/SportGroup.js'),
+  loader: () => import('../sport/SportGroup'),
   loading: Loading,
 });
 
 const SportGroupDetails = Loadable({
-  loader: () => import('../sport/SportGroupDetails.js'),
+  loader: () => import('../sport/SportGroupDetails'),
   loading: Loading,
 });
 

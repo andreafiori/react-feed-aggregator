@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Breadcrumbs from '../components/Breadcrumbs.js';
-import NewsList from '../components/NewsList.js';
-import { getAllNewsGroupsAsArray } from '../feeds/FeedsManager.js';
-import { SoftwareDevelopmentNewsGroups } from '../feeds/SoftwareDevelopmentFeedManager.js';
+import Breadcrumbs from '../components/Breadcrumbs';
+import NewsList from '../components/NewsList';
+import { getAllNewsGroupsAsArray } from '../feeds/FeedsManager';
+import { SoftwareDevelopmentNewsGroups } from '../feeds/SoftwareDevelopmentFeedManager';
 
 class SoftwareDevelopment extends Component {
   constructor(props) {

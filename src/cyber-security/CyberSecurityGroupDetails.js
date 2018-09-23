@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { RssParser } from '../api/RssParser.js';
-import { getNewsFeedBySlug, getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager.js';
-import { CyberSecurityNewsGroups, CyberSecurityNewsFeeds } from '../feeds/CyberSecurityFeedManager.js';
-import FeedsCategoryList from '../components/FeedsCategoryList.js';
-import FeedsFromApi from '../components/FeedsFromApi.js';
-import LoadingSpinner from '../components/LoadingSpinner.js';
-import Breadcrumbs from '../components/Breadcrumbs.js';
+import { RssParser } from '../api/RssParser';
+import { getNewsFeedBySlug, getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager';
+import { CyberSecurityNewsGroups, CyberSecurityNewsFeeds } from '../feeds/CyberSecurityFeedManager';
+import FeedsCategoryList from '../components/FeedsCategoryList';
+import FeedsFromApi from '../components/FeedsFromApi';
+import LoadingSpinner from '../components/LoadingSpinner';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 class CyberSecurityGroupDetails extends Component {
   constructor(props) {

@@ -1,10 +1,10 @@
-import { BbcNewsGroup, BbcNewsFeeds } from './BbcFeeds.js';
-import { CnnNewsGroup, CnnNewsFeeds } from './CnnFeeds.js';
-import { NewYorkTimesNewsGroup, NewYorkTimesNewsFeeds } from './NewYorkTimesFeeds.js';
+import { BbcNewsGroup, BbcNewsFeeds } from './BbcFeeds';
+import { CnnNewsGroup, CnnNewsFeeds } from './CnnFeeds';
+import { NewYorkTimesNewsGroup, NewYorkTimesNewsFeeds } from './NewYorkTimesFeeds';
 import { NewYorkPostNewsGroup, NewYorkPostFeeds } from './NewYorkPostFeeds';
-import { WallStreetJournalNewsGroup, WallStreetJournalNewsFeeds } from './WallStreetJournalFeeds.js';
-import { AnsaNewsGroup, AnsaNewsFeeds } from './AnsaFeeds.js';
-import { RaiTelevideoNewsGroup, RaiTelevideoNewsFeeds } from './RaiTelevideoFeeds.js';
+import { WallStreetJournalNewsGroup, WallStreetJournalNewsFeeds } from './WallStreetJournalFeeds';
+import { AnsaNewsGroup, AnsaNewsFeeds } from './AnsaFeeds';
+import { RaiTelevideoNewsGroup, RaiTelevideoNewsFeeds } from './RaiTelevideoFeeds';
 
 export const newsGroups = {
   'bbc': BbcNewsGroup,

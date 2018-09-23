@@ -2,7 +2,10 @@
  * Get All News Groups as array
  */
 export const getAllNewsGroupsAsArray = function(newsGroups) {
-  return Object.values(newsGroups);
+  // return Object.values(newsGroups); Not working on IE :(
+  return Object.keys(newsGroups).map(function(e) {
+    return newsGroups[e];
+  });
 }
 
 /**

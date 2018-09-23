@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import { getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager.js';
-import { SoftwareDevelopmentNewsGroups, SoftwareDevelopmentNewsFeeds } from '../feeds/SoftwareDevelopmentFeedManager.js';
-import FeedsCategoryList from '../components/FeedsCategoryList.js';
-import Breadcrumbs from '../components/Breadcrumbs.js';
-import NewsGroupList from '../components/NewsGroupList.js';
-import NewsGroupError from '../components/NewsGroupError.js';
+import { getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager';
+import { SoftwareDevelopmentNewsGroups, SoftwareDevelopmentNewsFeeds } from '../feeds/SoftwareDevelopmentFeedManager';
+import FeedsCategoryList from '../components/FeedsCategoryList';
+import Breadcrumbs from '../components/Breadcrumbs';
+import NewsGroupList from '../components/NewsGroupList';
+import NewsGroupError from '../components/NewsGroupError';
 
 class SoftwareDevelopmentGroup extends Component {
   constructor(props) {
     super(props);
 
-    let currentNewsGroup = getNewsGroupByKey(SoftwareDevelopmentNewsGroups, props.match.params.group);
+    const currentNewsGroup = getNewsGroupByKey(SoftwareDevelopmentNewsGroups, props.match.params.group);
 
     this.state = {
       group: currentNewsGroup,

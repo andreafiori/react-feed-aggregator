@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
-import { RssParser } from '../api/RssParser.js';
-import { getNewsFeedBySlug, getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager.js';
-import { newsGroups, feeds } from '../feeds/NewsFeedManager.js';
-import FeedsCategoryList from '../components/FeedsCategoryList.js';
-import FeedsFromApi from '../components/FeedsFromApi.js';
-import LoadingSpinner from '../components/LoadingSpinner.js';
-import Breadcrumbs from './../components/Breadcrumbs.js';
+import { RssParser } from '../api/RssParser';
+import { getNewsFeedBySlug, getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager';
+import { newsGroups, feeds } from '../feeds/NewsFeedManager';
+import FeedsCategoryList from '../components/FeedsCategoryList';
+import FeedsFromApi from '../components/FeedsFromApi';
+import LoadingSpinner from '../components/LoadingSpinner';
+import Breadcrumbs from './../components/Breadcrumbs';
 
 class NewsGroupDetails extends Component {
   constructor(props) {
     super(props);
 
-    let currentNewsGroup = getNewsGroupByKey(newsGroups, props.match.params.group);
+    const currentNewsGroup = getNewsGroupByKey(newsGroups, props.match.params.group);
 
-    let newsFeedsByGroup = getNewsFeedsByGroup(feeds, props.match.params.group);
+    const newsFeedsByGroup = getNewsFeedsByGroup(feeds, props.match.params.group);
 
-    let currentFeed = getNewsFeedBySlug(newsFeedsByGroup, props.match.params.slug);
+    const currentFeed = getNewsFeedBySlug(newsFeedsByGroup, props.match.params.slug);
 
     this.state = {
       group: props.match.params.group,

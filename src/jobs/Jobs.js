@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { getAllNewsGroupsAsArray } from '../feeds/FeedsManager.js';
-import NewsList from '../components/NewsList.js';
-import Breadcrumbs from '../components/Breadcrumbs.js';
-import { JobsNewsGroups } from '../feeds/JobsFeedManager.js';
+import { getAllNewsGroupsAsArray } from '../feeds/FeedsManager';
+import NewsList from '../components/NewsList';
+import Breadcrumbs from '../components/Breadcrumbs';
+import { JobsNewsGroups } from '../feeds/JobsFeedManager';
 
 class Jobs extends Component {
 	constructor(props) {

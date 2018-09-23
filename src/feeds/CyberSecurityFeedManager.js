@@ -1,8 +1,8 @@
-import { SansNewsGroup, SansNewsFeeds } from './SansFeeds.js';
+import { SansNewsGroup, SansNewsFeeds } from './SansFeeds';
 import { CyberSecurityWebsitesNewsGroup, CyberSecurityWebsitesFeeds } from './CyberSecurityWebsitesFeed';
-import { DarkreadingNewsGroup, DarkreadingNewsFeeds } from './DarkReadingFeeds.js';
+import { DarkreadingNewsGroup, DarkreadingNewsFeeds } from './DarkReadingFeeds';
 import { WeLiveSecurityNewsGroup, WeLiveSecurityNewsFeeds } from './WeLiveSecurityFeeds';
-import { ThreatPostNewsGroup, ThreatPostNewsFeeds } from './ThreatPostFeeds.js';
+import { ThreatPostNewsGroup, ThreatPostNewsFeeds } from './ThreatPostFeeds';
 import { GovernmentNewsGroup, GovernmentNewsFeeds } from './GovernmentFeeds';
 import { TechWorldNewsGroup, TechWorldNewsFeeds } from './TechWorldFeeds';
 

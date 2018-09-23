@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { RssParser } from '../api/RssParser.js';
-import { getNewsFeedBySlug, getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager.js';
-import FeedsCategoryList from '../components/FeedsCategoryList.js';
-import FeedsFromApi from '../components/FeedsFromApi.js';
-import LoadingSpinner from '../components/LoadingSpinner.js';
-import Breadcrumbs from './../components/Breadcrumbs.js';
-import { JobsNewsGroups, JobsNewsFeeds } from '../feeds/JobsFeedManager.js';
+import { RssParser } from '../api/RssParser';
+import { getNewsFeedBySlug, getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager';
+import FeedsCategoryList from '../components/FeedsCategoryList';
+import FeedsFromApi from '../components/FeedsFromApi';
+import LoadingSpinner from '../components/LoadingSpinner';
+import Breadcrumbs from './../components/Breadcrumbs';
+import { JobsNewsGroups, JobsNewsFeeds } from '../feeds/JobsFeedManager';
 
 class JobsGroupDetails extends Component {
   constructor(props) {

@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import { getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager.js';
-import FeedsCategoryList from '../components/FeedsCategoryList.js';
-import Breadcrumbs from './../components/Breadcrumbs.js';
-import NewsGroupList from '../components/NewsGroupList.js';
+import { getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager';
+import FeedsCategoryList from '../components/FeedsCategoryList';
+import Breadcrumbs from './../components/Breadcrumbs';
+import NewsGroupList from '../components/NewsGroupList';
 import { VideogamesNewsGroups, VideogamesNewsFeeds } from '../feeds/VideoGamesFeedManager';
 
 class VideoGamesGroup extends Component {
   constructor(props) {
     super(props);
 
-    let currentNewsGroup = getNewsGroupByKey(VideogamesNewsGroups, props.match.params.group);
+    const currentNewsGroup = getNewsGroupByKey(VideogamesNewsGroups, props.match.params.group);
 
     this.state = {
       group: currentNewsGroup,

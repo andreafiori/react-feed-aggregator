@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { VideogamesNewsGroups } from '../feeds/VideoGamesFeedManager.js';
-import { getAllNewsGroupsAsArray } from '../feeds/FeedsManager.js';
-import NewsList from '../components/NewsList.js';
-import Breadcrumbs from '../components/Breadcrumbs.js';
+import { VideogamesNewsGroups } from '../feeds/VideoGamesFeedManager';
+import { getAllNewsGroupsAsArray } from '../feeds/FeedsManager';
+import NewsList from '../components/NewsList';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 class VideoGames extends Component {
   constructor(props) {

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { RssParser } from '../api/RssParser.js';
-import { getNewsFeedBySlug, getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager.js';
-import { SoftwareDevelopmentNewsGroups, SoftwareDevelopmentNewsFeeds } from '../feeds/SoftwareDevelopmentFeedManager.js';
-import FeedsCategoryList from '../components/FeedsCategoryList.js';
-import FeedsFromApi from '../components/FeedsFromApi.js';
-import LoadingSpinner from '../components/LoadingSpinner.js';
-import Breadcrumbs from './../components/Breadcrumbs.js';
+import { RssParser } from '../api/RssParser';
+import { getNewsFeedBySlug, getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager';
+import { SoftwareDevelopmentNewsGroups, SoftwareDevelopmentNewsFeeds } from '../feeds/SoftwareDevelopmentFeedManager';
+import FeedsCategoryList from '../components/FeedsCategoryList';
+import FeedsFromApi from '../components/FeedsFromApi';
+import LoadingSpinner from '../components/LoadingSpinner';
+import Breadcrumbs from './../components/Breadcrumbs';
 
 class SoftwareDevelopmentGroupDetails extends Component {
   constructor(props) {

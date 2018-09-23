@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { getAllNewsGroupsAsArray } from '../feeds/FeedsManager.js';
-import NewsList from '../components/NewsList.js';
-import Breadcrumbs from '../components/Breadcrumbs.js';
-import { CyberSecurityNewsGroups } from '../feeds/CyberSecurityFeedManager.js';
+import { getAllNewsGroupsAsArray } from '../feeds/FeedsManager';
+import NewsList from '../components/NewsList';
+import Breadcrumbs from '../components/Breadcrumbs';
+import { CyberSecurityNewsGroups } from '../feeds/CyberSecurityFeedManager';
 
 class CyberSecurity extends Component {
 	constructor(props) {
