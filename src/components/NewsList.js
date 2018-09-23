@@ -8,18 +8,9 @@ class NewsList extends Component {
     columnSize: 6,
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      columnSize: (props.columnSize) ? props.columnSize : 6,
-    };
-  }
-
   render() {
-
     const { newsGroups } = this.props;
-    const { columnSize } = this.state;
+    const columnSize = (this.props.columnSize) ? this.props.columnSize : 6;
 
     return (
       <div>
@@ -50,7 +41,7 @@ class NewsList extends Component {
             <h3>No news group were found</h3>
             <p>Please come back later. We will add new feeds ASAP.</p>
           </div>
-        } 
+        }
       </div>
     );
   }

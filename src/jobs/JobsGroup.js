@@ -1,23 +1,11 @@
 import React, { Component } from 'react';
-import { getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager';
+import { FeedManager } from '../feeds/FeedsManager';
 import FeedsCategoryList from '../components/FeedsCategoryList';
 import Breadcrumbs from './../components/Breadcrumbs';
 import NewsGroupList from '../components/NewsGroupList';
 import { JobsNewsGroups, JobsNewsFeeds } from '../feeds/JobsFeedManager';
 
 class JobsGroup extends Component {
-
-  constructor(props) {
-    super(props);
-
-    const currentNewsGroup = getNewsGroupByKey(JobsNewsGroups, props.match.params.group);
-
-    this.state = {
-      group: currentNewsGroup,
-      feeds: getNewsFeedsByGroup(JobsNewsFeeds, props.match.params.group),
-      breadcrumbs: this.setupBreadCrumbs(currentNewsGroup)
-    };
-  }
 
   setupBreadCrumbs(newsGroup) {
     let breadcrumbs = [
@@ -44,14 +32,22 @@ class JobsGroup extends Component {
   }
 
   render() {
+    const groupParam =  this.props.match.params.group;
 
-    const { group, feeds, breadcrumbs } = this.state;
+    const group = FeedManager.getNewsGroupByKey(
+      JobsNewsGroups,
+      groupParam
+    );
+
+    const feeds  = FeedManager.getNewsFeedsByGroup(JobsNewsFeeds, groupParam);
+
+    const breadcrumbs = this.setupBreadCrumbs(group);
 
     return (
       <div>
 
         <Breadcrumbs elements={breadcrumbs} />
-
+{JSON.stringify(this.props.children)}
         <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-9">
             <NewsGroupList group={group} />

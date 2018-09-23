@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager';
+import { FeedManager } from '../feeds/FeedsManager';
 import FeedsCategoryList from '../components/FeedsCategoryList';
 import Breadcrumbs from './../components/Breadcrumbs';
 import NewsGroupList from '../components/NewsGroupList';
@@ -10,11 +10,11 @@ class CyberSecurityGroup extends Component {
 	constructor(props) {
     super(props);
 
-    let currentNewsGroup = getNewsGroupByKey(CyberSecurityNewsGroups, props.match.params.group);
+    let currentNewsGroup = FeedManager.getNewsGroupByKey(CyberSecurityNewsGroups, props.match.params.group);
 
     this.state = {
       group: currentNewsGroup,
-      feeds: getNewsFeedsByGroup(CyberSecurityNewsFeeds, props.match.params.group),
+      feeds: FeedManager.getNewsFeedsByGroup(CyberSecurityNewsFeeds, props.match.params.group),
       breadcrumbs: this.setupBreadCrumbs(currentNewsGroup)
     };
   }

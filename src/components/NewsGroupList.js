@@ -45,14 +45,14 @@ class NewsGroupList extends Component {
 
         </div>
       );
-    } else {
-      return (
-        <div className="alert alert-warning">
-          <h3>Error occurred</h3>
-          <p>No news group. Check the news group list.</p>
-        </div>
-      );
     }
+
+    return (
+      <div className="alert alert-warning">
+        <h3>Error occurred</h3>
+        <p>No news group. Check the news group list.</p>
+      </div>
+    );
     
   }
 }

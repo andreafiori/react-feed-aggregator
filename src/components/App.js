@@ -140,13 +140,13 @@ class App extends Component {
       search: '',
       isOpen: false,
       routes: [
-        { path: '/news', text: "News", isActive: false, title: "News and magazine" },
-        { path: '/open-weather', text: "Weather", isActive: false, title: "" },
-        { path: '/sport', text: "Sport", isActive: false, title: "Sport news" },
-        { path: '/software-development', text: "Software Development", isActive: false, title: "Software Development news" },
-        { path: '/cyber-security', text: "Cyber Security", isActive: false, title: "Cyber Security news" },
-        { path: '/videogames', text: "Videogames", isActive: false, title: "Videogames" },
-        { path: '/jobs', text: "Jobs", isActive: false, title: "Jobs" },
+        { path: '/news', text: 'News', isActive: false, title: 'News and magazine' },
+        { path: '/open-weather', text: 'Weather', isActive: false, title: '' },
+        { path: '/sport', text: 'Sport', isActive: false, title: 'Sport news' },
+        { path: '/software-development', text: 'Software Development', isActive: false, title: 'Software Development news' },
+        { path: '/cyber-security', text: 'Cyber Security', isActive: false, title: 'Cyber Security news' },
+        { path: '/videogames', text: 'Videogames', isActive: false, title: 'Videogames' },
+        { path: '/jobs', text: 'Jobs', isActive: false, title: 'Jobs' },
       ]
     };
 

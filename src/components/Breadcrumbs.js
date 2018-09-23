@@ -13,7 +13,6 @@ class Breadcrumbs extends Component {
 
     this.state = {
       elements: this.props.elements,
-      elementsHasChanged: false,
     };
   }
 

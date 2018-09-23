@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { RssParser } from '../api/RssParser';
-import { getNewsFeedBySlug, getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager';
+import { FeedManager } from '../feeds/FeedsManager';
 import { CyberSecurityNewsGroups, CyberSecurityNewsFeeds } from '../feeds/CyberSecurityFeedManager';
 import FeedsCategoryList from '../components/FeedsCategoryList';
 import FeedsFromApi from '../components/FeedsFromApi';
@@ -11,18 +11,18 @@ class CyberSecurityGroupDetails extends Component {
   constructor(props) {
     super(props);
 
-    let currentNewsGroup = getNewsGroupByKey(CyberSecurityNewsGroups, props.match.params.group);
+    const currentNewsGroup = FeedManager.getNewsGroupByKey(CyberSecurityNewsGroups, props.match.params.group);
 
-    let newsFeedsByGroup = getNewsFeedsByGroup(CyberSecurityNewsFeeds, props.match.params.group);
+    const newsFeedsByGroup = FeedManager.getNewsFeedsByGroup(CyberSecurityNewsFeeds, props.match.params.group);
 
-    let currentFeed = getNewsFeedBySlug(newsFeedsByGroup, props.match.params.slug);
+    const currentFeed = FeedManager.getNewsFeedBySlug(newsFeedsByGroup, props.match.params.slug);
 
     this.state = {
       group: props.match.params.group,
       slug: props.match.params.slug,
       currentNewsGroup: currentNewsGroup,
       currentFeed: currentFeed,
-      currentFeedsList: getNewsFeedsByGroup(CyberSecurityNewsFeeds, props.match.params.group),
+      currentFeedsList: newsFeedsByGroup,
       rssParser: new RssParser(),
       breadcrumbs: [
         { label: 'Cyber Security', href: '/cyber-security', title: 'Back to the Cyber Security news list', active: false },
@@ -64,7 +64,7 @@ class CyberSecurityGroupDetails extends Component {
 
     if ( (slug !== this.state.slug || this.state.newsFromApi === null) && this.state.error === null) {
 
-      let currentFeedsList = getNewsFeedBySlug(this.state.currentFeedsList, slug);
+      const currentFeedsList = FeedManager.getNewsFeedBySlug(this.state.currentFeedsList, slug);
 
       let self = this;
       rssParser.callPromise(currentFeedsList.url)
@@ -74,7 +74,7 @@ class CyberSecurityGroupDetails extends Component {
             group: group,
             slug: slug,
             newsFromApi: newsFromApi,
-            currentNewsGroup: getNewsGroupByKey(CyberSecurityNewsGroups, group),
+            currentNewsGroup: FeedManager.getNewsGroupByKey(CyberSecurityNewsGroups, group),
             currentFeed: currentFeedsList,
             /* currentFeedsList: newsFromApi, */
             error: null,
