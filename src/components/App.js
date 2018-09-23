@@ -140,13 +140,13 @@ class App extends Component {
       search: '',
       isOpen: false,
       routes: [
-        { path: `${process.env.PUBLIC_URL}/news`, text: "News", isActive: false, title: "News and magazine" },
-        { path: `${process.env.PUBLIC_URL}/open-weather`, text: "Weather", isActive: false, title: "" },
-        { path: `${process.env.PUBLIC_URL}/sport`, text: "Sport", isActive: false, title: "Sport news" },
-        { path: `${process.env.PUBLIC_URL}/software-development`, text: "Software Development", isActive: false, title: "Software Development news" },
-        { path: `${process.env.PUBLIC_URL}/cyber-security`, text: "Cyber Security", isActive: false, title: "Cyber Security news" },
-        { path: `${process.env.PUBLIC_URL}/videogames`, text: "Videogames", isActive: false, title: "Videogames" },
-        { path: `${process.env.PUBLIC_URL}/jobs`, text: "Jobs", isActive: false, title: "Jobs" },
+        { path: '/news', text: "News", isActive: false, title: "News and magazine" },
+        { path: '/open-weather', text: "Weather", isActive: false, title: "" },
+        { path: '/sport', text: "Sport", isActive: false, title: "Sport news" },
+        { path: '/software-development', text: "Software Development", isActive: false, title: "Software Development news" },
+        { path: '/cyber-security', text: "Cyber Security", isActive: false, title: "Cyber Security news" },
+        { path: '/videogames', text: "Videogames", isActive: false, title: "Videogames" },
+        { path: '/jobs', text: "Jobs", isActive: false, title: "Jobs" },
       ]
     };
 
@@ -166,7 +166,7 @@ class App extends Component {
 
         <Navbar color="dark mb-2" dark expand="md">
           <Container>
-          <NavbarBrand tag={Link} to={`${process.env.PUBLIC_URL}/`}><i className="fa fa-bullhorn"></i> News Feed Aggregator</NavbarBrand>
+          <NavbarBrand tag={Link} to="/"><i className="fa fa-bullhorn"></i> News Feed Aggregator</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav navbar>
@@ -184,36 +184,36 @@ class App extends Component {
         <Container>
 
           <Switch>
-            <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home} />
-            <Route exact path={`${process.env.PUBLIC_URL}/about`} component={About} />
-            <Route exact path={`${process.env.PUBLIC_URL}/open-weather`} component={OpenWeatherContainer} />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/open-weather" component={OpenWeatherContainer} />
 
-            <Route exact path={`${process.env.PUBLIC_URL}/news`} component={News} key="NewsGroups" />
-            <Route exact path={`${process.env.PUBLIC_URL}/news/:group`} component={NewsGroup} key="NewsGroupDetails" />
-            <Route exact path={`${process.env.PUBLIC_URL}/news/:group/:slug`} component={NewsGroupDetails} key="NewsFeedsDetails" />
+            <Route exact path="/news" component={News} key="NewsGroups" />
+            <Route exact path="/news/:group" component={NewsGroup} key="NewsGroupDetails" />
+            <Route exact path="/news/:group/:slug" component={NewsGroupDetails} key="NewsFeedsDetails" />
 
-            <Route exact path={`${process.env.PUBLIC_URL}/software-development`} component={SoftwareDevelopment} key="SoftwareDevelopment" />
-            <Route exact path={`${process.env.PUBLIC_URL}/software-development/:group`} component={SoftwareDevelopmentGroup} key="SoftwareDevelopmentGroup" />
-            <Route exact path={`${process.env.PUBLIC_URL}/software-development/:group/:slug`} component={SoftwareDevelopmentGroupDetails} key="SoftwareDevelopmentFeedsList" />
+            <Route exact path="/software-development" component={SoftwareDevelopment} key="SoftwareDevelopment" />
+            <Route exact path="/software-development/:group" component={SoftwareDevelopmentGroup} key="SoftwareDevelopmentGroup" />
+            <Route exact path="/software-development/:group/:slug" component={SoftwareDevelopmentGroupDetails} key="SoftwareDevelopmentFeedsList" />
 
-            <Route exact path={`${process.env.PUBLIC_URL}/cyber-security`} component={CyberSecurity} key="CyberSecurity" />
-            <Route exact path={`${process.env.PUBLIC_URL}/cyber-security/:group`} component={CyberSecurityGroup} key="CyberSecurityGroupDetails" />
-            <Route exact path={`${process.env.PUBLIC_URL}/cyber-security/:group/:slug`} component={CyberSecurityGroupDetails} key="CyberSecurityFeedsDetails" />
+            <Route exact path="/cyber-security" component={CyberSecurity} key="CyberSecurity" />
+            <Route exact path="/cyber-security/:group" component={CyberSecurityGroup} key="CyberSecurityGroupDetails" />
+            <Route exact path="/cyber-security/:group/:slug" component={CyberSecurityGroupDetails} key="CyberSecurityFeedsDetails" />
 
-            <Route exact path={`${process.env.PUBLIC_URL}/videogames`} component={VideoGames} key="VideoGames" />
-            <Route exact path={`${process.env.PUBLIC_URL}/videogames/:group`} component={VideoGamesGroup} key="VideoGamesGroup" />
-            <Route exact path={`${process.env.PUBLIC_URL}/videogames/:group/:slug`} component={VideoGamesGroupDetails} key="VideoGames" />
+            <Route exact path="/videogames" component={VideoGames} key="VideoGames" />
+            <Route exact path="/videogames/:group" component={VideoGamesGroup} key="VideoGamesGroup" />
+            <Route exact path="/videogames/:group/:slug" component={VideoGamesGroupDetails} key="VideoGames" />
 
-            <Route exact path={`${process.env.PUBLIC_URL}/sport`} component={Sport} key="Sport" />
-            <Route exact path={`${process.env.PUBLIC_URL}/sport/:group`} component={SportGroup} key="SportGrous" />
-            <Route exact path={`${process.env.PUBLIC_URL}/sport/:group/:slug`} component={SportGroupDetails} key="SportFeeds" />
+            <Route exact path="/sport" component={Sport} key="Sport" />
+            <Route exact path="/sport/:group" component={SportGroup} key="SportGrous" />
+            <Route exact path="/sport/:group/:slug" component={SportGroupDetails} key="SportFeeds" />
 
-            <Route exact path={`${process.env.PUBLIC_URL}/jobs`} component={Jobs} key="Jobs" />
-            <Route exact path={`${process.env.PUBLIC_URL}/jobs/:group`} component={JobsGroup} key="JobsGroup" />
-            <Route exact path={`${process.env.PUBLIC_URL}/jobs/:group/:slug`} component={JobsGroupDetails} key="JobsFeeds" />
+            <Route exact path="/jobs" component={Jobs} key="Jobs" />
+            <Route exact path="/jobs/:group" component={JobsGroup} key="JobsGroup" />
+            <Route exact path="/jobs/:group/:slug" component={JobsGroupDetails} key="JobsFeeds" />
 
-            <Redirect from={`${process.env.PUBLIC_URL}/old-match`} to={`${process.env.PUBLIC_URL}/will-match`} />
-            <Route path={`${process.env.PUBLIC_URL}/will-match`} component={WillMatch} />
+            <Redirect from="/old-match" to="/will-match" />
+            <Route path="/will-match" component={WillMatch} />
             <Route component={NoMatch} />
           </Switch>
 

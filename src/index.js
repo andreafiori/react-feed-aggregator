@@ -5,8 +5,8 @@ import '../node_modules/font-awesome/css/font-awesome.min.css';
 import App from './components/App.js';
 import './styles/App.css';
 import registerServiceWorker from './registerServiceWorker';
+import { BrowserRouter as Router, HashRouter } from 'react-router-dom';
+import history from 'history/createBrowserHistory';
 
-import {BrowserRouter as Router} from "react-router-dom";
-
-ReactDOM.render((<Router basename="/"><App /></Router>), document.getElementById('root'));
+ReactDOM.render((<HashRouter history={history}><App /></HashRouter>), document.getElementById('root'));
 registerServiceWorker();
