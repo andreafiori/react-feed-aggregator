@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager';
+import { FeedManager } from '../feeds/FeedsManager';
 import FeedsCategoryList from '../components/FeedsCategoryList';
 import Breadcrumbs from '../components/Breadcrumbs';
 import NewsGroupList from '../components/NewsGroupList';
@@ -9,11 +9,11 @@ class SportGroup extends Component {
   constructor(props) {
     super(props);
 
-    const currentNewsGroup = getNewsGroupByKey(SportFeedNewsGroup, props.match.params.group);
+    const currentNewsGroup = FeedManager.getNewsGroupByKey(SportFeedNewsGroup, props.match.params.group);
 
     this.state = {
       group: currentNewsGroup,
-      feeds: getNewsFeedsByGroup(SportFeedNewsFeeds, props.match.params.group),
+      feeds: FeedManager.getNewsFeedsByGroup(SportFeedNewsFeeds, props.match.params.group),
       breadcrumbs: this.setupBreadCrumbs(currentNewsGroup)
     };
   }

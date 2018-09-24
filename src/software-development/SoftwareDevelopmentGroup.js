@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager';
+import { FeedManager } from '../feeds/FeedsManager';
 import { SoftwareDevelopmentNewsGroups, SoftwareDevelopmentNewsFeeds } from '../feeds/SoftwareDevelopmentFeedManager';
 import FeedsCategoryList from '../components/FeedsCategoryList';
 import Breadcrumbs from '../components/Breadcrumbs';
@@ -10,11 +10,11 @@ class SoftwareDevelopmentGroup extends Component {
   constructor(props) {
     super(props);
 
-    const currentNewsGroup = getNewsGroupByKey(SoftwareDevelopmentNewsGroups, props.match.params.group);
+    const currentNewsGroup = FeedManager.getNewsGroupByKey(SoftwareDevelopmentNewsGroups, props.match.params.group);
 
     this.state = {
       group: currentNewsGroup,
-      feeds: getNewsFeedsByGroup(SoftwareDevelopmentNewsFeeds, props.match.params.group),
+      feeds: FeedManager.getNewsFeedsByGroup(SoftwareDevelopmentNewsFeeds, props.match.params.group),
       breadcrumbs: this.setupBreadCrumbs(currentNewsGroup)
     };
   }

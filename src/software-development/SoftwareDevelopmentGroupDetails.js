@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { RssParser } from '../api/RssParser';
-import { getNewsFeedBySlug, getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager';
+import { FeedManager } from '../feeds/FeedsManager';
 import { SoftwareDevelopmentNewsGroups, SoftwareDevelopmentNewsFeeds } from '../feeds/SoftwareDevelopmentFeedManager';
 import FeedsCategoryList from '../components/FeedsCategoryList';
 import FeedsFromApi from '../components/FeedsFromApi';
@@ -11,18 +11,18 @@ class SoftwareDevelopmentGroupDetails extends Component {
   constructor(props) {
     super(props);
 
-    let currentNewsGroup = getNewsGroupByKey(SoftwareDevelopmentNewsGroups, props.match.params.group);
+    const currentNewsGroup = FeedManager.getNewsGroupByKey(SoftwareDevelopmentNewsGroups, props.match.params.group);
 
-    let newsFeedsByGroup = getNewsFeedsByGroup(SoftwareDevelopmentNewsFeeds, props.match.params.group);
+    const newsFeedsByGroup = FeedManager.getNewsFeedsByGroup(SoftwareDevelopmentNewsFeeds, props.match.params.group);
 
-    let currentFeed = getNewsFeedBySlug(newsFeedsByGroup, props.match.params.slug);
+    const currentFeed = FeedManager.getNewsFeedBySlug(newsFeedsByGroup, props.match.params.slug);
 
     this.state = {
       group: props.match.params.group,
       slug: props.match.params.slug,
       currentNewsGroup: currentNewsGroup,
       currentFeed: currentFeed,
-      currentFeedsList: getNewsFeedsByGroup(SoftwareDevelopmentNewsFeeds, props.match.params.group),
+      currentFeedsList: newsFeedsByGroup,
       breadcrumbs: [
         { label: 'Software Development', href: '/software-development', title: 'Back to the Software Development main page', active: false },
         { label: currentNewsGroup.title, href: currentNewsGroup.path, title: currentNewsGroup.title, active: false },
@@ -64,7 +64,7 @@ class SoftwareDevelopmentGroupDetails extends Component {
 
     if ( (slug !== this.state.slug || this.state.newsFromApi === null) && this.state.error === null) {
 
-      let currentFeedsList = getNewsFeedBySlug(this.state.currentFeedsList, slug);
+      let currentFeedsList = FeedManager.getNewsFeedBySlug(this.state.currentFeedsList, slug);
 
       let self = this;
       rssParser.callPromise(currentFeedsList.url)

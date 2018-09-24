@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { RssParser } from '../api/RssParser';
-import { getNewsFeedBySlug, getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager';
+import { FeedManager } from '../feeds/FeedsManager';
 import { newsGroups, feeds } from '../feeds/NewsFeedManager';
 import FeedsCategoryList from '../components/FeedsCategoryList';
 import FeedsFromApi from '../components/FeedsFromApi';
@@ -11,18 +11,18 @@ class NewsGroupDetails extends Component {
   constructor(props) {
     super(props);
 
-    const currentNewsGroup = getNewsGroupByKey(newsGroups, props.match.params.group);
+    const currentNewsGroup = FeedManager.getNewsGroupByKey(newsGroups, props.match.params.group);
 
-    const newsFeedsByGroup = getNewsFeedsByGroup(feeds, props.match.params.group);
+    const newsFeedsByGroup = FeedManager.getNewsFeedsByGroup(feeds, props.match.params.group);
 
-    const currentFeed = getNewsFeedBySlug(newsFeedsByGroup, props.match.params.slug);
+    const currentFeed = FeedManager.getNewsFeedBySlug(newsFeedsByGroup, props.match.params.slug);
 
     this.state = {
       group: props.match.params.group,
       slug: props.match.params.slug,
       currentNewsGroup: currentNewsGroup,
       currentFeed: currentFeed,
-      currentFeedsList: getNewsFeedsByGroup(feeds, props.match.params.group),
+      currentFeedsList: FeedManager.getNewsFeedsByGroup(feeds, props.match.params.group),
       breadcrumbs: this.setupBreadCrumbs(currentNewsGroup, currentFeed),
       newsFromApi: null,
       error: null,
@@ -69,14 +69,14 @@ class NewsGroupDetails extends Component {
 
     if ( (slug !== this.state.slug || this.state.newsFromApi === null) && this.state.error === null) {
 
-      let currentFeedsLIst = getNewsFeedBySlug(this.state.currentFeedsList, slug);
+      const currentFeedsLIst = FeedManager.getNewsFeedBySlug(this.state.currentFeedsList, slug);
 
-      let self = this;
+      const self = this;
       rssParser.callPromise(currentFeedsLIst.url)
         .then(function (response) {
-          const currentNewsGroup = getNewsGroupByKey(newsGroups, group);
-          const feedsByGroup = getNewsFeedsByGroup(feeds, group);
-          const currentFeed = getNewsFeedBySlug(feedsByGroup, slug);
+          const currentNewsGroup = FeedManager.getNewsGroupByKey(newsGroups, group);
+          const feedsByGroup = FeedManager.getNewsFeedsByGroup(feeds, group);
+          const currentFeed = FeedManager.getNewsFeedBySlug(feedsByGroup, slug);
           const newBreadcrumbs = self.setupBreadCrumbs(currentNewsGroup, currentFeed);
           self.setState({
             group: group,

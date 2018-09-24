@@ -102,7 +102,6 @@ Single file:
 
 - Breacrumbs fix on feed list
 - Scroll to top \ Back to top links
-- Dotenv API enviroment prod and dev?
 - New Favicon\s
 - Meta tags?
 - Testing

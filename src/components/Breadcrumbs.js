@@ -8,14 +8,6 @@ class Breadcrumbs extends Component {
     elements: []
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      elements: this.props.elements,
-    };
-  }
-
   componentDidUpdate(prevProps) {
     // NOT working because of async calls...
     if (this.props.elements !== prevProps.elements) {
@@ -27,7 +19,7 @@ class Breadcrumbs extends Component {
 
   render() {
 
-    const { elements } = this.state;
+    const { elements } = this.props;
 
     return (
       <Breadcrumb>

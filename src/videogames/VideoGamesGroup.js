@@ -1,23 +1,11 @@
 import React, { Component } from 'react';
-import { getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager';
+import { FeedManager } from '../feeds/FeedsManager';
 import FeedsCategoryList from '../components/FeedsCategoryList';
 import Breadcrumbs from './../components/Breadcrumbs';
 import NewsGroupList from '../components/NewsGroupList';
 import { VideogamesNewsGroups, VideogamesNewsFeeds } from '../feeds/VideoGamesFeedManager';
 
 class VideoGamesGroup extends Component {
-  constructor(props) {
-    super(props);
-
-    const currentNewsGroup = getNewsGroupByKey(VideogamesNewsGroups, props.match.params.group);
-
-    this.state = {
-      group: currentNewsGroup,
-      feeds: getNewsFeedsByGroup(VideogamesNewsFeeds, props.match.params.group),
-      breadcrumbs: this.setupBreadCrumbs(currentNewsGroup)
-    };
-  }
-
   setupBreadCrumbs(newsGroup) {
     let breadcrumbs = [
       { label: 'Videogames', href: '/videogames', title: 'Back to videogames feeds main page', active: false },
@@ -43,8 +31,9 @@ class VideoGamesGroup extends Component {
   }
 
   render() {
-
-    const { group, feeds, breadcrumbs } = this.state;
+    const group = FeedManager.getNewsGroupByKey(VideogamesNewsGroups, this.props.match.params.group);
+    const feeds = FeedManager.getNewsFeedsByGroup(VideogamesNewsFeeds, this.props.match.params.group);
+    const breadcrumbs = this.setupBreadCrumbs(group);
 
     return (
       <div>

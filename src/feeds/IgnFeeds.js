@@ -5,7 +5,7 @@ export const IgnNewsGroups = {
 	group:        'videogames',
 	category:     'World',
 	path:         '/videogames/ign/',
-	country:      'Gmes',
+	country:      'Games',
 	website:      'https://www.ign.com/',
 	youtube:      'https://www.youtube.com/channel/UCKy1dAqELo0zrOtPkf0eTMw',
 	facebook:     'https://it-it.facebook.com/ign/',

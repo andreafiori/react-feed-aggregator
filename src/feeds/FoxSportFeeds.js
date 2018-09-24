@@ -42,7 +42,6 @@ export const FoxSportNewsGroup = {
 	rss:          'https://www.foxsports.com/rss-feeds',
 };
 
-// TODO: build api base URL and parameters as a const
 export const FoxSportNewsFeeds = [
   {
     title: 'Headlines',

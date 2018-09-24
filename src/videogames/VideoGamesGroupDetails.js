@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { RssParser } from '../api/RssParser';
-import { getNewsFeedBySlug, getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager';
+import { FeedManager } from '../feeds/FeedsManager';
 import FeedsCategoryList from '../components/FeedsCategoryList';
 import FeedsFromApi from '../components/FeedsFromApi';
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -11,18 +11,18 @@ class VideoGamesGroupDetails extends Component {
   constructor(props) {
     super(props);
 
-    const currentNewsGroup = getNewsGroupByKey(VideogamesNewsGroups, props.match.params.group);
+    const currentNewsGroup = FeedManager.getNewsGroupByKey(VideogamesNewsGroups, props.match.params.group);
 
-    const newsFeedsByGroup = getNewsFeedsByGroup(VideogamesNewsFeeds, props.match.params.group);
+    const newsFeedsByGroup = FeedManager.getNewsFeedsByGroup(VideogamesNewsFeeds, props.match.params.group);
 
-    const currentFeed = getNewsFeedBySlug(newsFeedsByGroup, props.match.params.slug);
+    const currentFeed = FeedManager.getNewsFeedBySlug(newsFeedsByGroup, props.match.params.slug);
 
     this.state = {
       group: props.match.params.group,
       slug: props.match.params.slug,
       currentNewsGroup: currentNewsGroup,
       currentFeed: currentFeed,
-      currentFeedsList: getNewsFeedsByGroup(VideogamesNewsFeeds, props.match.params.group),
+      currentFeedsList: newsFeedsByGroup,
       breadcrumbs: this.setupBreadcrumbs(currentNewsGroup),
       newsFromApi: null,
       rssParser: new RssParser(),
@@ -86,9 +86,9 @@ class VideoGamesGroupDetails extends Component {
 
     if ( (slug !== this.state.slug || this.state.newsFromApi === null) && this.state.error === null) {
 
-      let currentFeedsLIst = getNewsFeedBySlug(this.state.currentFeedsList, slug);
+      const currentFeedsLIst = FeedManager.getNewsFeedBySlug(this.state.currentFeedsList, slug);
 
-      let self = this;
+      const self = this;
       rssParser.callPromise(currentFeedsLIst.url)
         .then(function (response) {
           self.setState({

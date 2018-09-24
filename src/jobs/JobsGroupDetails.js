@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { RssParser } from '../api/RssParser';
-import { getNewsFeedBySlug, getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager';
+import { FeedManager } from '../feeds/FeedsManager';
 import FeedsCategoryList from '../components/FeedsCategoryList';
 import FeedsFromApi from '../components/FeedsFromApi';
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -11,18 +11,18 @@ class JobsGroupDetails extends Component {
   constructor(props) {
     super(props);
 
-    let currentNewsGroup = getNewsGroupByKey(JobsNewsGroups, props.match.params.group);
+    const currentNewsGroup = FeedManager.getNewsGroupByKey(JobsNewsGroups, props.match.params.group);
 
-    let newsFeedsByGroup = getNewsFeedsByGroup(JobsNewsFeeds, props.match.params.group);
+    const newsFeedsByGroup = FeedManager.getNewsFeedsByGroup(JobsNewsFeeds, props.match.params.group);
 
-    let currentFeed = getNewsFeedBySlug(newsFeedsByGroup, props.match.params.slug);
+    const currentFeed = FeedManager.getNewsFeedBySlug(newsFeedsByGroup, props.match.params.slug);
 
     this.state = {
       group: props.match.params.group,
       slug: props.match.params.slug,
       currentNewsGroup: currentNewsGroup,
       currentFeed: currentFeed,
-      currentFeedsList: getNewsFeedsByGroup(JobsNewsFeeds, props.match.params.group),
+      currentFeedsList: FeedManager.getNewsFeedsByGroup(JobsNewsFeeds, props.match.params.group),
       breadcrumbs: [
         
         { label: currentNewsGroup.title, href: currentNewsGroup.path ? currentNewsGroup.path : '', title: currentNewsGroup.title, active: false },
@@ -88,7 +88,7 @@ class JobsGroupDetails extends Component {
 
     if ( (slug !== this.state.slug || this.state.newsFromApi === null) && this.state.error === null) {
 
-      let currentFeedsList = getNewsFeedBySlug(this.state.currentFeedsList, slug);
+      let currentFeedsList = FeedManager.getNewsFeedBySlug(this.state.currentFeedsList, slug);
 
       let self = this;
       rssParser.callPromise(currentFeedsList.url)

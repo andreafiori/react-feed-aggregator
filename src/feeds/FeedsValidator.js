@@ -1,4 +1,4 @@
-export class FeedsTester {
+export class FeedsValidator {
 
   /**
    * Given a NewsGroup object, check all required array keys
@@ -18,6 +18,10 @@ export class FeedsTester {
     return this.checkArrayKeysIntoObject(requiredNewsgroupKeys, newsGroup);
   }
 
+  /**
+   * Check feed object keys
+   * @param {Array} feedsArrayOfObjects 
+   */
   static checkNewsFeedKeys(feedsArrayOfObjects) {
     const arrayKeys = ['label', 'title', 'path', 'url'];
     const self = this;
@@ -28,6 +32,11 @@ export class FeedsTester {
     });
   }
 
+  /**
+   * Given an array, check the values into an object
+   * @param {Array} arrayKeys 
+   * @param {Object} obj 
+   */
   static checkArrayKeysIntoObject(arrayKeys, obj) {
     return arrayKeys.every(function(item) {
       return (obj.hasOwnProperty(item) && obj[item] !== '');

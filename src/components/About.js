@@ -4,7 +4,7 @@ import Breadcrumbs from './Breadcrumbs';
 class About extends Component {
   render() {
     const breadcrumbs = [
-      { label: 'About', href: null, title: null, active: true }
+      { label: 'About', href: '', title: '', active: true }
     ];
 
     return (

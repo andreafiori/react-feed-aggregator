@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { newsGroups, feeds } from '../feeds/NewsFeedManager';
-import { getNewsGroupByKey, getNewsFeedsByGroup } from '../feeds/FeedsManager';
+import { FeedManager } from '../feeds/FeedsManager';
 import FeedsCategoryList from '../components/FeedsCategoryList';
 import Breadcrumbs from './../components/Breadcrumbs';
 import NewsGroupList from '../components/NewsGroupList';
@@ -10,11 +10,11 @@ class NewsGroup extends Component {
   constructor(props) {
     super(props);
 
-    const currentNewsGroup = getNewsGroupByKey(newsGroups, props.match.params.group);
+    const currentNewsGroup = FeedManager.getNewsGroupByKey(newsGroups, props.match.params.group);
 
     this.state = {
       group: currentNewsGroup,
-      feeds: getNewsFeedsByGroup(feeds, props.match.params.group),
+      feeds: FeedManager.getNewsFeedsByGroup(feeds, props.match.params.group),
       breadcrumbs: [
         { label: 'News', href: '/news', title: 'Back to news feeds main page', active: false },
         { label: currentNewsGroup.title, href: null, title: null, active: true }
@@ -68,19 +68,19 @@ class NewsGroup extends Component {
   
         </div>
       );
-    } else {
-      return (
-        <div>
-          <Breadcrumbs elements={breadcrumbs} />
-
-          <div className="alert alert-warning">
-            <h3>No news group</h3>
-            <p>The selected newsgroup were not found.</p>
-          </div>
-
-        </div>
-      );
     }
+
+    return (
+      <div>
+        <Breadcrumbs elements={breadcrumbs} />
+
+        <div className="alert alert-warning">
+          <h3>No news group</h3>
+          <p>The selected newsgroup were not found.</p>
+        </div>
+
+      </div>
+    );
     
   }
 

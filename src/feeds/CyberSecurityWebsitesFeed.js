@@ -364,13 +364,6 @@ export const CyberSecurityWebsitesFeeds = [
 			}, */
 		]
 	},
-	// TODO: move some items here
-	/* {
-		title: 'Blogs',
-		feeds: [
-			
-		]
-	}, */
 	{
 		title: 'Antivirus',
 		feeds: [
