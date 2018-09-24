@@ -6,6 +6,7 @@ import FeedsCategoryList from '../components/FeedsCategoryList';
 import FeedsFromApi from '../components/FeedsFromApi';
 import LoadingSpinner from '../components/LoadingSpinner';
 import Breadcrumbs from './../components/Breadcrumbs';
+import axios from 'axios';
 
 class NewsGroupDetails extends Component {
   constructor(props) {

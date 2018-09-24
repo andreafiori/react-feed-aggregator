@@ -5,7 +5,7 @@ export class FeedsValidator {
    * @param {Object} newsGroup 
    */
   static checkNewsGroupKeys(newsGroup) {
-    const requiredNewsgroupKeys = [
+    const keysToCheck = [
       'image',
       'title',
       'description',
@@ -15,7 +15,7 @@ export class FeedsValidator {
       'path'
     ];
 
-    return this.checkArrayKeysIntoObject(requiredNewsgroupKeys, newsGroup);
+    return this.checkArrayKeysIntoObject(newsGroup, keysToCheck);
   }
 
   /**
@@ -23,22 +23,22 @@ export class FeedsValidator {
    * @param {Array} feedsArrayOfObjects 
    */
   static checkNewsFeedKeys(feedsArrayOfObjects) {
-    const arrayKeys = ['label', 'title', 'path', 'url'];
+    const keysToCheck = ['label', 'title', 'path', 'url'];
     const self = this;
     return feedsArrayOfObjects.every(function(item) {
       return item.feeds.every(function(feed) {
-        return self.checkArrayKeysIntoObject(arrayKeys, feed);
+        return self.checkArrayKeysIntoObject(feed, keysToCheck);
       });
     });
   }
 
   /**
    * Given an array, check the values into an object
-   * @param {Array} arrayKeys 
    * @param {Object} obj 
+   * @param {Array} keysToCheck 
    */
-  static checkArrayKeysIntoObject(arrayKeys, obj) {
-    return arrayKeys.every(function(item) {
+  static checkArrayKeysIntoObject(obj, keysToCheck) {
+    return keysToCheck.every(function(item) {
       return (obj.hasOwnProperty(item) && obj[item] !== '');
     });
   }

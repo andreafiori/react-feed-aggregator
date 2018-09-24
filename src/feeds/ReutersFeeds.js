@@ -6,12 +6,13 @@ export const ReutersNewsGroup = {
 	category:     'News',
 	path:         '/news/reuters',
 	country:      'World',
-	website:      '',
-	youtube:      'w',
-	facebook:     '',
-  twitter:      '',
+	website:      'https://www.reuters.com/',
+	youtube:      '',
+	facebook:     'https://www.facebook.com/Reuters',
+  twitter:      'https://twitter.com/reuters',
   gplus:        '',
-	wikipedia:    '',
+  wikipedia:    '',
+  linkedin:     'https://www.linkedin.com/company/10256858/',
 	rss:          'https://www.reuters.com/tools/rss',
 };
 
@@ -29,109 +30,109 @@ export const ReutersNewsFeeds = [
         label: 'Business',
         title: 'Business news on Reuters',
         path: '/news/reuters/business',
-        url: ''
+        url: 'http://feeds.reuters.com/reuters/businessNews?format=xml'
       },
       {
         label: 'Company News',
         title: '',
         path: '/news/reuters/company-news',
-        url: ''
+        url: 'http://feeds.reuters.com/reuters/companyNews?format=xml'
       },
       {
         label: 'Entertainment',
         title: '',
         path: '/news/reuters/entertainment',
-        url: ''
+        url: 'http://feeds.reuters.com/reuters/entertainment?format=xml'
       },
       {
         label: 'Environment',
         title: '',
         path: '/news/reuters/environment',
-        url: ''
+        url: 'http://feeds.reuters.com/reuters/environment?format=xml'
       },
       {
         label: 'Health News',
         title: '',
         path: '/news/reuters/health-news',
-        url: ''
+        url: 'http://feeds.reuters.com/reuters/healthNews?format=xml'
       },
       {
         label: 'Lifestyle',
         title: '',
         path: '/news/reuters/lifestyle',
-        url: ''
+        url: 'http://feeds.reuters.com/reuters/lifestyle?format=xml'
       },
       {
         label: 'Money',
-        title: '',
+        title: 'Money, FoxNews RSS feds',
         path: '/news/reuters/money',
-        url: ''
+        url: 'http://feeds.reuters.com/news/wealth?format=xml'
       },
       {
         label: 'Most Read Articles',
-        title: '',
+        title: 'Most Read Articles RSS feeds',
         path: '/news/reuters/most-read-articles',
-        url: ''
+        url: 'http://feeds.reuters.com/reuters/MostRead?format=xml'
       },
       {
         label: 'Oddly Enough',
-        title: '',
+        title: 'Oddly Enough RSS feeds',
         path: '/news/reuters/oddly-enough',
-        url: ''
+        url: 'http://feeds.reuters.com/reuters/oddlyEnoughNews?format=xml'
       },
       {
         label: 'Pictures',
-        title: '',
+        title: 'Pictures RSS feeds',
         path: '/news/reuters/pictures',
-        url: ''
+        url: 'http://feeds.reuters.com/ReutersPictures?format=xml'
       },
       {
         label: 'People',
-        title: '',
+        title: 'People RSS feeds',
         path: '/news/reuters/people',
-        url: ''
+        url: 'http://feeds.reuters.com/reuters/peopleNews?format=xml'
       },
       {
         label: 'Politics',
-        title: '',
+        title: 'Politics RSS feeds',
         path: '/news/reuters/politics',
-        url: ''
+        url: 'http://feeds.reuters.com/Reuters/PoliticsNews?format=xml'
       },
       {
         label: 'Science',
-        title: '',
+        title: 'Science RSS feeds',
         path: '/news/reuters/science',
-        url: ''
+        url: 'http://feeds.reuters.com/reuters/scienceNews?format=xml'
       },
       {
         label: 'Sports',
-        title: '',
+        title: 'Sports RSS feeds',
         path: '/news/reuters/sports',
-        url: ''
+        url: 'http://feeds.reuters.com/reuters/sportsNews?format=xml'
       },
       {
         label: 'Technology',
-        title: '',
+        title: 'Technology RSS feeds',
         path: '/news/reuters/technology',
-        url: ''
+        url: 'http://feeds.reuters.com/reuters/technologyNews?format=xml'
       },
       {
         label: 'Top News',
-        title: '',
+        title: 'Top news RSS feeds',
         path: '/news/reuters/top-news',
-        url: ''
+        url: 'http://feeds.reuters.com/reuters/topNews?format=xml'
       },
       {
         label: 'US News',
-        title: '',
+        title: 'US new RSS feeds',
         path: '/news/reuters/us-news',
-        url: ''
+        url: 'http://feeds.reuters.com/Reuters/domesticNews'
       },
       {
         label: 'World',
-        title: '',
+        title: 'World news on FoxNews',
         path: '/news/reuters/world-news',
-        url: ''
+        url: 'http://feeds.reuters.com/Reuters/worldNews?format=xml'
       },
     ]
   },
@@ -140,99 +141,123 @@ export const ReutersNewsFeeds = [
     feeds: [
       {
         label: 'Breakingviews Video',
-        title: '',
+        title: 'Breakingviews Video RSS feed',
         path: '/news/reuters/breaking-news-video',
-        url: ''
+        url: 'http://feeds.reuters.com/reuters/USVideoBreakingviews?format=xml'
       },
       {
         label: 'Business Video',
-        title: '',
+        title: 'Business Video RSS feed',
         path: '/news/reuters/business-video',
-        url: ''
+        url: 'http://feeds.reuters.com/reuters/USVideoBusiness?format=xml'
       },
       {
         label: 'Business Travel Video',
-        title: '',
+        title: 'Business Travel Vide RSS feed',
         path: '/news/reuters/business-travel-video',
-        url: ''
+        url: '	http://feeds.reuters.com/reuters/USVideoBusinessTravel?format=xml'
       },
       {
         label: 'Chrystia Freeland Video',
-        title: '',
+        title: 'Chrystia Freeland Video RSS feed',
         path: '/news/reuters/chrystia-freeland-video',
-        url: ''
+        url: '	http://feeds.reuters.com/reuters/USVideoChrystiaFreeland?format=xml'
       },
       {
         label: 'Entertainment Video',
-        title: '',
+        title: 'Entertainment Video RSS feed',
         path: '/news/reuters/entertainment-video',
-        url: ''
+        url: 'http://feeds.reuters.com/reuters/USVideoEntertainment?format=xml'
       },
       {
         label: 'Environment Video',
-        title: '',
+        title: 'Environment Video RSS feed',
         path: '/news/reuters/environment-video',
-        url: ''
+        url: '	http://feeds.reuters.com/reuters/USVideoEnvironment?format=xml'
       },
       {
         label: 'Felix Salmon Video',
-        title: '',
+        title: 'Felix Salmon Video RSS feed',
         path: '/news/reuters/felix-salmon-video',
-        url: ''
+        url: 'http://feeds.reuters.com/reuters/USVideoFelixSalmon?format=xml'
       },
       {
         label: 'GigaOm Video',
-        title: '',
+        title: 'GigaOm Video RSS feed',
         path: '/news/reuters/gigaom-video',
-        url: ''
+        url: 'http://feeds.reuters.com/reuters/USVideoGigaom?format=xml'
       },
       {
         label: 'Lifestyle Video',
-        title: '',
+        title: 'Lifestyle Video RSS feed',
         path: '/news/reuters/lifestyle-video',
-        url: ''
+        url: 'http://feeds.reuters.com/reuters/USVideoLifestyle?format=xml'
       },
       {
         label: 'Most Watched Video',
-        title: '',
+        title: 'Most Watched Video RSS feed',
         path: '/news/reuters/most-watched-video',
-        url: ''
+        url: 'http://feeds.reuters.com/reuters/USVideoMostWatched?format=xml'
       },
       {
         label: 'Most Recent Video',
-        title: '',
+        title: 'Most Recent Video RSS feed',
         path: '/news/reuters/most-recent-video',
-        url: ''
+        url: 'http://feeds.reuters.com/reuters/USVideoLatest?format=xml'
       },
       {
         label: 'Newsmakers',
-        title: '',
+        title: 'Newsmakers RSS feeds',
         path: '/news/reuters/newsmakers',
-        url: ''
+        url: 'http://feeds.reuters.com/reuters/USVideoNewsmakers?format=xml'
       },
       {
         label: 'Oddly Enough',
-        title: '',
+        title: 'Oddly Enough RSS feeds',
         path: '/news/reuters/oddly-enough-videos',
-        url: ''
+        url: 'http://feeds.reuters.com/reuters/USVideoOddlyEnough?format=xml'
       },
       {
         label: 'Personal Finance',
-        title: '',
+        title: 'Personal Finance Videos RSS feeds',
         path: '/news/reuters/personal-finance-video',
-        url: ''
+        url: 'http://feeds.reuters.com/reuters/USVideoPersonalFinance?format=xml'
       },
       {
         label: 'Politics Video',
         title: 'Politics Video RSS feeds',
         path: '/news/reuters/politics-video',
-        url: ''
+        url: '	http://feeds.reuters.com/reuters/USVideoPolitics?format=xml'
       },
       {
         label: 'Rough Cuts',
         title: 'Rough Cuts Video RSS feeds',
         path: '/news/reuters/rough-cuts-video',
-        url: ''
+        url: 'http://feeds.reuters.com/reuters/USVideoRoughCuts?format=xml'
+      },
+      {
+        label: 'Small Business',
+        title: 'Small Business Video RSS feeds',
+        path: '/news/reuters/small-business-video',
+        url: 'http://feeds.reuters.com/reuters/USVideoSmallBusiness?format=xml'
+      },
+      {
+        label: 'Technology Video',
+        title: 'Technology Video RSS feeds',
+        path: '/news/reuters/technology-video',
+        url: 'http://feeds.reuters.com/reuters/USVideoTechnology?format=xml'
+      },
+      {
+        label: 'Top News Video',
+        title: 'Top News Video RSS feeds',
+        path: '/news/reuters/top-news-video',
+        url: 'http://feeds.reuters.com/reuters/USVideoTopNews?format=xml'
+      },
+      {
+        label: 'World News',
+        title: 'World News Video RSS feeds',
+        path: '/news/reuters/top-news-video',
+        url: 'http://feeds.reuters.com/reuters/USVideoWorldNews?format=xml'
       },
     ]
   }

@@ -49,7 +49,14 @@ export const FrontendNewsFeeds = [
 				label: 'A list apart',
 				title: 'A List Apart: For People Who Make Websites',
 				path: '/software-development/frontend-news/a-list-apart',
-				url: 'http://alistapart.com/site/rss'
+				truncateDescription: true,
+				url: 'https://alistapart.com/main/feed'
+			},
+			{
+				label: 'A list apart, translated articles',
+				title: 'A List Apart: For People Who Make Websites (translated articles)',
+				path: '/software-development/frontend-news/a-list-apart-translated-articles',
+				url: 'https://alistapart.com/main/feed-translations'
 			},
 			{
 				label: 'Speckyboy',

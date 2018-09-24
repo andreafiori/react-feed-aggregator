@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SocialButtons from './SocialButtons';
 
 class NewsGroupList extends Component {
   static defaultProps = {
@@ -19,35 +20,7 @@ class NewsGroupList extends Component {
             </h3>
             <p className="card-text mb-auto">{ group.description }</p>
 
-            <div>
-            { group.website && 
-              <span><a href={group.website} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-primary"><i className="fa fa-globe"></i> Website</a>&nbsp;</span>
-            }
-
-            { group.facebook && 
-              <span><a href={group.facebook} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-primary"><i className="fa fa-facebook"></i> Facebook</a>&nbsp;</span>
-            }
-
-            { group.youtube && 
-              <span><a href={group.youtube} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-danger"><i className="fa fa-youtube"></i> Youtube</a>&nbsp;</span>
-            }
-
-            { group.wikipedia && 
-              <span><a href={group.wikipedia} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-secondary"><i className="fa fa-wikipedia-w"></i> Wikipedia</a>&nbsp;</span>
-            }
-  
-            { group.twitter && 
-              <span><a href={group.twitter} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-info"><i className="fa fa-twitter"></i> Twitter</a>&nbsp;</span>
-            }
-
-            { group.gplus && 
-              <span><a href={group.gplus} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-danger"><i className="fa fa-google"></i> Gplus</a>&nbsp;</span>
-            }
-
-            { group.rss && 
-              <span><a href={group.rss} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-warning"><i className="fa fa-rss"></i> RSS</a></span>
-            }
-            </div>
+            <SocialButtons obj={group} />
 
           </div>
 

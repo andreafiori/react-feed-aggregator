@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { formatDate } from '../utils/DateUtils';
+import { StringUtils } from '../utils/StringUtils';
+import SocialButtons from './SocialButtons';
 
 class FeedsFromApi extends Component {
+
   static defaultProps = {
     currentFeed: null,
     newsFromApi: null,
@@ -28,59 +31,7 @@ class FeedsFromApi extends Component {
             </div>
 
             <div className="col-sm-12 col-md-12 col-lg-12">
-              { currentFeed.website && 
-                <span>
-                  <a href={currentFeed.website} target="_blank" className="btn btn-sm btn-primary" rel="noopener noreferrer" title={currentFeed.label + ' official website'}>
-                    <i className="fa fa-globe"></i> Website
-                  </a>&nbsp;
-                </span>
-              }
-
-              { currentFeed.facebook && 
-                <span>
-                  <a href={currentFeed.facebook} target="_blank" className="btn btn-sm btn-primary" rel="noopener noreferrer" title={currentFeed.label + ' Facebook profile'}>
-                    <i className="fa fa-facebook"></i> Facebook
-                  </a>&nbsp;
-                </span>
-              }
-
-              { currentFeed.twitter && 
-                <span>
-                  <a href={currentFeed.twitter} target="_blank" className="btn btn-sm btn-info" rel="noopener noreferrer" title={currentFeed.label + ' Twitter profile'}>
-                    <i className="fa fa-twitter"></i> Twitter
-                  </a>&nbsp;
-                </span>
-              }
-
-              { currentFeed.linkedin && 
-                <span>
-                  <a href={currentFeed.linkedin} target="_blank" className="btn btn-sm btn-primary" rel="noopener noreferrer" title={currentFeed.label + ' Linkedin profile'}>
-                    <i className="fa fa-linkedin"></i> Linkedin
-                  </a>&nbsp;
-                </span>
-              }
-
-              { currentFeed.youtube && 
-                <span>
-                  <a href={currentFeed.youtube} target="_blank" className="btn btn-sm btn-danger" rel="noopener noreferrer" title={currentFeed.label + ' Youtube profile'}>
-                    <i className="fa fa-youtube"></i> Youtube
-                  </a>&nbsp;
-                </span>
-              }
-
-              { currentFeed.github && 
-                <span>
-                  <a href={currentFeed.github} target="_blank" className="btn btn-sm btn-dark" rel="noopener noreferrer" title={currentFeed.label + ' Github profile'}>
-                    <i className="fa fa-github"></i> Github
-                  </a>&nbsp;
-                </span>
-              }
-
-              <span>
-                <a href={currentFeed.url} target="_blank" className="btn btn-sm btn-warning" rel="noopener noreferrer" title={currentFeed.label + ' RSS feed link'}>
-                  <i className="fa fa-rss"></i> RSS
-                </a>
-              </span>
+              <SocialButtons obj={currentFeed} />
             </div>
             
           </div>
@@ -93,8 +44,12 @@ class FeedsFromApi extends Component {
                 
                 <div><i className="fa fa-calendar"></i> <time>{ formatDate(item.pubDate) }</time></div>
 
-                { !currentFeed.hideDescription && 
+                { !currentFeed.hideDescription && !currentFeed.truncateDescription && 
                   <div>{ item.description  }</div>
+                }
+
+                { !currentFeed.hideDescription && currentFeed.truncateDescription &&
+                  <div>{ StringUtils.truncateString(item.description, 40) + '...'  }</div>
                 }
 
                 <div className="text-right">
