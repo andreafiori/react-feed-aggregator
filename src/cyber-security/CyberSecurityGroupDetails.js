@@ -23,16 +23,27 @@ class CyberSecurityGroupDetails extends Component {
       currentNewsGroup: currentNewsGroup,
       currentFeed: currentFeed,
       currentFeedsList: newsFeedsByGroup,
-      rssParser: new RssParser(),
-      breadcrumbs: [
-        { label: 'Cyber Security', href: '/cyber-security', title: 'Back to the Cyber Security news list', active: false },
-        { label: currentNewsGroup.title, href: currentNewsGroup.path ? currentNewsGroup.path : '', title: currentNewsGroup.title, active: false },
-        { label: currentFeed.label, href: null, title: '', active: true },
-      ],
+      breadcrumbs: this.setupBreadcrumbs(currentNewsGroup, currentFeed),
       newsFromApi: null,
       error: null,
     };
 
+    this.handleUpdateFeed = this.handleUpdateFeed.bind(this);
+  }
+
+  setupBreadcrumbs(newsGroup, newsFeed) {
+    return [
+      { label: 'Cyber Security', href: '/cyber-security', title: 'Back to the Cyber Security news list', active: false },
+      { label: newsGroup.title, href: newsGroup.path ? newsGroup.path : '', title: newsGroup.title, active: false },
+      { label: newsFeed.label, href: null, title: '', active: true },
+    ]
+  }
+
+  handleUpdateFeed() {
+    // Temporary reset the news list
+    this.setState({
+      newsFromApi: null,
+    });
   }
 
   /**
@@ -46,9 +57,8 @@ class CyberSecurityGroupDetails extends Component {
    * Check state and update it if needed
    * 
    * @param {*} prevProps 
-   * @param {*} prevState 
    */
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps) {
     // This is the initial render without a previous prop change
     if (prevProps === undefined) {
       return false;
@@ -60,11 +70,12 @@ class CyberSecurityGroupDetails extends Component {
 
   setupCurrentNewsGroup() {
     const {slug, group} = this.props.match.params;
-    const {rssParser} = this.state;
+    const rssParser = new RssParser();
 
     if ( (slug !== this.state.slug || this.state.newsFromApi === null) && this.state.error === null) {
 
       const currentFeedsList = FeedManager.getNewsFeedBySlug(this.state.currentFeedsList, slug);
+      const currentNewsGroup = FeedManager.getNewsGroupByKey(CyberSecurityNewsGroups, group)
 
       let self = this;
       rssParser.callPromise(currentFeedsList.url)
@@ -74,9 +85,9 @@ class CyberSecurityGroupDetails extends Component {
             group: group,
             slug: slug,
             newsFromApi: newsFromApi,
-            currentNewsGroup: FeedManager.getNewsGroupByKey(CyberSecurityNewsGroups, group),
+            currentNewsGroup: currentNewsGroup,
             currentFeed: currentFeedsList,
-            /* currentFeedsList: newsFromApi, */
+            breadcrumbs: self.setupBreadcrumbs(currentNewsGroup, currentFeedsList),
             error: null,
           });
         })
@@ -128,24 +139,23 @@ class CyberSecurityGroupDetails extends Component {
             </div>
 
             <div className="col-sm-12 col-md-4 col-lg-3">
-              <FeedsCategoryList items={currentFeedsList} />
+              <FeedsCategoryList handleUpdateFeed={this.handleUpdateFeed} items={currentFeedsList} />
             </div>
           </div>
 
         </div>
 
       );
-    } else {
-      return (
-        <div className="alert alert-warning">
-          <h3>Feed not found</h3>
-          <p>The newsgroup were not found; there is not news to display</p>
-        </div>
-      );
     }
-    
-  }
 
+    return (
+      <div className="alert alert-warning">
+        <h3>Feed not found</h3>
+        <p>The newsgroup were not found; there is not news to display</p>
+      </div>
+    );
+  }
+    
 }
 
 export default CyberSecurityGroupDetails;

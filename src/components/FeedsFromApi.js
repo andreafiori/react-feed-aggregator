@@ -48,7 +48,7 @@ class FeedsFromApi extends Component {
                   <div>{ item.description  }</div>
                 }
 
-                { !currentFeed.hideDescription && currentFeed.truncateDescription &&
+                { currentFeed.truncateDescription === true &&
                   <div>{ StringUtils.truncateString(item.description, 40) + '...'  }</div>
                 }
 

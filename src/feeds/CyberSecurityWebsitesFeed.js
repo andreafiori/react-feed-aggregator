@@ -47,13 +47,12 @@ export const CyberSecurityWebsitesFeeds = [
 				linkedin: 'https://www.linkedin.com/company/5053/',
 				url: 'https://nakedsecurity.sophos.com/feed/'
 			},
-			// Not working, check format
 			/* {
 				label: 'Google Online Security Blog',
 				title: 'Google Online Security Blog RSS Feed',
 				path: '/cyber-security/websites/google-online',
 				website: 'https://security.googleblog.com/',
-				url: 'http://feeds.feedburner.com/GoogleOnlineSecurityBlog/?format=xml'
+				url: 'http://feeds.feedburner.com/GoogleOnlineSecurityBlog'
 			}, */
 			{
 				label: 'Infosecurity Magazine',
@@ -110,7 +109,7 @@ export const CyberSecurityWebsitesFeeds = [
 				title: 'SecurityWeek | Information Security News, IT Security News & Expert Insights RSS Feed',
 				path: '/cyber-security/websites/security-week',
 				website: 'http://www.securityweek.com/',
-				url: 'http://feeds.feedburner.com/Securityweek'
+				url: 'http://feeds.feedburner.com/Securityweek?format=xml'
 			},
 			{
 				label: 'Help Net Security',
@@ -121,8 +120,8 @@ export const CyberSecurityWebsitesFeeds = [
 			},
 			{
 				label: 'HackRead',
-				title: 'HackRead | Latest Cyber Crime - InfoSec- Tech - Hacking News RSS Feed',
-				path: '/cyber-security/websites/',
+				title: 'HackRead | Latest Cyber Crime - InfoSec - Tech - Hacking News RSS Feed',
+				path: '/cyber-security/websites/hackread',
 				website: 'https://www.hackread.com/',
 				url: 'https://www.hackread.com/feed'
 			},
@@ -166,16 +165,15 @@ export const CyberSecurityWebsitesFeeds = [
 				title: 'BankInfoSecurity.com RSS Feed',
 				path: '/cyber-security/websites/bank-info-security',
 				website: 'http://www.bankinfosecurity.com/news',
-				url: 'http://feeds.feedburner.com/bankinfosecurity/com'
+				url: 'http://feeds.feedburner.com/bankinfosecurity/com?format=xml'
 			},
-			// Microsoft Blog category
-			/* {
+			{
 				label: 'Microsoft Security',
-				title: 'Cybersecurity – Microsoft Secure Blog RSS Feed,
+				title: 'Cybersecurity – Microsoft Secure Blog RSS Feed',
 				path: '/cyber-security/websites/microsoft-cybersecurity-blog',
-				website: 'http://www.cio.com/',
-				url: 'https://blogs.microsoft.com/microsoftsecure/category/cybersecurity/'
-			}, */
+				website: 'https://blogs.microsoft.com/',
+				url: 'https://blogs.microsoft.com/feed/'
+			},
 			// The Guardinan https://www.theguardian.com/technology/data-computer-security/rss | https://www.theguardian.com/technology/data-computer-security
 			// Forbes https://www.forbes.com/security/feed/ | 
 			{
@@ -247,6 +245,16 @@ export const CyberSecurityWebsitesFeeds = [
 				gplus: 'https://plus.google.com/+proofpoint/posts',
 				youtube: 'https://www.youtube.com/channel/UCIvtJgsrUzFo90NKeiVozhQ',
 				url: 'https://www.proofpoint.com/us/rss.xml'
+			},
+			{
+				label: 		'PCI Perspectives',
+				title: 		'PCI Perspectives RSS Feed',
+				path: 		'/cyber-security/websites/pci-perspective',
+				website:	'https://blog.pcisecuritystandards.org/',
+				twitter: 	'https://twitter.com/PCISSC',
+				youtube: 	'https://www.youtube.com/user/PCICouncil',
+				linkedin:	'https://www.linkedin.com/company/pci-security-standards-council',
+				url: 			'https://blog.pcisecuritystandards.org/rss.xml',
 			},
 			// Veracode http://www.veracode.com/blog/feed
 			// Tripwire https://www.tripwire.com/state-of-security/
@@ -349,6 +357,14 @@ export const CyberSecurityWebsitesFeeds = [
 				url: 			'http://www.mytopposts.com/category/cyber-security/feed',
 			},
 			// Security weekly http://securityweekly.com/podcast/psw.xml | http://securityweekly.com/podcast/psw.xml
+			{
+				label: 		'Connected',
+				title: 		'Connected - Official Technology Community of Connection',
+				path: 		'/cyber-security/websites/connected-blog-community',
+				website:	'https://community.connection.com/',
+				url: 			'https://community.connection.com/feed-connection/',
+				
+			},
 			// Empty
 			/* {
 				label: 		'',
@@ -387,6 +403,107 @@ export const CyberSecurityWebsitesFeeds = [
 			},
 			// Quick Heal Antivirus https://blogs.quickheal.com/feed/
 			// TrendMicro https://blog.trendmicro.com/ | http://feeds.trendmicro.com/TrendMicroSimplySecurity
+			// Move this one on 
+			{
+				label: 'Cyber-DB',
+				title: 'Cyber-DB State Actor Cyber Reports Overshadow the Extensive Threat of Cyber Crime',
+				path: '/cyber-security/websites/cyber-db',
+				website: 'http://cyberdb.co/blog/',
+				url: 'http://cyberdb.co/blog/feed'
+			}, 
+			{
+				label: 'SecurityWatch RSS Feed',
+				title: 'SecurityWatch RSS Feed',
+				path: '/cyber-security/websites/securitywatch-blog',
+				website: 'http://bhconsulting.ie/securitywatch/',
+				url: 'http://bhconsulting.ie/securitywatch/?feed=rss2'
+			},
+			{
+				label: 'Compass Cyber Security',
+				title: 'Compass Cyber Security A Navigant Consulting Company RSS Feed',
+				path: '/cyber-security/websites/compass-cyber-security',
+				website: 'http://www.compasscyber.com/blog/',
+				facebook: 'https://www.facebook.com/compasscyber/',
+				twitter: 'https://twitter.com/COMPASScyber',
+				gplus: 'https://plus.google.com/105193008083506275976/posts',
+				linkedin: 'https://www.linkedin.com/company/comprehensive-applied-security-solutions-compass-?',
+				url: 'http://www.compasscyber.com/blog/feed'
+			},
+			// Cyber Security Buzz RSS Feed: the website gives an error
+			{
+				label: 'Binary Blogger',
+				title: ' Binary Blogger RSS Feed',
+				path: '/cyber-security/websites/binary-blogger',
+				website: 'https://binaryblogger.com/',
+				url: 'http://feeds.feedburner.com/binaryblogger'
+			},
+			{
+				label: 'GRA Quantum',
+				title: 'GRA Quantum RSS Feed',
+				path: '/cyber-security/websites/',
+				website: 'https://graquantum.com/',
+				facebook: 'https://www.facebook.com/Graquantum/',
+				twitter: 'https://twitter.com/GraQuantum',
+				linkedin: 'https://www.linkedin.com/company/gra-quantum/',
+				url: 'https://graquantum.com/feed'
+			},
+			{
+				label: 'The Last Watchdog',
+				title: 'The Last Watchdog RSS Feed',
+				path: '/cyber-security/websites/the-last-watchdog',
+				website: 'http://lastwatchdog.com/',
+				url: 'http://lastwatchdog.com/feed/'
+			},
+			{
+				label: 'IT Security Expert',
+				title: 'IT Security Expert RSS Feed',
+				path: '/cyber-security/websites/it-security-expert',
+				website: 'https://blog.itsecurityexpert.co.uk/',
+				facebook: '',
+				twitter: 'https://twitter.com/SecurityExpert',
+				youtube: '',
+				gplus: '',
+				linkedin: '',
+				isAtomFormat: true,
+				url: 'http://blog.itsecurityexpert.co.uk/atom.xml'
+			},
+			{
+				label: 'Privacy Ref Blog',
+				title: 'Privacy Ref Blog RSS Feed',
+				path: '/cyber-security/websites/privacy-ref-blog',
+				website: 'http://privacyref.com/wordpress/',
+				url: 'http://privacyref.com/wordpress/feed'
+			},
+			{
+				label: 'Cyber Security Blog',
+				title: 'Cyber Security Blog RSS Feed',
+				path: '/cyber-security/websites/cyber-security-blog',
+				website: 'http://www.cyber-security-blog.com/',
+				url: 'http://www.cyber-security-blog.com/feeds/posts/default?alt=rss'
+			},
+			{
+				label: 'SANS AppSec Street Fighter',
+				title: 'AppSec Street Fighter - SANS Institute RSS Feed',
+				path: '/cyber-security/websites/sans-appsec-street-fighter',
+				website: 'http://software-security.sans.org/blog',
+				facebook: 'https://www.facebook.com/pages/SANS-Institute/173623382673767',
+				twitter: 'http://twitter.com/sansappsec',
+				url: 'https://ics.sans.org/blog/feed//'
+				// url: 'http://software-security.sans.org/blog/feed/'
+			},
+			// Empty
+			/* {
+				label: '',
+				title: '',
+				path: '/cyber-security/websites/',
+				website: '',
+				facebook: '',
+				twitter: '',
+				youtube: '',
+				gplus: '',
+				linkedin: '',
+				url: ''
+			}, */
 		]
 	},
 	{
@@ -429,7 +546,36 @@ export const CyberSecurityWebsitesFeeds = [
 				youtube: 'https://www.youtube.com/user/troyhuntdotcom',
 				gplus: 'https://plus.google.com/+TroyHunt',
 				linkedin: 'https://www.linkedin.com/in/troyhunt',
-				url: 'https://feeds.feedburner.com/TroyHunt'
+				url: 'https://feeds.feedburner.com/TroyHunt?format=xml'
+			},
+			{
+				label: 		'Richard Bejtlich',
+				title: 		'Richard Bejtlich TAO security blog',
+				path: 		'/cyber-security/websites/richard-bejtich-tao-security',
+				website:	'https://taosecurity.blogspot.com/',
+				twitter: 	'https://twitter.com/taosecurity',
+				url: 			'https://taosecurity.blogspot.com/feeds/posts/default?alt=rss',
+			},
+			//  https://community.connection.com/author/stephen-nardone/feed/
+			// https://community.connection.com/author/lane-shelton/feed/
+			// https://community.connection.com/author/kurt-hildebrand/feed/
+			{
+				label: 'Adam Levin',
+				title: 'Adam Levin - Identity, Security, and Personal Finance RSS Feed',
+				path: '/cyber-security/websites/adam-levin',
+				website: 'https://adamlevin.com/',
+				url: 'https://adamlevin.com/feed'
+			},
+			{
+				label: 'Yusuph Kileo',
+				title: 'KILEO ON CYBERSECURITY RSS Feed',
+				path: '/cyber-security/websites/kiòeo-on-cyber-security',
+				website: 'http://ykileo.blogspot.com/',
+				facebook: 'https://www.facebook.com/KileoCyber/',
+				twitter: 'https://twitter.com/YUSUPHKILEO',
+				gplus: 'https://plus.google.com/u/0/+KILEOY',
+				linkedin: 'http://www.linkedin.com/in/yusuphkileo',
+				url: 'http://ykileo.blogspot.com/feeds/posts/default?alt=rss'
 			},
 			{
 				label: 'Marco Ramilli',
@@ -438,16 +584,8 @@ export const CyberSecurityWebsitesFeeds = [
 				website: 'https://marcoramilli.blogspot.com',
 				url: 'http://marcoramilli.blogspot.com/feeds/posts/default?alt=rss'
 			},
-
 			// Kevin Mitnick No feeds https://blogs.quickheal.com/feed/
 			// Dan Lohrmann http://www.govtech.com/blogs/lohrmann-on-cybersecurity/
-			// Empty
-			/* {
-				label: '',
-				title: '',
-				path: '/cyber-security/websites/',
-				url: ''
-			}, */
 		]
 	}
 ];
