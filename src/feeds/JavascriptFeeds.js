@@ -67,9 +67,10 @@ export const JavascriptNewsFeeds = [
 				label: 'React Native',
 				title: 'Latest article from the React Native website',
         path: '/software-development/javascript/react-native',
-        website: 'https://www.reactjs.org/',
+        website: 'https://facebook.github.io/react-native/',
         github: 'https://github.com/facebook/react-native',
-				url: 'http://facebook.github.io/react-native/',
+        isAtom: true,
+        url: 'https://facebook.github.io/react-native/blog/atom.xml',
       },
       // Google News? https://news.google.com/news?cf=all&hl=en&pz=1&ned=us&q=javascript&output=rss
       // Angular: https://angular.io/ Vue: https://vuejs.org/The Progressive JavaScript Framework
@@ -85,6 +86,7 @@ export const JavascriptNewsFeeds = [
 				title: 'Latest article from Ember Blog',
         path: '/software-development/javascript/ember',
         website: 'https://www.emberjs.com/',
+        isAtom: true,
 				url: 'https://www.emberjs.com/blog/feed.xml?format=xml',
       },
       {

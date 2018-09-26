@@ -29,29 +29,26 @@ class VideoGamesGroupDetails extends Component {
       error: null,
     };
 
+    this.handleUpdateFeed = this.handleUpdateFeed.bind(this);
+  }
+
+  handleUpdateFeed() {
+    // Temporary reset the news list
+    this.setState({
+      newsFromApi: null,
+    });
   }
   
-  setupBreadcrumbs(newsGroup) {
-    let breadcrumbs = [
+  setupBreadcrumbs(cunewsGroup, newsFeed) {
+    let breadcrumbs =  [
       { label: 'News', href: '/news', title: 'Back to the news main page', active: false },
+      { label: cunewsGroup.title, href: cunewsGroup.path, title: cunewsGroup.title, active: false },
     ];
 
-    if (newsGroup) {
-      breadcrumbs.push({
-        label: newsGroup.title,
-        href: newsGroup.path,
-        title: newsGroup.title,
-        active: false
-      });
-
-      breadcrumbs.push({
-        label: 'News list',
-        href: '',
-        title: '',
-        active: true
-      });
+    if (newsFeed) {
+      breadcrumbs.push({ label: newsFeed.label, href: '', title: '', active: true });
     } else {
-      breadcrumbs.push({label: 'Error', active: true});
+      breadcrumbs.push({ label: 'Error', href: '', title: '', active: true });
     }
 
     return breadcrumbs;
@@ -86,15 +83,19 @@ class VideoGamesGroupDetails extends Component {
 
     if ( (slug !== this.state.slug || this.state.newsFromApi === null) && this.state.error === null) {
 
-      const currentFeedsLIst = FeedManager.getNewsFeedBySlug(this.state.currentFeedsList, slug);
+      const currentFeedsList = FeedManager.getNewsFeedBySlug(this.state.currentFeedsList, slug);
+      const currentNewsGroup = FeedManager.getNewsGroupByKey(VideogamesNewsGroups, group);
 
       const self = this;
-      rssParser.callPromise(currentFeedsLIst.url)
+      rssParser.callPromise(currentFeedsList.url)
         .then(function (response) {
           self.setState({
             group: group,
             slug: slug,
             newsFromApi: rssParser.parseFeedRss(response.data),
+            currentNewsGroup: currentNewsGroup,
+            currentFeed: currentFeedsList,
+            breadcrumbs: self.setupBreadcrumbs(currentNewsGroup, currentFeedsList),
             error: null,
           });
         })
@@ -102,6 +103,8 @@ class VideoGamesGroupDetails extends Component {
           self.setState({
             group: group,
             slug: slug,
+            currentNewsGroup: currentNewsGroup,
+            currentFeed: currentFeedsList,
             newsFromApi: null,
             error: error
           });
@@ -149,7 +152,7 @@ class VideoGamesGroupDetails extends Component {
           </div>
 
           <div className="col-sm-12 col-md-4 col-lg-3">
-            <FeedsCategoryList items={currentFeedsList} />
+            <FeedsCategoryList handleUpdateFeed={this.handleUpdateFeed} items={currentFeedsList} />
           </div>
         </div>
 

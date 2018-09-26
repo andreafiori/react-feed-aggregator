@@ -7,19 +7,8 @@ import NewsGroupList from '../components/NewsGroupList';
 import NewsGroupError from '../components/NewsGroupError';
 
 class SoftwareDevelopmentGroup extends Component {
-  constructor(props) {
-    super(props);
 
-    const currentNewsGroup = FeedManager.getNewsGroupByKey(SoftwareDevelopmentNewsGroups, props.match.params.group);
-
-    this.state = {
-      group: currentNewsGroup,
-      feeds: FeedManager.getNewsFeedsByGroup(SoftwareDevelopmentNewsFeeds, props.match.params.group),
-      breadcrumbs: this.setupBreadCrumbs(currentNewsGroup)
-    };
-  }
-
-  setupBreadCrumbs(newsGroup) {
+  setupBreadcrumbs(newsGroup) {
     let breadcrumbs = [
       { label: 'Software Development', href: '/software-development', title: 'Back to Software Development feeds main page', active: false },
     ];
@@ -44,8 +33,9 @@ class SoftwareDevelopmentGroup extends Component {
   }
 
   render() {
-
-    const { group, feeds, breadcrumbs } = this.state;
+    const group = FeedManager.getNewsGroupByKey(SoftwareDevelopmentNewsGroups, this.props.match.params.group);
+    const feeds = FeedManager.getNewsFeedsByGroup(SoftwareDevelopmentNewsFeeds, this.props.match.params.group);
+    const breadcrumbs = this.setupBreadcrumbs(group);
 
     if (group) {
       return (
@@ -64,13 +54,12 @@ class SoftwareDevelopmentGroup extends Component {
           </div>
   
         </div>
-  
-      );
-    } else {
-      return (
-        <NewsGroupError breadcrumbs={breadcrumbs} />
       );
     }
+
+    return (
+      <NewsGroupError breadcrumbs={breadcrumbs} />
+    );
     
   }
 }

@@ -75,7 +75,7 @@ class CyberSecurityGroupDetails extends Component {
     if ( (slug !== this.state.slug || this.state.newsFromApi === null) && this.state.error === null) {
 
       const currentFeedsList = FeedManager.getNewsFeedBySlug(this.state.currentFeedsList, slug);
-      const currentNewsGroup = FeedManager.getNewsGroupByKey(CyberSecurityNewsGroups, group)
+      const currentNewsGroup = FeedManager.getNewsGroupByKey(CyberSecurityNewsGroups, group);
 
       let self = this;
       rssParser.callPromise(currentFeedsList.url)
@@ -96,6 +96,9 @@ class CyberSecurityGroupDetails extends Component {
             group: group,
             slug: slug,
             newsFromApi: null,
+            currentNewsGroup: currentNewsGroup,
+            currentFeed: currentFeedsList,
+            breadcrumbs: self.setupBreadcrumbs(currentNewsGroup, currentFeedsList),
             error: error
           });
         });
@@ -123,8 +126,8 @@ class CyberSecurityGroupDetails extends Component {
                 <div className="alert alert-danger">
                   <h3>Error occurred</h3>
                   <p>{ error.message }</p>
-                  <a href={currentFeed.url} className="btn btn-sm btn-warning" target="_blank" rel="" title="">
-                    <i className="fa fa-rss"></i> Rss
+                  <a href={currentFeed.url} className="btn btn-sm btn-warning" target="_blank" rel="" title={currentFeed.label + ' RSS feed'}>
+                    <i className="fa fa-rss"></i> RSS
                   </a>
                 </div>
               }

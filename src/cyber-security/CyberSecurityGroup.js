@@ -44,7 +44,6 @@ class CyberSecurityGroup extends Component {
   }
 
   render() {
-
     const { group, feeds, breadcrumbs } = this.state;
 
     if (group) {
@@ -65,11 +64,12 @@ class CyberSecurityGroup extends Component {
   
         </div>
       );
-    } else {
-      return (
-        <NewsGroupError breadcrumbs={breadcrumbs} />
-      );
     }
+
+    return (
+      <NewsGroupError breadcrumbs={breadcrumbs} />
+    );
+    
   }
 }
 

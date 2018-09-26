@@ -29,7 +29,6 @@ class SoftwareDevelopmentGroupDetails extends Component {
         { label: 'Feeds', href: null, title: 'Feeds', active: true },
       ],
       newsFromApi: null,
-      rssParser: new RssParser(),
       error: null,
     };
 
@@ -60,7 +59,7 @@ class SoftwareDevelopmentGroupDetails extends Component {
 
   setupCurrentNewsGroup() {
     const {slug, group} = this.props.match.params;
-    const {rssParser} = this.state;
+    const rssParser = new RssParser();
 
     if ( (slug !== this.state.slug || this.state.newsFromApi === null) && this.state.error === null) {
 

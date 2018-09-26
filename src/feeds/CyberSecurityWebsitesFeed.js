@@ -31,6 +31,18 @@ export const CyberSecurityWebsitesFeeds = [
 				url: 'http://feeds.feedburner.com/TheHackersNews/?format=xml'
 			},
 			{
+				label: 		'EC Council',
+				title: 		'EC Council RSS feed',
+				path: 		'/cyber-security/websites/ec-council',
+				website:	'https://www.eccouncil.org/',
+				facebook: 'https://www.facebook.com/ECCouncil',
+				twitter: 	'https://twitter.com/ECCOUNCIL',
+				youtube: 	'https://www.youtube.com/user/eccouncilusa',
+				gplus: 		'https://plus.google.com/+eccouncil',
+				linkedin:	'https://www.linkedin.com/company/ec-council',
+				url: 			'https://www.eccouncil.org/feed/',
+			},
+			{
 				label: 'Krebs on Security',
 				title: 'Krebs on Security RSS Feed',
 				path: '/cyber-security/websites/krebs-security',
@@ -147,6 +159,13 @@ export const CyberSecurityWebsitesFeeds = [
 				url: 'https://www.techworm.net/feed'
 			},
 			{
+				label: 'Techworld - Security',
+				title: 'Techworld - Security RSS Feed',
+				path: '/cyber-security/websites/techworld',
+				website: 'http://www.techworld.com/security/',
+				url: 'http://www.techworld.com/security/rss'
+			},
+			{
 				label: 'Security Gladiators',
 				title: 'Security Gladiators - Internet Security News RSS Feed',
 				path: '/cyber-security/websites/',
@@ -175,7 +194,8 @@ export const CyberSecurityWebsitesFeeds = [
 				url: 'https://blogs.microsoft.com/feed/'
 			},
 			// The Guardinan https://www.theguardian.com/technology/data-computer-security/rss | https://www.theguardian.com/technology/data-computer-security
-			// Forbes https://www.forbes.com/security/feed/ | 
+			// Data and computer security | The Guardian RSS Feed
+			// Forbes https://www.forbes.com/security/feed/ | http://www.forbes.com/security/index.xml
 			{
 				label: 'Cisco Blog',
 				title: 'Cisco Blog - Security RSS Feed',
@@ -464,7 +484,7 @@ export const CyberSecurityWebsitesFeeds = [
 				youtube: '',
 				gplus: '',
 				linkedin: '',
-				isAtomFormat: true,
+				isAtom: true,
 				url: 'http://blog.itsecurityexpert.co.uk/atom.xml'
 			},
 			{

@@ -60,19 +60,20 @@ class FeedsFromApi extends Component {
 
         </div>
       );
-    } else {
-      return (
-        <div className="alert alert-warning">
-          <h3>No news to display</h3>
-          <p>No news to display at the moment. Please come back later.</p>
-          <div>
-            <a href={currentFeed.url} target="_blank" className="btn btn-sm btn-warning" rel="noopener noreferrer" title={currentFeed.label + ' RSS feed link'}>
-              <i className="fa fa-rss"></i> RSS
-            </a>
-          </div>
-        </div>
-      );
     }
+
+    return (
+      <div className="alert alert-warning">
+        <h3>No news to display</h3>
+        <p>No news to display at the moment. Please come back later.</p>
+        <div>
+          <a href={currentFeed.url} target="_blank" className="btn btn-sm btn-warning" rel="noopener noreferrer" title={currentFeed.label + ' RSS feed link'}>
+            <i className="fa fa-rss"></i> RSS
+          </a>
+        </div>
+      </div>
+    );
+    
   }
 }
 

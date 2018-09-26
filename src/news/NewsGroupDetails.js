@@ -22,22 +22,35 @@ class NewsGroupDetails extends Component {
       slug: props.match.params.slug,
       currentNewsGroup: currentNewsGroup,
       currentFeed: currentFeed,
-      currentFeedsList: FeedManager.getNewsFeedsByGroup(feeds, props.match.params.group),
-      breadcrumbs: this.setupBreadCrumbs(currentNewsGroup, currentFeed),
+      currentFeedsList: newsFeedsByGroup,
+      breadcrumbs: this.setupBreadcrumbs(currentNewsGroup, currentFeed),
       newsFromApi: null,
       error: null,
-      rssParser: new RssParser(),
     };
 
+    this.handleUpdateFeed = this.handleUpdateFeed.bind(this);
   }
 
-  setupBreadCrumbs(newsGroup, feed) {
-    return [
+  handleUpdateFeed() {
+    // Temporary reset the news list
+    this.setState({
+      newsFromApi: null,
+    });
+  }
+
+  setupBreadcrumbs(newsGroup, newsFeed) {
+    let breadcrumbs =  [
       { label: 'News', href: '/news', title: 'Back to the news main page', active: false },
-      { label: newsGroup.title, href: newsGroup.path ? newsGroup.path : '', title: newsGroup.title, active: false },
-      // { label: feed.label, href: null, title: '', active: true },
-      { label: 'News list', href: null, title: '', active: true },
+      { label: newsGroup.title, href: newsGroup.path, title: newsGroup.title, active: false },
     ];
+
+    if (newsFeed) {
+      breadcrumbs.push({ label: newsFeed.label, href: '', title: '', active: true });
+    } else {
+      breadcrumbs.push({ label: 'Error', href: '', title: '', active: true });
+    }
+
+    return breadcrumbs;
   }
 
   /**
@@ -51,9 +64,8 @@ class NewsGroupDetails extends Component {
    * Check state and update it if needed
    * 
    * @param {*} prevProps 
-   * @param {*} prevState 
    */
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps) {
     // This is the initial render without a previous prop change
     if (prevProps === undefined) {
       return false;
@@ -65,25 +77,24 @@ class NewsGroupDetails extends Component {
 
   setupCurrentNewsGroup() {
     const {slug, group} = this.props.match.params;
-    const {rssParser} = this.state;
+    const rssParser = new RssParser();
 
     if ( (slug !== this.state.slug || this.state.newsFromApi === null) && this.state.error === null) {
 
-      const currentFeedsLIst = FeedManager.getNewsFeedBySlug(this.state.currentFeedsList, slug);
+      const currentFeedsList = FeedManager.getNewsFeedBySlug(this.state.currentFeedsList, slug);
+      const currentNewsGroup = FeedManager.getNewsGroupByKey(newsGroups, group);
 
       const self = this;
-      rssParser.callPromise(currentFeedsLIst.url)
+      rssParser.callPromise(currentFeedsList.url)
         .then(function (response) {
-          const currentNewsGroup = FeedManager.getNewsGroupByKey(newsGroups, group);
-          const feedsByGroup = FeedManager.getNewsFeedsByGroup(feeds, group);
-          const currentFeed = FeedManager.getNewsFeedBySlug(feedsByGroup, slug);
-          const newBreadcrumbs = self.setupBreadCrumbs(currentNewsGroup, currentFeed);
           self.setState({
             group: group,
             slug: slug,
-            newsFromApi: rssParser.parseFeedRss(response.data),
+            newsFromApi: rssParser.parseRssXmlString(response.data, currentFeedsList.isAtom),
+            currentNewsGroup: currentNewsGroup,
+            currentFeed: currentFeedsList,
+            breadcrumbs: self.setupBreadcrumbs(currentNewsGroup, currentFeedsList),
             error: null,
-            breadcrumbs: newBreadcrumbs
           });
         })
         .catch(function (error) {
@@ -137,7 +148,7 @@ class NewsGroupDetails extends Component {
           </div>
 
           <div className="col-sm-12 col-md-4 col-lg-3">
-            <FeedsCategoryList items={currentFeedsList} />
+            <FeedsCategoryList handleUpdateFeed={this.handleUpdateFeed} items={currentFeedsList} />
           </div>
         </div>
 

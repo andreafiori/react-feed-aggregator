@@ -43,8 +43,8 @@ export class RssParser {
     return axios.get(url);
   }
 
-  parseRssXmlString(xmlString, isAtomFormat = false) {
-    return (isAtomFormat === true) ? this.parseFeedAtomFormat(xmlString) : this.parseFeedRss(xmlString);
+  parseRssXmlString(xmlString, isAtom = false) {
+    return (isAtom === true) ? this.parseFeedAtomFormat(xmlString) : this.parseFeedRss(xmlString);
   }
 
   /**
