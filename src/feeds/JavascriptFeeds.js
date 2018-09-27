@@ -1,7 +1,7 @@
 export const JavascriptNewsGroup = {
   image:        'javascript-rss.gif',
 	title:        'Javascript News',
-	description:  'Latest news from the best frontend websites and developers',
+	description:  'Latest Javascript news from the most popular websites',
 	group:        'javascript',
 	category:     'Frontend',
 	path:         '/software-development/javascript',
@@ -111,6 +111,48 @@ export const JavascriptNewsFeeds = [
         twitter: 'https://twitter.com/jsdiaries',
 				url: 'http://jsdiaries.com/feed',
       }, */
+    ]
+  },
+  // List https://blog.feedspot.com/jquery_rss_feeds/
+  {
+    title: 'JQuery',
+    feeds: [
+      {
+				label: 'Reddit - jQuery',
+				title: 'Reddit - jQuery RSS Feed',
+        path: '/software-development/javascript/reddit-jquery',
+        website: 'https://www.reddit.com/r/jquery/',
+        isAtom: true,
+				url: 'https://www.reddit.com/r/jquery/.rss?format=xml',
+      },
+      {
+				label: 'jQuery Script Blog',
+				title: 'jQuery Script Blog RSS Feed',
+        path: '/software-development/javascript/jquery-script-blog',
+        website: 'http://www.jqueryscript.net/blog/',
+				url: 'http://feeds.feedburner.com/jquery-script?format=xml',
+      },
+      {
+				label: 'jQuery By Example',
+				title: 'jQuery By Example RSS Feed',
+        path: '/software-development/javascript/jquery-by-example',
+        website: 'http://www.jquerybyexample.net/',
+				url: 'http://www.jquerybyexample.net/feeds/posts/default',
+      },
+      /* {
+				label: 'jQuery Blog',
+				title: 'jQuery Blog RSS Feed',
+        path: '/software-development/javascript/jquery-blog-rss',
+        website: 'http://blog.jquery.com/',
+				url: 'http://feeds.feedburner.com/OneQlikAtATime?format=xml',
+      }, */
+      {
+				label: '',
+				title: '',
+        path: '/software-development/javascript/',
+        website: '',
+				url: '',
+      },
     ]
   },
   {

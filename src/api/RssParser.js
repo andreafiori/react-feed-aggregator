@@ -95,10 +95,17 @@ export class RssParser {
 
       const pubDateTag = i('updated');
       const pubDate = (pubDateTag) ? pubDateTag.textContent : null;
-  
+
+      let linkToArticle;
+      if (i('link') && i('link').textContent) {
+        linkToArticle = i('link').textContent;
+      } else if (i('link') && i('link').getAttribute('href')) {
+        linkToArticle = i('link').getAttribute('href');
+      }
+
       this.domObject.items.push({
         title:        this.checkTagItem(i, 'title'),
-        link:         i('link').textContent,
+        link:         linkToArticle,
         description:  this.checkTagItem(i, 'summary'),
         pubDate:      pubDate,
       });

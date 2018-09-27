@@ -23,15 +23,34 @@ class SoftwareDevelopmentGroupDetails extends Component {
       currentNewsGroup: currentNewsGroup,
       currentFeed: currentFeed,
       currentFeedsList: newsFeedsByGroup,
-      breadcrumbs: [
-        { label: 'Software Development', href: '/software-development', title: 'Back to the Software Development main page', active: false },
-        { label: currentNewsGroup.title, href: currentNewsGroup.path, title: currentNewsGroup.title, active: false },
-        { label: 'Feeds', href: null, title: 'Feeds', active: true },
-      ],
+      breadcrumbs: this.setupBreadcrumbs(currentNewsGroup, currentFeed),
       newsFromApi: null,
       error: null,
     };
 
+    this.handleUpdateFeed = this.handleUpdateFeed.bind(this);
+  }
+
+  setupBreadcrumbs(newsGroup, newsFeed) {
+    let breadcrumbs =  [
+      { label: 'Software Development', href: '/software-development', title: 'Back to the Software Development main page', active: false },
+      { label: newsGroup.title, href: newsGroup.path, title: newsGroup.title, active: false },
+    ];
+
+    if (newsFeed) {
+      breadcrumbs.push({ label: newsFeed.label, href: '', title: '', active: true });
+    } else {
+      breadcrumbs.push({ label: 'Error', href: '', title: '', active: true });
+    }
+
+    return breadcrumbs;
+  }
+
+  handleUpdateFeed() {
+    // Temporary reset the news list
+    this.setState({
+      newsFromApi: null,
+    });
   }
 
   /**
@@ -45,9 +64,8 @@ class SoftwareDevelopmentGroupDetails extends Component {
    * Check state and update it if needed
    * 
    * @param {*} prevProps 
-   * @param {*} prevState 
    */
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps) {
     // This is the initial render without a previous prop change
     if (prevProps === undefined) {
       return false;
@@ -63,7 +81,8 @@ class SoftwareDevelopmentGroupDetails extends Component {
 
     if ( (slug !== this.state.slug || this.state.newsFromApi === null) && this.state.error === null) {
 
-      let currentFeedsList = FeedManager.getNewsFeedBySlug(this.state.currentFeedsList, slug);
+      const currentFeedsList = FeedManager.getNewsFeedBySlug(this.state.currentFeedsList, slug);
+      const currentNewsGroup = FeedManager.getNewsGroupByKey(SoftwareDevelopmentNewsGroups, group);
 
       let self = this;
       rssParser.callPromise(currentFeedsList.url)
@@ -72,6 +91,9 @@ class SoftwareDevelopmentGroupDetails extends Component {
             group: group,
             slug: slug,
             newsFromApi: rssParser.parseRssXmlString(response.data, currentFeedsList.isAtom),
+            currentNewsGroup: currentNewsGroup,
+            currentFeed: currentFeedsList,
+            breadcrumbs: self.setupBreadcrumbs(currentNewsGroup, currentFeedsList),
             error: null,
           });
         })
@@ -119,7 +141,7 @@ class SoftwareDevelopmentGroupDetails extends Component {
           </div>
 
           <div className="col-sm-12 col-md-4 col-lg-3">
-            <FeedsCategoryList items={currentFeedsList} />
+            <FeedsCategoryList handleUpdateFeed={this.handleUpdateFeed} items={currentFeedsList} />
           </div>
         </div>
 

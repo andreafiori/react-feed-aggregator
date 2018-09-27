@@ -181,14 +181,14 @@ export const JavaNewsFeeds = [
         linkedin: 'https://www.linkedin.com/in/nicolasfrankel/',
 				url: 'https://blog.frankel.ch/feed.xml',
 			},
-			// Adam Bien atom feeds
-      /* {
+      {
 				label: 'Adam Bien',
 				title: 'Latest article from a java geek blog',
         path: '/software-development/java/adam-bien',
-        website: 'http://www.adam-bien.com/roller/abien/',
+				website: 'http://www.adam-bien.com/roller/abien/',
+				isAtom: true,
 				url: 'http://www.adam-bien.com/roller/abien/feed/entries/atom',
-			}, */
+			},
 			{
 				label: 'Arun Gupta',
 				title: 'Arun Gupta, Miles to go',
@@ -203,7 +203,17 @@ export const JavaNewsFeeds = [
 				website: 'https://pragmaticintegrator.wordpress.com/',
 				linkedin: 'http://nl.linkedin.com/in/pascalalma',
 				url: 'https://pragmaticintegrator.wordpress.com/feed/',
-      },
+			},
+			{
+				label: 'Martin Fowler',
+				title: 'Martin Fowler RSS feed',
+        path: '/software-development/java/martin-fowler',
+        website: 'https://martinfowler.com/',
+        twitter: 'http://www.twitter.com/martinfowler',
+        github: 'https://github.com/martinfowler',
+        isAtom: true,
+				url: 'https://martinfowler.com/feed.atom',
+			},
 			// Empty
 			/* {
 				label: '',

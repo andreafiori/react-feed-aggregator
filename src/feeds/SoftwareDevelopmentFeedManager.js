@@ -4,6 +4,7 @@ import { FrontendNewsGroup, FrontendNewsFeeds } from './FrontendNewsFeeds';
 import { JavascriptNewsGroup, JavascriptNewsFeeds } from './JavascriptFeeds';
 import { JavaNewsGroup, JavaNewsFeeds } from './JavaFeeds';
 import { PythonNewsGroup, PythonNewsFeeds } from './PythonFeeds';
+import { GolangNewsGroup, GolangNewsFeeds } from './GolangFeeds';
 
 export const SoftwareDevelopmentNewsGroups = {
 	'frontend-news': FrontendNewsGroup,
@@ -11,6 +12,7 @@ export const SoftwareDevelopmentNewsGroups = {
 	'php-news': PHPNewsGroup,
 	'python': PythonNewsGroup,
 	'java': JavaNewsGroup,
+	'golang': GolangNewsGroup,
 	'dzone': DzoneNewsGroup,
 };
 
@@ -20,5 +22,6 @@ export const SoftwareDevelopmentNewsFeeds = {
 	'php-news': PHPNewsFeeds,
 	'python': PythonNewsFeeds,
 	'java': JavaNewsFeeds,
+	'golang': GolangNewsFeeds,
 	'dzone': DzoneNewsFeeds,
 };

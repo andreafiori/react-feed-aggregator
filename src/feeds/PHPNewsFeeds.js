@@ -6,14 +6,14 @@ export const PHPNewsGroup = {
 	category: 		'Backend',
 	path: 				'/software-development/php-news',
 	country: 			'World',
-	website: 			'',
+	website: 			'http://php.net/',
 	youtube: 			'',
 	facebook: 		'',
 	twitter: 			'',
 	wikipedia: 		'',
 	gplus:				'',
 	linkedin:			'',
-	rss:					'',
+	rss:					'http://php.net/releases/feed.php',
 };
 
 // List https://blog.feedspot.com/php_rss_feeds/
@@ -22,35 +22,17 @@ export const PHPNewsFeeds = [
 		title: 'Websites',
 		feeds: [
 			{
+				label: 'PHP.net releases',
+				title: 'PHP.net releases',
+				path: '/software-development/php-news/php-net-releases',
+				isAtom: true,
+				url: 'http://php.net/releases/feed.php'
+			},
+			{
 				label: 'PHP round table',
 				title: 'PHP round table',
 				path: '/software-development/php-news/php-round-table',
 				url: 'http://feeds.feedburner.com/PhpRoundtable?format=xml'
-			},
-			{
-				label: 'Symfony',
-				title: 'Latest Symfony web components and framework news',
-				path: '/software-development/php-news/symfony',
-				url: 'https://feeds.feedburner.com/symfony/blog'
-			},
-			{
-				label: 'Zend Blog',
-				title: 'Latest news from the Zend Blog',
-				path: '/software-development/php-news/zend-blog',
-				url: 'https://blog.zend.com/feed/'
-			},
-			{
-				label: 'Zend Security',
-				title: 'Latest news from Zend Security',
-				path: '/software-development/php-news/zend-security',
-				url: 'https://framework.zend.com/security/feed'
-			},
-			{
-				label: 'Laracasts',
-				title: 'Latest news from Laracasts, Jeffrey Way',
-				path: '/software-development/php-news/laracasts',
-				url: 'https://laracasts.com/feed',
-				isAtom: true,
 			},
 			{
 				label: 'Sitepoint PHP',
@@ -58,27 +40,21 @@ export const PHPNewsFeeds = [
 				path: '/software-development/php-news/sitepoint-php',
 				url: 'https://www.sitepoint.com/php/feed/'
 			},
-			// Not working?
-			/* {
+			{
 				label: 'Reddit PHP',
 				title: 'Latest news from Reddit',
 				path: '/software-development/php-news/reddit-php',
+				isAtom: true,
 				url: 'https://www.reddit.com/r/PHP/.rss' // http://feeds.feedburner.com/phpclassesblog-xml?format=xml
 			},
-			*/
-			// PHP UK conference https://www.youtube.com/feeds/videos.xml?user=phpukconference
 			{
-				label: 'Laravel News',
-				title: 'Latest news from Laravel News',
-				path: '/software-development/php-news/laravel-news',
-				url: 'https://feed.laravel-news.com/'
+				label: 'PHP UK conference',
+				title: 'PHP UK conference RSS feed',
+				path: '/software-development/php-news/php-uk-conference',
+				isAtom: true,
+				url: 'https://www.youtube.com/feeds/videos.xml?user=phpukconference'
 			},
-			{
-				label: 'Laravel Daily',
-				title: 'Latest news from Laravel Daily',
-				path: '/software-development/php-news/laravel-daily',
-				url: 'https://laraveldaily.com/feed/'
-			},
+			
 			{
 				label: 'PHP Classes',
 				title: 'Latest news from PHP Classes',
@@ -140,6 +116,57 @@ export const PHPNewsFeeds = [
 				path: '/software-development/php-news/code-diesel',
 				url: 'https://www.codediesel.com/feed/'
 			}, */
+		]
+	},
+	{
+		title: 'Frameworks',
+		feeds: [
+			{
+				label: 'Yii 2',
+				title: 'Latest Yii 2 framework news',
+				path: '/software-development/php-news/yii2-framework',
+				facebook: 'https://www.facebook.com/groups/yiitalk/',
+				github: 'https://github.com/yiisoft',
+				twitter: 'https://twitter.com/yiiframework',
+				url: 'https://www.yiiframework.com/rss.xml'
+			},
+			{
+				label: 'Symfony',
+				title: 'Latest Symfony web components and framework news',
+				path: '/software-development/php-news/symfony',
+				url: 'https://feeds.feedburner.com/symfony/blog'
+			},
+			{
+				label: 'Zend Blog',
+				title: 'Latest news from the Zend Blog',
+				path: '/software-development/php-news/zend-blog',
+				url: 'https://blog.zend.com/feed/'
+			},
+			{
+				label: 'Zend Security',
+				title: 'Latest news from Zend Security',
+				path: '/software-development/php-news/zend-security',
+				url: 'https://framework.zend.com/security/feed'
+			},
+			{
+				label: 'Laravel News',
+				title: 'Latest news from Laravel News',
+				path: '/software-development/php-news/laravel-news',
+				url: 'https://feed.laravel-news.com/'
+			},
+			{
+				label: 'Laravel Daily',
+				title: 'Latest news from Laravel Daily',
+				path: '/software-development/php-news/laravel-daily',
+				url: 'https://laraveldaily.com/feed/'
+			},
+			{
+				label: 'Laracasts',
+				title: 'Latest news from Laracasts, Jeffrey Way',
+				path: '/software-development/php-news/laracasts',
+				isAtom: true,
+				url: 'https://laracasts.com/feed',
+			},
 		]
 	},
 	{

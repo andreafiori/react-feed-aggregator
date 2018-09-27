@@ -100,10 +100,11 @@ Single file:
 
 ## TODO
 
-- Breacrumbs fix on feed list
+- Generalize Atom \ Classsic feed parser
+- Optimize feed list fetch in case of error...
 - Scroll to top \ Back to top links
 - New Favicon\s
-- Meta tags?
+- Meta tags?!
 - Testing
 - Linting
 - Github deploy "homepage": "https://www.andreafiori.net/projects/feed-aggregator",

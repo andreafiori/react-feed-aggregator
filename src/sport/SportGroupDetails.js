@@ -33,7 +33,7 @@ class SportGroupDetails extends Component {
 
   setupBreadcrumbs(newsGroup, newsFeed) {
     let breadcrumbs =  [
-      { label: 'Software Development', href: '/software-development', title: 'Back to the Software Development main page', active: false },
+      { label: 'Sport', href: '/sport', title: 'Back to the Sport main page', active: false },
       { label: newsGroup.title, href: newsGroup.path, title: newsGroup.title, active: false },
     ];
 
