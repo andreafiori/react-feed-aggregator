@@ -5,15 +5,17 @@ import { WeLiveSecurityNewsGroup, WeLiveSecurityNewsFeeds } from './WeLiveSecuri
 import { ThreatPostNewsGroup, ThreatPostNewsFeeds } from './ThreatPostFeeds';
 import { GovernmentNewsGroup, GovernmentNewsFeeds } from './GovernmentFeeds';
 import { TechWorldNewsGroup, TechWorldNewsFeeds } from './TechWorldFeeds';
+import { IsacaNewsGroup, IsacaNewsFeeds } from './IsacaFeeds';
 
 export const CyberSecurityNewsGroups = {
 	'websites': 					CyberSecurityWebsitesNewsGroup,
 	'we-live-security':		WeLiveSecurityNewsGroup,
 	'government': 				GovernmentNewsGroup,
-	'sans': 							SansNewsGroup,
 	'darkreading': 				DarkreadingNewsGroup,
 	'tech-world': 				TechWorldNewsGroup,
 	'threat-post': 				ThreatPostNewsGroup,
+	'sans': 							SansNewsGroup,
+	'isaca': 							IsacaNewsGroup,
 	// fortinet: 					FortinetNewsGroup,
 };
 
@@ -21,9 +23,10 @@ export const CyberSecurityNewsFeeds = {
 	'websites': 					CyberSecurityWebsitesFeeds,
 	'we-live-security': 	WeLiveSecurityNewsFeeds,
 	'government': 				GovernmentNewsFeeds,
-	'sans': 							SansNewsFeeds,
 	'darkreading': 				DarkreadingNewsFeeds,
 	'tech-world': 				TechWorldNewsFeeds,
 	'threat-post': 				ThreatPostNewsFeeds,
+	'sans': 							SansNewsFeeds,
+	'isaca': 							IsacaNewsFeeds,
 	// 'fortinet': 					FortinetNewsFeeds,
 };
