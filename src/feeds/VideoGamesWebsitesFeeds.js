@@ -19,31 +19,7 @@ export const VideoGamesWebsitesNewsGroup = {
 export const VideoGamesWebsitesFeeds = [
   {
     title: 'Websites',
-    feeds: [
-      {
-        label: 'Xbox Wire',
-        title: 'Xbox Wire RSS Feed',
-        path: '/videogames/websites/xbox-wire',
-        website: '',
-        url: 'http://news.xbox.com/feed'
-      },
-      {
-        label: 'PlayStation Blog',
-        title: 'Official PlayStation Blog RSS Feed',
-        path: '/videogames/websites/playstation-blog',
-        website: 'http://blog.us.playstation.com/',
-        url: 'http://feeds.feedburner.com/psblog?format=xml'
-      },
-      {
-        label: 'Nintendo Life',
-        title: 'Nintendo Life RSS Feed',
-        path: '/videogames/websites/nintendo-lite',
-        website: 'http://www.nintendolife.com/',
-        facebook: 'https://www.facebook.com/nintendolife',
-        twitter: 'https://twitter.com/nintendolife',
-        youtube: 'https://www.youtube.com/nintendolife',
-        url: 'http://www.nintendolife.com/feeds/latest'
-      },
+    feeds: [ 
       // Reddit | Gamers RSS Feed https://www.reddit.com/r/gamers/.rss | https://www.reddit.com/r/gamers/
       {
         label: 'Polygon',
@@ -56,26 +32,6 @@ export const VideoGamesWebsitesFeeds = [
         url: 'http://www.polygon.com/rss/index.xml'
       },
       {
-        label: 'Xbox Live\'s Major Nelson',
-        title: 'Xbox Live\'s Major Nelson RSS Feed',
-        path: '/videogames/websites/xbox-live-major-nelson',
-        website: 'https://majornelson.com/',
-        /* facebook: '',
-        twitter: '',
-        youtube: '', */
-        url: 'https://majornelson.com/feed'
-      },
-      {
-        label: 'VG247',
-        title: 'XVG247 RSS Feed',
-        path: '/videogames/websites/xbox-live-major-nelson',
-        website: 'http://www.vg247.com/',
-        /* facebook: '',
-        twitter: '',
-        youtube: '', */
-        url: 'http://www.vg247.com/feed/'
-      },
-      {
         label: 'Eurogamer',
         title: 'Eurogamer RSS Feed',
         path: '/videogames/websites/xbox-live-major-nelson',
@@ -84,16 +40,6 @@ export const VideoGamesWebsitesFeeds = [
         twitter: '',
         youtube: '', */
         url: 'http://www.eurogamer.net/?format=rss'
-      },
-      {
-        label: 'My Nintendo News',
-        title: 'My Nintendo News RSS Feed',
-        path: '/videogames/websites/',
-        website: 'https://mynintendonews.com/',
-        facebook: '',
-        twitter: '',
-        youtube: '',
-        url: 'https://mynintendonews.com/feed'
       },
       {
         label: 'Destructoid',
@@ -171,13 +117,6 @@ export const VideoGamesWebsitesFeeds = [
         url: 'http://skoar.digit.in/feed'
       },
       {
-        label: 'PlayerAuctions Blog',
-        title: 'PlayerAuctions Blog | PC Game News, Guides, & Updates RSS Feed',
-        path: '/videogames/websites/playerauctions-blog',
-        website: 'https://blog.playerauctions.com/',
-        url: 'https://blog.playerauctions.com/feed'
-      },
-      {
         label: 'Siliconera',
         title: 'Siliconera RSS Feed',
         path: '/videogames/websites/siliconera',
@@ -219,9 +158,6 @@ export const VideoGamesWebsitesFeeds = [
         title: 'PlayStation LifeStyle RSS Feed',
         path: '/videogames/websites/playstation-lifestyle',
         website: 'http://www.playstationlifestyle.net/',
-        /* facebook: '',
-        twitter: '',
-        youtube: '', */
         url: 'http://www.playstationlifestyle.net/feed/'
       },
       {
@@ -285,11 +221,11 @@ export const VideoGamesWebsitesFeeds = [
         label: 'GamingBolt.com RSS Feed',
         title: 'GamingBolt.com RSS Feed',
         path: '/videogames/websites/gamingbolt-com',
-        website: '',
-        facebook: '',
-        twitter: '',
-        youtube: '',
-        url: ''
+        website: 'http://gamingbolt.com/',
+        facebook: 'https://www.facebook.com/GamingBolt-241308979564/',
+        twitter: 'https://twitter.com/GamingBoltTweet',
+        youtube: 'https://www.youtube.com/user/GamingBoltLive',
+        url: 'http://feeds.feedburner.com/gamingbolt'
       },
       {
         label: 'VideoGamer',
@@ -302,24 +238,11 @@ export const VideoGamesWebsitesFeeds = [
         url: ''
       },
       {
-        label: 'GoNintendo',
-        title: 'GoNintendo RSS Feed',
-        path: '/videogames/websites/gonintendo',
-        website: '',
-        facebook: '',
-        twitter: '',
-        youtube: '',
-        url: ''
-      },
-      {
         label: 'Pocket Gamer',
         title: 'Pocket Gamer RSS Feed',
         path: '/videogames/websites/pocket-gamer',
-        website: '',
-        facebook: '',
-        twitter: '',
-        youtube: '',
-        url: ''
+        website: 'http://www.pocketgamer.co.uk/',
+        url: 'http://www.pocketgamer.co.uk/rss.asp'
       },
       {
         label: 'Games Finder - Recommending Games Like Your Favourites',
@@ -336,9 +259,9 @@ export const VideoGamesWebsitesFeeds = [
         title: 'Jay Is Games RSS Feed',
         path: '/videogames/websites/jay-games',
         website: 'http://jayisgames.com/',
-        /* facebook: '',
+        facebook: '',
         twitter: '',
-        youtube: '', */
+        youtube: '',
         url: 'http://jayisgames.com/index.xml'
       },
       {
@@ -400,10 +323,56 @@ export const VideoGamesWebsitesFeeds = [
         title: 'GamingOnLinux | Linux & SteamOS Gaming News RSS Feed',
         path: '/videogames/websites/gaming-on-linux',
         website: 'https://www.gamingonlinux.com/',
-        /* facebook: '',
-        twitter: '',
-        youtube: '', */
+        facebook: 'https://www.facebook.com/gamingonlinux',
+        twitter: 'https://www.twitter.com/gamingonlinux',
+        youtube: 'https://www.youtube.com/user/GamingOnLinuxcom',
+        gplus: 'https://plus.google.com/+Gamingonlinux',
         url: 'https://www.gamingonlinux.com/article_rss.php'
+        // https://www.gamingonlinux.com/article_rss.php
+        // https://www.gamingonlinux.com/article_rss.php?mini
+        // https://www.gamingonlinux.com/forum_rss.php
+      },
+      {
+        label: 'Adventure Gamers',
+        title: 'Adventure Gamers RSS Feed',
+        path: '/videogames/websites/adventure-gamers',
+        website: 'http://www.adventuregamers.com/',
+        url: 'http://www.adventuregamers.com/rss/'
+      },
+      {
+        label: 'TechRaptor - Gaming',
+        title: 'TechRaptor - Gaming RSS Feed',
+        path: '/videogames/websites/',
+        website: 'https://techraptor.net/content/category/gaming',
+        facebook: 'https://www.facebook.com/TechRaptor/',
+        twitter: 'https://twitter.com/techraptr',
+        youtube: 'https://www.youtube.com/user/TechRaptorVideo',
+        gplus: 'https://plus.google.com/+TechraptorNet',
+        url: 'https://techraptor.net/content/category/gaming/feed'
+      },
+      {
+        label: 'The Game Fanatics',
+        title: 'The Game Fanatics RSS Feed',
+        path: '/videogames/websites/the-game-fanatics',
+        website: 'http://thegamefanatics.com/',
+        facebook: 'https://www.facebook.com/thegamefanatics',
+        twitter: 'https://twitter.com/thegamefanatics',
+        youtube: 'https://www.youtube.com/subscription_center?add_user=thegamefanaticstv',
+        url: 'http://thegamefanatics.com/feed'
+      },
+      {
+        label: 'TheSixthAxis',
+        title: 'TheSixthAxis RSS Feed',
+        path: '/videogames/websites/',
+        website: 'http://www.thesixthaxis.com/',
+        url: 'http://www.thesixthaxis.com/feed/'
+      },
+      {
+        label: 'GameSpew',
+        title: 'GameSpew RSS Feed',
+        path: '/videogames/websites/',
+        website: 'http://www.gamespew.com/',
+        url: 'http://www.gamespew.com/feed'
       },
       /* {
         label: '',
@@ -415,6 +384,87 @@ export const VideoGamesWebsitesFeeds = [
         youtube: '',
         url: ''
       }, */
+    ]
+  },
+  {
+    title: 'Nintendo',
+    feeds: [
+      {
+        label: 'Nintendo Life',
+        title: 'Nintendo Life RSS Feed',
+        path: '/videogames/websites/nintendo-lite',
+        website: 'http://www.nintendolife.com/',
+        facebook: 'https://www.facebook.com/nintendolife',
+        twitter: 'https://twitter.com/nintendolife',
+        youtube: 'https://www.youtube.com/nintendolife',
+        url: 'http://www.nintendolife.com/feeds/latest'
+      },
+      {
+        label: 'GoNintendo',
+        title: 'GoNintendo RSS Feed',
+        path: '/videogames/websites/gonintendo',
+        website: 'https://www.gonintendo.com/',
+        facebook: 'https://facebook.com/gonintendo',
+        twitter: 'https://twitter.com/GoNintendoTweet',
+        youtube: 'https://www.youtube.com/channel/UCvQPbLRLHSUWy7km3iaN4ng',
+        url: 'http://feedpress.me/gonintendo'
+      },
+      {
+        label: 'My Nintendo News',
+        title: 'My Nintendo News RSS Feed',
+        path: '/videogames/websites/',
+        website: 'https://mynintendonews.com/',
+        facebook: '',
+        twitter: '',
+        youtube: '',
+        url: 'https://mynintendonews.com/feed'
+      },
+    ]
+  },
+  {
+    title: 'Sony',
+    feeds: [
+      {
+        label: 'PlayStation Blog',
+        title: 'Official PlayStation Blog RSS Feed',
+        path: '/videogames/websites/playstation-blog',
+        website: 'http://blog.us.playstation.com/',
+        url: 'http://feeds.feedburner.com/psblog?format=xml'
+      },
+      {
+        label: 'PlayerAuctions Blog',
+        title: 'PlayerAuctions Blog | PC Game News, Guides, & Updates RSS Feed',
+        path: '/videogames/websites/playerauctions-blog',
+        website: 'https://blog.playerauctions.com/',
+        url: 'https://blog.playerauctions.com/feed'
+      },
+    ]
+  },
+  {
+    title: 'Microsoft',
+    feeds: [
+      {
+        label: 'Xbox Wire',
+        title: 'Xbox Wire RSS Feed',
+        path: '/videogames/websites/xbox-wire',
+        website: 'http://news.xbox.com/',
+        url: 'http://news.xbox.com/feed'
+      }, 
+      {
+        label: 'Xbox Live\'s Major Nelson',
+        title: 'Xbox Live\'s Major Nelson RSS Feed',
+        path: '/videogames/websites/xbox-live-major-nelson',
+        website: 'https://majornelson.com/',
+        twitter: 'https://twitter.com/majornelson',
+        url: 'https://majornelson.com/feed'
+      },
+      {
+        label: 'VG247',
+        title: 'XVG247 RSS Feed',
+        path: '/videogames/websites/xbox-live-major-nelson',
+        website: 'http://www.vg247.com/',
+        url: 'http://www.vg247.com/feed/'
+      },
     ]
   }
 ];

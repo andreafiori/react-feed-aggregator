@@ -66,12 +66,15 @@ export class RssParser {
   
       const pubDateTag = i('pubDate');
       const pubDate = (pubDateTag) ? pubDateTag.textContent : null;
+
+      const dcDateTag = i('date');
+      const dcDate = (dcDateTag) ? dcDateTag.textContent : null;
   
       this.domObject.items.push({
         title:        this.checkTagItem(i, 'title'),
         link:         i('link').textContent,
         description:  this.checkTagItem(i, 'description'),
-        pubDate:      pubDate
+        pubDate:      pubDate ? pubDate : dcDate
       });
   
     });

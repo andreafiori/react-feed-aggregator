@@ -15,19 +15,19 @@ class FeedsCategoryList extends Component {
           <ul className="list-unstyled">
             {item.feeds.map((feed, i) =>
               <li key={'news-item-' + i}>
-                <Link onClick={this.props.handleUpdateFeed} to={feed.path} title={feed.title}>{feed.label}</Link>
+                <Link replace onClick={this.props.handleUpdateFeed} to={feed.path} title={feed.title}>{feed.label}</Link>
               </li>
             )}
           </ul>
         </div>
       );
-    } else {
-      return(
-        <div>
-          <h3 className="font-italic">No Categories</h3>
-        </div>
-      );
     }
+
+    return(
+      <div>
+        <h3 className="font-italic">No Categories</h3>
+      </div>
+    );
 
   }
 }

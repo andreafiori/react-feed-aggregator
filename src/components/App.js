@@ -172,7 +172,7 @@ class App extends Component {
             <Nav navbar>
               { this.state.routes.map((link, i) =>
                 <NavItem key={i}>
-                  <NavLink tag={Link} to={link.path} title={link.title}>{link.text}</NavLink>
+                  <NavLink tag={Link} replace to={link.path} title={link.title}>{link.text}</NavLink>
                 </NavItem>
               )}
             </Nav>
@@ -226,7 +226,7 @@ class App extends Component {
         </Container>
 
         <footer className="blog-footer">
-          <p>&copy; { (new Date()).getFullYear() } News Aggregator. <Link to="/about" title="Information about the news aggregator project">About</Link> | <a rel="noopener noreferrer" href="https://github.com/andreafiori/feed-aggregator" target="_blank">Github</a> | <a rel="noopener noreferrer" href="http://www.andreafiori.net" target="_blank">Webmaster</a>.</p>
+          <p>&copy; { (new Date()).getFullYear() } News Aggregator. <Link replace to="/about" title="Information about the news aggregator project">About</Link> | <a rel="noopener noreferrer" href="https://github.com/andreafiori/feed-aggregator" target="_blank">Github</a> | <a rel="noopener noreferrer" href="http://www.andreafiori.net" target="_blank">Webmaster</a>.</p>
           {/*
           <p>
             <a href="javascript:void(0)" title="Back to top of the screen">Back to top</a>
