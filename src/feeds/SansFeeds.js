@@ -69,6 +69,16 @@ export const SansNewsFeeds = [
 				path: '/cyber-security/sans/security-awareness-tip-of-the-day',
 				url: 'http://feeds2.feedburner.com/security-awareness-tip-of-the-day' // https://www.sans.org/tip-of-the-day/rss
 			},
+			{
+				label: 'SANS AppSec Street Fighter',
+				title: 'AppSec Street Fighter - SANS Institute RSS Feed',
+				path: '/cyber-security/websites/sans-appsec-street-fighter',
+				website: 'http://software-security.sans.org/blog',
+				facebook: 'https://www.facebook.com/pages/SANS-Institute/173623382673767',
+				twitter: 'http://twitter.com/sansappsec',
+				url: 'https://ics.sans.org/blog/feed//'
+				// url: 'http://software-security.sans.org/blog/feed/'
+			},
 			// Other feeds are not working
 			{
 				label: 'Free Upcoming Webcasts Feed',

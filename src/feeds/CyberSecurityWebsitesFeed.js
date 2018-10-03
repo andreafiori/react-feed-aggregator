@@ -19,6 +19,7 @@ export const CyberSecurityWebsitesNewsGroup = {
 // List 1: https://blog.feedspot.com/cyber_security_rss_feeds/
 // List 2: https://blog.feedspot.com/cyber_security_news_rss_feeds/
 // Blogs list https://digitalguardian.com/blog/top-50-infosec-blogs-you-should-be-reading
+// People https://blog.feedspot.com/hacker_rss_feeds/
 export const CyberSecurityWebsitesFeeds = [
 	{
 		title: 'Websites',
@@ -28,6 +29,11 @@ export const CyberSecurityWebsitesFeeds = [
 				title: 'The Hacker News | Cyber Security,Hacking News RSS Feed',
 				path: '/cyber-security/websites/the-hacker-news',
 				website: 'https://thehackernews.com/',
+				facebook: 'https://www.facebook.com/thehackernews',
+				twitter: 	'https://twitter.com/thehackersnews',
+				youtube: 	'https://www.youtube.com/user/hackernewsvideos?sub_confirmation=1',
+				linkedin:	'https://www.linkedin.com/company/the-hacker-news/',
+				gplus: 'https://plus.google.com/+TheHackerNews',
 				url: 'http://feeds.feedburner.com/TheHackersNews/?format=xml'
 			},
 			{
@@ -41,6 +47,26 @@ export const CyberSecurityWebsitesFeeds = [
 				gplus: 		'https://plus.google.com/+eccouncil',
 				linkedin:	'https://www.linkedin.com/company/ec-council',
 				url: 			'https://www.eccouncil.org/feed/',
+			},
+			{
+				label: 'Kali Linux',
+				title: 'Kali Linux RSS Feed',
+				path: '/cyber-security/websites/kali-linux',
+				website: 'https://www.kali.org/feed/',
+				twitter: 'https://twitter.com/kalilinux',
+				linkedin:	'http://www.linkedin.com/groups?gid=970937',
+				github: 'https://github.com/offensive-security',
+				url: 'https://www.kali.org/feed/'
+			},
+			{
+				label: 'Offensive Security',
+				title: 'Offensive Security RSS Feed',
+				path: '/cyber-security/websites/offensive-security',
+				website: 'https://www.offensive-security.com/',
+				facebook: 'https://www.facebook.com/KaliLinux',
+				twitter: 'https://twitter.com/offsectraining',
+				linkedin:	'https://www.linkedin.com/company/ec-council',
+				url: 'https://www.offensive-security.com/feed/'
 			},
 			{
 				label: 'Krebs on Security',
@@ -76,7 +102,7 @@ export const CyberSecurityWebsitesFeeds = [
 				linkedin: 'http://www.linkedin.com/groups?gid=2035794&trk=myg_ugrp_ovr',
 				gplus: 'https://plus.google.com/+InfosecurityMagazine/posts',
 				url: 'http://www.infosecurity-magazine.com/rss/news/'
-			}, 
+			},
 			{
 				label: 'CSO Online',
 				title: 'CSO Online RSS Feed',
@@ -401,134 +427,26 @@ export const CyberSecurityWebsitesFeeds = [
 		]
 	},
 	{
-		title: 'Antivirus',
-		feeds: [
-			{
-				label: 'McAfee Antivirus',
-				title: 'McAfee Antivirus | Securing Tomorrow RSS Feed',
-				path: '/cyber-security/websites/mcafee-antivirus',
-				website: 'https://securingtomorrow.mcafee.com/',
-				url: 'https://securingtomorrow.mcafee.com/feed'
-			},
-			{
-				label: 'Symantec Connect',
-				title: 'Symantec Connect - Security Response RSS Feed',
-				path: '/cyber-security/websites/symantec',
-				website: 'https://www.symantec.com/connect/symantec-blogs/sr',
-				facebook: '',
-				twitter: '',
-				linkedin: '',
-				gplus: '',
-				url: 'https://www.symantec.com/connect/item-feeds/all/all/feed/all/all/all'
-			},
-			// Quick Heal Antivirus https://blogs.quickheal.com/feed/
-			// TrendMicro https://blog.trendmicro.com/ | http://feeds.trendmicro.com/TrendMicroSimplySecurity
-			// Move this one on 
-			{
-				label: 'Cyber-DB',
-				title: 'Cyber-DB State Actor Cyber Reports Overshadow the Extensive Threat of Cyber Crime',
-				path: '/cyber-security/websites/cyber-db',
-				website: 'http://cyberdb.co/blog/',
-				url: 'http://cyberdb.co/blog/feed'
-			}, 
-			{
-				label: 'SecurityWatch RSS Feed',
-				title: 'SecurityWatch RSS Feed',
-				path: '/cyber-security/websites/securitywatch-blog',
-				website: 'http://bhconsulting.ie/securitywatch/',
-				url: 'http://bhconsulting.ie/securitywatch/?feed=rss2'
-			},
-			{
-				label: 'Compass Cyber Security',
-				title: 'Compass Cyber Security A Navigant Consulting Company RSS Feed',
-				path: '/cyber-security/websites/compass-cyber-security',
-				website: 'http://www.compasscyber.com/blog/',
-				facebook: 'https://www.facebook.com/compasscyber/',
-				twitter: 'https://twitter.com/COMPASScyber',
-				gplus: 'https://plus.google.com/105193008083506275976/posts',
-				linkedin: 'https://www.linkedin.com/company/comprehensive-applied-security-solutions-compass-?',
-				url: 'http://www.compasscyber.com/blog/feed'
-			},
-			// Cyber Security Buzz RSS Feed: the website gives an error
-			{
-				label: 'Binary Blogger',
-				title: ' Binary Blogger RSS Feed',
-				path: '/cyber-security/websites/binary-blogger',
-				website: 'https://binaryblogger.com/',
-				url: 'http://feeds.feedburner.com/binaryblogger'
-			},
-			{
-				label: 'GRA Quantum',
-				title: 'GRA Quantum RSS Feed',
-				path: '/cyber-security/websites/',
-				website: 'https://graquantum.com/',
-				facebook: 'https://www.facebook.com/Graquantum/',
-				twitter: 'https://twitter.com/GraQuantum',
-				linkedin: 'https://www.linkedin.com/company/gra-quantum/',
-				url: 'https://graquantum.com/feed'
-			},
-			{
-				label: 'The Last Watchdog',
-				title: 'The Last Watchdog RSS Feed',
-				path: '/cyber-security/websites/the-last-watchdog',
-				website: 'http://lastwatchdog.com/',
-				url: 'http://lastwatchdog.com/feed/'
-			},
-			{
-				label: 'IT Security Expert',
-				title: 'IT Security Expert RSS Feed',
-				path: '/cyber-security/websites/it-security-expert',
-				website: 'https://blog.itsecurityexpert.co.uk/',
-				facebook: '',
-				twitter: 'https://twitter.com/SecurityExpert',
-				youtube: '',
-				gplus: '',
-				linkedin: '',
-				isAtom: true,
-				url: 'http://blog.itsecurityexpert.co.uk/atom.xml'
-			},
-			{
-				label: 'Privacy Ref Blog',
-				title: 'Privacy Ref Blog RSS Feed',
-				path: '/cyber-security/websites/privacy-ref-blog',
-				website: 'http://privacyref.com/wordpress/',
-				url: 'http://privacyref.com/wordpress/feed'
-			},
-			{
-				label: 'Cyber Security Blog',
-				title: 'Cyber Security Blog RSS Feed',
-				path: '/cyber-security/websites/cyber-security-blog',
-				website: 'http://www.cyber-security-blog.com/',
-				url: 'http://www.cyber-security-blog.com/feeds/posts/default?alt=rss'
-			},
-			{
-				label: 'SANS AppSec Street Fighter',
-				title: 'AppSec Street Fighter - SANS Institute RSS Feed',
-				path: '/cyber-security/websites/sans-appsec-street-fighter',
-				website: 'http://software-security.sans.org/blog',
-				facebook: 'https://www.facebook.com/pages/SANS-Institute/173623382673767',
-				twitter: 'http://twitter.com/sansappsec',
-				url: 'https://ics.sans.org/blog/feed//'
-				// url: 'http://software-security.sans.org/blog/feed/'
-			},
-			// Empty
-			/* {
-				label: '',
-				title: '',
-				path: '/cyber-security/websites/',
-				website: '',
-				facebook: '',
-				twitter: '',
-				youtube: '',
-				gplus: '',
-				linkedin: '',
-				url: ''
-			}, */
-		]
-	},
-	{
 		title: 'People',
 		feeds: [
+			{
+				label: 'John McAfee',
+				title: 'Schneier on Security RSS Feed',
+				path: '/cyber-security/websites/john-mcafee',
+				website: 'http://www.whoismcafee.com',
+				twitter: 'https://twitter.com/officialmcafee',
+				url: 'http://www.whoismcafee.com/feed/'
+			},
+			// Only one and very old post :(
+			/* {
+				label: 'Kevin Poulsen',
+				title: 'Kevin Poulsen RSS Feed',
+				path: '/cyber-security/websites/kevin-poulsen',
+				website: 'https://www.kingpin.cc/',
+				facebook: 'https://www.facebook.com/Kingpin-by-Kevin-Poulsen-155380054501624/',
+				twitter: 'https://twitter.com/kpoulsen',
+				url: 'https://www.kingpin.cc/feed/'
+			}, */
 			{
 				label: 'Bruce Schneier',
 				title: 'Schneier on Security RSS Feed',
@@ -536,6 +454,7 @@ export const CyberSecurityWebsitesFeeds = [
 				website: 'https://www.schneier.com/',
 				facebook: 'https://www.facebook.com/bruce.schneier',
 				twitter: 'https://twitter.com/schneierblog/',
+				isAtom: true,
 				url: 'https://www.schneier.com/blog/atom.xml'
 			},
 			{
@@ -576,7 +495,7 @@ export const CyberSecurityWebsitesFeeds = [
 				twitter: 	'https://twitter.com/taosecurity',
 				url: 			'https://taosecurity.blogspot.com/feeds/posts/default?alt=rss',
 			},
-			//  https://community.connection.com/author/stephen-nardone/feed/
+			// https://community.connection.com/author/stephen-nardone/feed/
 			// https://community.connection.com/author/lane-shelton/feed/
 			// https://community.connection.com/author/kurt-hildebrand/feed/
 			{
@@ -585,6 +504,13 @@ export const CyberSecurityWebsitesFeeds = [
 				path: '/cyber-security/websites/adam-levin',
 				website: 'https://adamlevin.com/',
 				url: 'https://adamlevin.com/feed'
+			},
+			{
+				label: 'Lesley Carhart',
+				title: 'Lesley Carhart - Full Spectrum Cyber-Warrior Princess RSS Feed',
+				path: '/cyber-security/websites/lesley-carhart',
+				website: 'https://tisiphone.net/',
+				url: 'https://tisiphone.net/feed'
 			},
 			{
 				label: 'Yusuph Kileo',
@@ -598,14 +524,45 @@ export const CyberSecurityWebsitesFeeds = [
 				url: 'http://ykileo.blogspot.com/feeds/posts/default?alt=rss'
 			},
 			{
+				label: 'The Last Watchdog',
+				title: 'The Last Watchdog, Byron V.Acohido  RSS Feed',
+				path: '/cyber-security/antivirus/the-last-watchdog',
+				website: 'http://lastwatchdog.com/',
+				url: 'http://lastwatchdog.com/feed/'
+			},
+			{
 				label: 'Marco Ramilli',
 				title: 'Marco Ramilli\'s Blog RSS Feed',
 				path: '/cyber-security/websites/marco-ramilli',
 				website: 'https://marcoramilli.blogspot.com',
-				url: 'http://marcoramilli.blogspot.com/feeds/posts/default?alt=rss'
+				url: 'http://feeds.feedburner.com/blogspot/CqwP?format=xml'
 			},
 			// Kevin Mitnick No feeds https://blogs.quickheal.com/feed/
 			// Dan Lohrmann http://www.govtech.com/blogs/lohrmann-on-cybersecurity/
+		]
+	},
+	{
+		title: 'Events',
+		feeds: [
+			{
+				label: 'Black Hat',
+				title: 'Black Hat RSS Feed',
+				path: '/cyber-security/websites/black-hat',
+				website: 'https://www.blackhat.com/',
+				isAtom: true,
+				url: 'https://www.youtube.com/feeds/videos.xml?user=BlackHatOfficialYT'
+			},
+			{
+				label: 'Defcon',
+				title: 'Defcon RSS Feed',
+				path: '/cyber-security/websites/defcon',
+				website: 'https://www.defcon.org/',
+				facebook: 'https://www.facebook.com/defcon',
+				twitter: 'https://twitter.com/defcon',
+				youtube: 'https://www.youtube.com/user/DEFCONConference',
+				gplus: 'https://plus.google.com/+DefconOrgplus',
+				url: 'https://www.defcon.org/defconrss.xml'
+			},
 		]
 	}
 ];

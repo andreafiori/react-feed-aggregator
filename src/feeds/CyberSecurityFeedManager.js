@@ -6,9 +6,11 @@ import { ThreatPostNewsGroup, ThreatPostNewsFeeds } from './ThreatPostFeeds';
 import { GovernmentNewsGroup, GovernmentNewsFeeds } from './GovernmentFeeds';
 import { TechWorldNewsGroup, TechWorldNewsFeeds } from './TechWorldFeeds';
 import { IsacaNewsGroup, IsacaNewsFeeds } from './IsacaFeeds';
+import { AntivirusNewsGroup, AntivirusNewsFeeds } from './AntivirusFeeds';
 
 export const CyberSecurityNewsGroups = {
 	'websites': 					CyberSecurityWebsitesNewsGroup,
+	'antivirus': 					AntivirusNewsGroup,
 	'we-live-security':		WeLiveSecurityNewsGroup,
 	'government': 				GovernmentNewsGroup,
 	'darkreading': 				DarkreadingNewsGroup,
@@ -21,6 +23,7 @@ export const CyberSecurityNewsGroups = {
 
 export const CyberSecurityNewsFeeds = {
 	'websites': 					CyberSecurityWebsitesFeeds,
+	'antivirus': 					AntivirusNewsFeeds,
 	'we-live-security': 	WeLiveSecurityNewsFeeds,
 	'government': 				GovernmentNewsFeeds,
 	'darkreading': 				DarkreadingNewsFeeds,
