@@ -10,7 +10,6 @@ export const JavaNewsGroup = {
 	youtube:      '',
 	facebook:     '',
   twitter:      '',
-  gplus:        '',
 	wikipedia:    '',
 	rss:          '',
 };
@@ -34,7 +33,6 @@ export const JavaNewsFeeds = [
 				twitter: '',
 				facebook: '',
 				linkedin: '',
-				gplus: '',
 				url: 'https://www.javaworld.com/index.rss',
       },
 			{
@@ -45,7 +43,6 @@ export const JavaNewsFeeds = [
 				twitter: 'https://twitter.com/javacodegeeks',
 				facebook: 'https://www.facebook.com/javacodegeeks',
 				linkedin: 'https://www.linkedin.com/groups/Java-Code-Geeks-3810709',
-				gplus: '',
 				url: 'https://www.javacodegeeks.com/feed',
       },
 			{

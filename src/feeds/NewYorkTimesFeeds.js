@@ -12,7 +12,6 @@ export const NewYorkTimesNewsGroup = {
 	facebook: 		'https://www.facebook.com/nytimes/',
 	twitter: 			'https://twitter.com/nytimes',
 	wikipedia: 		'https://en.wikipedia.org/wiki/The_New_York_Times',
-	gplus:				'',
 	rss: 					'http://www.nytimes.com/services/xml/rss/',
 };
 
@@ -30,7 +29,7 @@ export const NewYorkTimesNewsFeeds = [
 		]
 	},
 	{
-		categoty: 'NYT World',
+		title: 'NYT World',
 		feeds: [
 			{
 				label: 'World',

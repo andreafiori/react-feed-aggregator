@@ -10,7 +10,6 @@ export const IgnNewsGroups = {
 	youtube:      'https://www.youtube.com/channel/UCKy1dAqELo0zrOtPkf0eTMw',
 	facebook:     'https://it-it.facebook.com/ign/',
   twitter:      'https://twitter.com/IGN',
-  gplus:        'https://plus.google.com/+IGN',
 	wikipedia:    'https://en.wikipedia.org/wiki/IGN',
 	rss:          'https://corp.ign.com/feeds/',
 };

@@ -11,7 +11,6 @@ export const JavascriptNewsGroup = {
 	youtube:      '',
 	facebook:     '',
   twitter:      '',
-  gplus:        '',
 	wikipedia:    '',
 	rss:          '',
 };

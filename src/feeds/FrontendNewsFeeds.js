@@ -11,7 +11,6 @@ export const FrontendNewsGroup = {
 	facebook: 		'',
 	twitter: 			'',
 	wikipedia: 		'',
-	gplus:				'',
 	linkedin:			'',
 	rss:					'',
 };

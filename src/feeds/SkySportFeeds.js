@@ -10,7 +10,6 @@ export const SkySportNewsGroup = {
 	youtube:      '',
 	facebook:     '',
   twitter:      '',
-  gplus:        '',
 	wikipedia:    '',
 	linkedin:			'',
 	rss:          'https://sport.sky.it/servizi/rss.html',

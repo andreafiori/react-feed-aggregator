@@ -30,14 +30,6 @@ class SocialButtons extends Component {
           </span>
         }
 
-        { this.props.obj && this.props.obj.gplus && 
-          <span>
-            <a href={this.props.obj.gplus} target="_blank" className="btn btn-sm btn-danger" rel="noopener noreferrer" title={this.props.obj.label + ' Google Plus profile'}>
-              <i className="fa fa-google"></i> GPlus
-            </a>&nbsp;
-          </span>
-        }
-
         { this.props.obj && this.props.obj.linkedin && 
           <span>
             <a href={this.props.obj.linkedin} target="_blank" className="btn btn-sm btn-primary" rel="noopener noreferrer" title={this.props.obj.label + ' Linkedin profile'}>

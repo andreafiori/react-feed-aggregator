@@ -10,7 +10,6 @@ export const NewYorkPostNewsGroup = {
 	youtube:      '',
 	facebook:     'https://www.facebook.com/nypost',
   twitter:      'https://twitter.com/nypost',
-  gplus:        '',
 	wikipedia:    '',
 	rss:          'https://nypost.com/rssfeeds/',
 };

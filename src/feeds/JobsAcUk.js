@@ -10,7 +10,6 @@ export const JobsAcUkNewsGroup = {
 	youtube:      '',
 	facebook:     'http://www.facebook.com/pages/jobsacuk/48963197182',
   twitter:      'http://twitter.com/jobsacuk',
-  gplus:        '',
   wikipedia:    '',
   linkedin:     'http://www.linkedin.com/company/711733?trk=tyah',
 	rss:          'https://www.jobs.ac.uk/feeds',

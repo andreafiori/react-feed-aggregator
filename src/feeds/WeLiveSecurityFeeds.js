@@ -12,7 +12,6 @@ export const WeLiveSecurityNewsGroup = {
   facebook: 'https://www.facebook.com/welivesecurity',
   twitter: 'http://twitter.com/welivesecurity',
   wikipedia: '',
-  gplus: 'https://plus.google.com/u/0/110270843223695558828/posts',
   linkedin: 'http://www.linkedin.com/company/28967?trk=tyah',
   rss: 'https://www.welivesecurity.com/rss-configurator/'
 };

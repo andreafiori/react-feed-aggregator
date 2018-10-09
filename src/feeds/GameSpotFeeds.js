@@ -10,7 +10,6 @@ export const GameSpotNewsGroup = {
 	youtube:      'http://youtube.com/gamespot',
 	facebook:     'http://facebook.com/gamespot',
   twitter:      'http://twitter.com/gamespot',
-  gplus:        '',
 	wikipedia:    '',
 	rss:          'https://www.gamespot.com/feeds/',
 };

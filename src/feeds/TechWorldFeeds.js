@@ -11,7 +11,6 @@ export const TechWorldNewsGroup = {
 	facebook: 		'https://www.facebook.com/TechworldUK',
 	twitter: 			'https://twitter.com/TechworldNews',
 	wikipedia: 		'',
-	gplus:				'https://plus.google.com/+TechworldUK/',
 	linkedin:			'https://www.linkedin.com/company/techworld',
 	rss:					'https://www.techworld.com/rss/',
 };

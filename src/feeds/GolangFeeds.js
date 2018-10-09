@@ -10,7 +10,6 @@ export const GolangNewsGroup = {
 	youtube:      '',
 	facebook:     '',
   twitter:      '',
-  gplus:        '',
 	wikipedia:    '',
 	rss:          '',
 };

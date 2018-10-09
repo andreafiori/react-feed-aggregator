@@ -10,7 +10,6 @@ export const IsacaNewsGroup = {
 	youtube:      '',
 	facebook:     '',
   twitter:      '',
-  gplus:        '',
 	wikipedia:    '',
 	rss:          'https://www.isaca.org/pages/rss-feed.aspx',
 };

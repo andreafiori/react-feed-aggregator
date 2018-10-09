@@ -10,7 +10,6 @@ export const AnsaNewsGroup = {
 	youtube: 			'http://www.youtube.com/user/Ansa',
 	facebook: 		'http://www.facebook.com/pages/ANSAit/158259371219',
 	twitter: 			'http://twitter.com/agenzia_ansa',
-	gplus:        'https://plus.google.com/103423288952352800420',
   wikipedia: 		'https://en.wikipedia.org/wiki/Agenzia_Nazionale_Stampa_Associata',
   linkedin: 		'http://www.linkedin.com/company/ansa',
   rss: 					'http://www.ansa.it/sito/static/ansa_rss.html',

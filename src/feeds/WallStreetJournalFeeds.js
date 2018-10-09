@@ -10,7 +10,6 @@ export const WallStreetJournalNewsGroup = {
   youtube: 'http://www.youtube.com/user/WSJDigitalNetwork',
   facebook: 'http://www.facebook.com/wsj',
   twitter: 'http://twitter.com/WSJ',
-  gplus: 'https://plus.google.com/117720626238470886461/posts',
   wikipedia: 'https://en.wikipedia.org/wiki/The_Wall_Street_Journal',
   rss: 'http://www.wsj.com/public/page/rss_news_and_feeds.html'
 };

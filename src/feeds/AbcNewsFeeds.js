@@ -10,7 +10,6 @@ export const AbcNewsGroup = {
 	youtube:      '',
 	facebook:     'https://www.facebook.com/abcnews',
   twitter:      'https://twitter.com/abc',
-	gplus:        'https://plus.google.com/+ABCNews',
 	flickr:				'',
 	wikipedia:    'https://en.wikipedia.org/wiki/ABC_News',
 	rss:          'http://abcnews.go.com/Site/page/rss--3520115',

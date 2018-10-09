@@ -10,7 +10,6 @@ export const SansNewsGroup = {
 	youtube:      '',
 	facebook:     'https://www.facebook.com/sansemea',
   twitter:      'https://twitter.com/SANSEMEA',
-  gplus:        'https://plus.google.com/u/0/communities/100545103014070862046',
 	wikipedia:    '',
 	linkedin:			'https://www.linkedin.com/company/sans-institute',
 	rss:          'https://www.sans.org/rss',

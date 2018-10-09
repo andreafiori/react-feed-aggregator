@@ -12,7 +12,6 @@ export const FoxNewsGroup = {
 	twitter: 			'http://twitter.com/foxnews',
 	wikipedia: 		'',
   linkedin:			'',
-  gplus:        'http://www.google.com/+FoxNews',
 	rss:					'http://www.foxnews.com/about/rss/',
 }
 

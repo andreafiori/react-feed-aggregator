@@ -11,7 +11,6 @@ export const DzoneNewsGroup = {
 	facebook: 		'https://www.facebook.com/DZone-259639764711',
 	twitter: 			'https://twitter.com/DZone',
 	wikipedia: 		'',
-	gplus:				'https://plus.google.com/+dzone/posts',
 	linkedin:			'https://www.linkedin.com/company/dzone',
 	rss:					'https://dzone.com/pages/feeds',
 };

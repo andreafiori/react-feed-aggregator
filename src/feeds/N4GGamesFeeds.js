@@ -10,7 +10,6 @@ export const N4GGamesGroup = {
 	youtube:      '',
 	facebook:     'http://www.facebook.com/News4Gamers',
   twitter:      'http://twitter.com/n4g',
-  gplus:        '',
 	wikipedia:    '',
 	rss:          'http://n4g.com/rss/',
 };

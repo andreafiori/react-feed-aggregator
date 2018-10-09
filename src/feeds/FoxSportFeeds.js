@@ -36,7 +36,6 @@ export const FoxSportNewsGroup = {
 	youtube:      'https://www.youtube.com/foxsports',
 	facebook:     'http://facebook.com/foxsports',
   twitter:      'http://twitter.com/foxsports',
-  gplus:        '',
   wikipedia:    'https://en.wikipedia.org/wiki/Fox_Sports',
   linkedin:     '',
 	rss:          'https://www.foxsports.com/rss-feeds',

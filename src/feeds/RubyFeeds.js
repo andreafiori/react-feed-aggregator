@@ -10,7 +10,6 @@ export const RubyNewsGroup = {
 	youtube:      '',
 	facebook:     '',
   twitter:      '',
-  gplus:        '',
 	wikipedia:    '',
 	linkedin:			'',
 	rss:          '',

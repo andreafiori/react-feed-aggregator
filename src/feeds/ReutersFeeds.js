@@ -10,7 +10,6 @@ export const ReutersNewsGroup = {
 	youtube:      '',
 	facebook:     'https://www.facebook.com/Reuters',
   twitter:      'https://twitter.com/reuters',
-  gplus:        '',
   wikipedia:    '',
   linkedin:     'https://www.linkedin.com/company/10256858/',
 	rss:          'https://www.reuters.com/tools/rss',

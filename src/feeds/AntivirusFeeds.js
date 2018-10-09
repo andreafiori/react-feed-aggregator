@@ -11,7 +11,6 @@ export const AntivirusNewsGroup = {
 	facebook: 		'',
 	twitter: 			'',
 	wikipedia: 		'',
-	gplus:				'',
 	linkedin:			'',
 	rss:					'',
 };
@@ -35,7 +34,6 @@ export const AntivirusNewsFeeds = [
 				facebook: '',
 				twitter: '',
 				linkedin: '',
-				gplus: '',
 				url: 'https://www.symantec.com/connect/item-feeds/all/all/feed/all/all/all'
 			},
 			{
@@ -70,7 +68,6 @@ export const AntivirusNewsFeeds = [
 				website: 'http://www.compasscyber.com/blog/',
 				facebook: 'https://www.facebook.com/compasscyber/',
 				twitter: 'https://twitter.com/COMPASScyber',
-				gplus: 'https://plus.google.com/105193008083506275976/posts',
 				linkedin: 'https://www.linkedin.com/company/comprehensive-applied-security-solutions-compass-?',
 				url: 'http://www.compasscyber.com/blog/feed'
 			},
@@ -106,7 +103,6 @@ export const AntivirusNewsFeeds = [
 				facebook: '',
 				twitter: 'https://twitter.com/SecurityExpert',
 				youtube: '',
-				gplus: '',
 				linkedin: '',
 				isAtom: true,
 				url: 'http://blog.itsecurityexpert.co.uk/atom.xml'
@@ -134,7 +130,6 @@ export const AntivirusNewsFeeds = [
 				facebook: '',
 				twitter: '',
 				youtube: '',
-				gplus: '',
 				linkedin: '',
 				url: ''
 			}, */

@@ -10,7 +10,6 @@ export const GameInformerNewsGroup = {
 	youtube:      'https://www.youtube.com/gameinformer',
 	facebook:     'http://facebook.com/officialgameinformer',
   twitter:      'http://twitter.com/GameInformer',
-  gplus:        '',
 	wikipedia:    '',
 	linkedin:			'',
 	rss:          'https://www.gameinformer.com/rss',

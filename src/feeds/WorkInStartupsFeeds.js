@@ -11,7 +11,6 @@ export const WorkinstartupsNewsGroups = {
   facebook:     'https://www.facebook.com/workinstartups',
   twitter:      'https://twitter.com/#!/workinstartups',
   wikipedia:    '',
-  gplus:        '',
   linkedin:     '',
   vimeo:        'https://vimeo.com/user9542396',
   rss:          '' // Icon on the left side of every web page

@@ -10,7 +10,6 @@ export const VideoGamesWebsitesNewsGroup = {
   youtube:      '',
   facebook:     '',
   twitter:      '',
-  gplus:        '',
   wikipedia:    '',
   rss:          '',
 };
@@ -113,7 +112,6 @@ export const VideoGamesWebsitesFeeds = [
         facebook: 'https://www.facebook.com/SKOAR',
         twitter: 'https://twitter.com/skoar',
         youtube: 'https://www.youtube.com/user/digit',
-        gplus: 'https://www.google.com/+SkoarIndia',
         url: 'http://skoar.digit.in/feed'
       },
       {
@@ -207,7 +205,6 @@ export const VideoGamesWebsitesFeeds = [
         facebook: 'https://www.facebook.com/massivelyop',
         twitter: 'https://twitter.com/MassivelyOP',
         youtube: 'https://youtube.com/channel/UCvHR952m5NrDyJnKRkxvhtQ',
-        gplus: 'https://plus.google.com/114522924993808478973',
         url: 'http://massivelyop.com/feed'
       },
       {
@@ -282,7 +279,6 @@ export const VideoGamesWebsitesFeeds = [
         facebook: 'http://www.facebook.com/unity3d',
         twitter: 'http://www.twitter.com/unity3d',
         youtube: 'https://www.youtube.com/user/Unity3D',
-        gplus: 'https://plus.google.com/u/0/104568650392955941577/',
         linkedin: 'https://www.linkedin.com/company/unity-technologies',
         url: 'https://blogs.unity3d.com/feed/'
       },
@@ -294,7 +290,6 @@ export const VideoGamesWebsitesFeeds = [
         facebook: 'https://www.facebook.com/PCInvasionCom',
         twitter: 'https://twitter.com/pcinvasion',
         youtube: 'https://youtube.com/channel/UCwEeGz642neKIXgv7AdWggA',
-        gplus: 'https://plus.google.com/+Pcinvasioncom',
         url: 'http://www.pcinvasion.com/feed'
       },
       {
@@ -326,7 +321,6 @@ export const VideoGamesWebsitesFeeds = [
         facebook: 'https://www.facebook.com/gamingonlinux',
         twitter: 'https://www.twitter.com/gamingonlinux',
         youtube: 'https://www.youtube.com/user/GamingOnLinuxcom',
-        gplus: 'https://plus.google.com/+Gamingonlinux',
         url: 'https://www.gamingonlinux.com/article_rss.php'
         // https://www.gamingonlinux.com/article_rss.php
         // https://www.gamingonlinux.com/article_rss.php?mini
@@ -347,7 +341,6 @@ export const VideoGamesWebsitesFeeds = [
         facebook: 'https://www.facebook.com/TechRaptor/',
         twitter: 'https://twitter.com/techraptr',
         youtube: 'https://www.youtube.com/user/TechRaptorVideo',
-        gplus: 'https://plus.google.com/+TechraptorNet',
         url: 'https://techraptor.net/content/category/gaming/feed'
       },
       {

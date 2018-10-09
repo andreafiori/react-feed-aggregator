@@ -11,7 +11,6 @@ export const GazzettaItNewsGroup = {
 	youtube:      '',
 	facebook:     'https://www.facebook.com/LaGazzettaDelloSport',
   twitter:      'https://twitter.com/Gazzetta_it',
-  gplus:        'https://plus.google.com/u/0/104026735786699300038',
 	wikipedia:    '',
 	rss:          'https://www.gazzetta.it/rss/',
 };

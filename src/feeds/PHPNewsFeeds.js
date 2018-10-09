@@ -11,7 +11,6 @@ export const PHPNewsGroup = {
 	facebook: 		'',
 	twitter: 			'',
 	wikipedia: 		'',
-	gplus:				'',
 	linkedin:			'',
 	rss:					'http://php.net/releases/feed.php',
 };

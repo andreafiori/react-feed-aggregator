@@ -11,7 +11,6 @@ export const DarkreadingNewsGroup = {
 	facebook: 		'https://www.facebook.com/darkreadingcom',
 	twitter: 			'http://twitter.com/DarkReading',
 	wikipedia: 		'',
-	gplus:				'https://plus.google.com/+darkreading',
 	linkedin:			'http://www.linkedin.com/groups?home=&gid=3193466&trk=anet_ug_hm',
 	rss:					'https://www.darkreading.com/rss_feeds.asp',
 };

@@ -10,7 +10,6 @@ export const ThreatPostNewsGroup = {
 	youtube:      'https://www.youtube.com/user/threatpost',
 	facebook:     'https://www.facebook.com/Threatpost/',
   twitter:      'https://twitter.com/threatpost/',
-  gplus:        'https://plus.google.com/103973344735603121561/posts',
 	wikipedia:    '',
 	linkedin:			'https://www.linkedin.com/groups/12103060',
 	rss:          'https://threatpost.com/feed',

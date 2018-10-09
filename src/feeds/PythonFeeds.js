@@ -10,7 +10,6 @@ export const PythonNewsGroup = {
 	youtube:      '',
 	facebook:     '',
   twitter:      'https://twitter.com/ThePSF',
-  gplus:        '',
 	wikipedia:    '',
 	rss:          '',
 };

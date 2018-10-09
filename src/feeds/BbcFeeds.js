@@ -11,7 +11,6 @@ export const BbcNewsGroup = {
 	youtube: 			'https://www.youtube.com/bbcnews',
 	facebook: 		'https://www.facebook.com/bbc/',
 	twitter: 			'https://twitter.com/bbc',
-	gplus:        'https://plus.google.com/+BBCNews',
 	wikipedia: 		'https://en.wikipedia.org/wiki/BBC',
 	rss: 					'https://www.bbc.com/news/10628494',
 };

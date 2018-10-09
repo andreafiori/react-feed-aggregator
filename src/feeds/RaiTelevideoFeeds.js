@@ -10,7 +10,6 @@ export const RaiTelevideoNewsGroup = {
 	youtube:      '',
 	facebook:     '',
   twitter:      '',
-  gplus:        '',
 	wikipedia:    '',
 	rss:          'http://www.servizitelevideo.rai.it/televideo/pub/rsslista.jsp',
 };

@@ -11,7 +11,6 @@ export const CyberSecurityWebsitesNewsGroup = {
 	facebook: 		'',
 	twitter: 			'',
 	wikipedia: 		'',
-	gplus:				'',
 	linkedin:			'',
 	rss:					'',
 };
@@ -25,16 +24,15 @@ export const CyberSecurityWebsitesFeeds = [
 		title: 'Websites',
 		feeds: [
 			{
-				label: 'The Hacker News ',
-				title: 'The Hacker News | Cyber Security,Hacking News RSS Feed',
+				label: 'The Hacker News',
+				title: 'The Hacker News has been internationally recognized as a leading news source dedicated to promoting awareness for security experts and hackers',
 				path: '/cyber-security/websites/the-hacker-news',
 				website: 'https://thehackernews.com/',
 				facebook: 'https://www.facebook.com/thehackernews',
 				twitter: 	'https://twitter.com/thehackersnews',
 				youtube: 	'https://www.youtube.com/user/hackernewsvideos?sub_confirmation=1',
 				linkedin:	'https://www.linkedin.com/company/the-hacker-news/',
-				gplus: 'https://plus.google.com/+TheHackerNews',
-				url: 'http://feeds.feedburner.com/TheHackersNews/?format=xml'
+				url: 'http://feeds.feedburner.com/TheHackersNews?format=xml'
 			},
 			{
 				label: 		'EC Council',
@@ -44,7 +42,6 @@ export const CyberSecurityWebsitesFeeds = [
 				facebook: 'https://www.facebook.com/ECCouncil',
 				twitter: 	'https://twitter.com/ECCOUNCIL',
 				youtube: 	'https://www.youtube.com/user/eccouncilusa',
-				gplus: 		'https://plus.google.com/+eccouncil',
 				linkedin:	'https://www.linkedin.com/company/ec-council',
 				url: 			'https://www.eccouncil.org/feed/',
 			},
@@ -52,7 +49,7 @@ export const CyberSecurityWebsitesFeeds = [
 				label: 'Kali Linux',
 				title: 'Kali Linux RSS Feed',
 				path: '/cyber-security/websites/kali-linux',
-				website: 'https://www.kali.org/feed/',
+				website: 'https://www.kali.org/',
 				twitter: 'https://twitter.com/kalilinux',
 				linkedin:	'http://www.linkedin.com/groups?gid=970937',
 				github: 'https://github.com/offensive-security',
@@ -67,13 +64,6 @@ export const CyberSecurityWebsitesFeeds = [
 				twitter: 'https://twitter.com/offsectraining',
 				linkedin:	'https://www.linkedin.com/company/ec-council',
 				url: 'https://www.offensive-security.com/feed/'
-			},
-			{
-				label: 'Krebs on Security',
-				title: 'Krebs on Security RSS Feed',
-				path: '/cyber-security/websites/krebs-security',
-				website: 'http://www.krebsonsecurity.com/',
-				url: 'http://krebsonsecurity.com/feed/'
 			},
 			{
 				label: 'Naked Security',
@@ -100,7 +90,6 @@ export const CyberSecurityWebsitesFeeds = [
 				facebook: 'https://www.facebook.com/pages/Infosecurity-Magazine/210560332330063',
 				twitter: 'https://twitter.com/InfosecurityMag',
 				linkedin: 'http://www.linkedin.com/groups?gid=2035794&trk=myg_ugrp_ovr',
-				gplus: 'https://plus.google.com/+InfosecurityMagazine/posts',
 				url: 'http://www.infosecurity-magazine.com/rss/news/'
 			},
 			{
@@ -111,13 +100,12 @@ export const CyberSecurityWebsitesFeeds = [
 				facebook: 'https://www.facebook.com/CSOonline',
 				twitter: 'https://twitter.com/csoonline',
 				linkedin: 'http://www.linkedin.com/company/csoonline',
-				gplus: 'https://plus.google.com/107528455727304200419/posts',
 				url: 'http://www.csoonline.com/index.rss'
 			},
 			{
 				label: 'CSO Security News',
 				title: 'CSO | Security News',
-				path: '/cyber-security/websites/cso-online',
+				path: '/cyber-security/websites/cso-security-news',
 				website: 'https://www.csoonline.com/',
 				url: 'https://www.csoonline.com/news/index.rss'
 			},
@@ -133,6 +121,9 @@ export const CyberSecurityWebsitesFeeds = [
 				title: 'CIO Security RSS Feed',
 				path: '/cyber-security/websites/cio-security',
 				website: 'http://www.cio.com/category/security/cio-security',
+				facebook: 'https://www.facebook.com/CIOfacebook',
+				twitter: 'https://twitter.com/CIOonline',
+				linkedin: 'https://www.linkedin.com/company/cio-online',
 				url: 'https://www.cio.com/category/security/index.rss'
 			},
 			{
@@ -174,14 +165,20 @@ export const CyberSecurityWebsitesFeeds = [
 				label: 'Comodo News',
 				title: 'Comodo News | Internet Security Information RSS Feed',
 				path: '/cyber-security/websites/comodo-news',
-				website: 'https://blog.comodo.com/feed',
-				url: 'https://blog.comodo.com/'
+				website: 'https://blog.comodo.com/',
+				facebook: 'https://www.facebook.com/ComodoHome',
+				twitter: 'https://twitter.com/comodo_labs',
+				youtube: 'https://www.youtube.com/user/comododesktop?key5sk1=5a283ec2e7490f4720210e69a4faa5f388d1de2b',
+				linkedin: 'https://www.linkedin.com/company/comodo?key5sk1=5a283ec2e7490f4720210e69a4faa5f388d1de2b',
+				url: 'https://blog.comodo.com/feed'
 			},
 			{
 				label: 'TechWorm',
 				title: 'TechWorm RSS Feed',
 				path: '/cyber-security/websites/techworm',
 				website: 'https://www.techworm.net/',
+				facebook: 'https://www.facebook.com/techworm.in/',
+				twitter: 'https://twitter.com/Techworm_in',
 				url: 'https://www.techworm.net/feed'
 			},
 			{
@@ -254,7 +251,6 @@ export const CyberSecurityWebsitesFeeds = [
 				facebook: 'https://www.facebook.com/TrustArc/',
 				twitter: 'https://twitter.com/trustarc',
 				linkedin: 'https://www.linkedin.com/company/21121',
-				gplus: 'https://plus.google.com/+TrustArc',
 				url: 'http://www.trustarc.com/blog/feed/'
 			},
 			{
@@ -266,7 +262,6 @@ export const CyberSecurityWebsitesFeeds = [
 				youtube: 'https://www.youtube.com/user/WebrootSoftware?sub_confirmation=1',
 				twitter: 'https://twitter.com/Webroot',
 				linkedin: 'https://www.linkedin.com/company/7434',
-				gplus: 'https://plus.google.com/101998920516021024298/posts',
 				url: 'https://www.webroot.com/blog/feed'
 			},
 			{
@@ -276,7 +271,6 @@ export const CyberSecurityWebsitesFeeds = [
 				website: 'https://www.zonealarm.com/',
 				facebook: 'https://www.facebook.com/ZoneAlarm/',
 				twitter: 'https://twitter.com/zonealarm',
-				gplus: 'https://plus.google.com/110257440616937271858/posts',
 				youtube: 'https://www.youtube.com/zonealarmsecurity',
 				url: 'https://www.zonealarm.com/blog/feed/'
 			},
@@ -288,7 +282,6 @@ export const CyberSecurityWebsitesFeeds = [
 				facebook: 'http://www.facebook.com/proofpoint',
 				twitter: 'http://www.twitter.com/proofpoint',
 				linkedin: 'https://www.linkedin.com/company/proofpoint',
-				gplus: 'https://plus.google.com/+proofpoint/posts',
 				youtube: 'https://www.youtube.com/channel/UCIvtJgsrUzFo90NKeiVozhQ',
 				url: 'https://www.proofpoint.com/us/rss.xml'
 			},
@@ -326,7 +319,6 @@ export const CyberSecurityWebsitesFeeds = [
 				facebook: 'https://www.facebook.com/seqrite',
 				twitter: 	'https://twitter.com/Seqrite',
 				youtube: 	'https://www.youtube.com/channel/UCPgS-p40ag_l8i3mhMWW7Gg',
-				gplus: 		'https://plus.google.com/114969253508422817802/posts',
 				linkedin:	'https://www.linkedin.com/company/seqrite',
 				url: 			'https://blogs.seqrite.com/feed/',
 			},
@@ -337,7 +329,6 @@ export const CyberSecurityWebsitesFeeds = [
 				website:	'https://www.datasunrise.com/blog/',
 				facebook: 'https://www.facebook.com/datasunrise',
 				twitter: 	'https://twitter.com/datasunrise',
-				gplus: 		'https://plus.google.com/+Datasunrise-Database-Security-Suite/posts',
 				linkedin:	'https://www.linkedin.com/company/datasunrise-inc',
 				url: 			'https://www.datasunrise.com/feed',
 			},
@@ -349,7 +340,6 @@ export const CyberSecurityWebsitesFeeds = [
 				facebook: 'https://www.facebook.com/pages/Teramind/1523438361205247',
 				twitter: 	'https://twitter.com/teramindco',
 				youtube: 	'https://www.youtube.com/channel/UCSkRq9qTqFJyyjQdovb0-Lg',
-				gplus: 		'https://plus.google.com/+TeramindCo',
 				linkedin:	'https://www.linkedin.com/company/5090184?trk=tyah&trkInfo=tarId%3A1408638847886%2Ctas%3Ateramind%2Cidx%3A1-1-1',
 				url: 			'https://itsecuritycentral.teramind.co/feed',
 			},
@@ -409,7 +399,6 @@ export const CyberSecurityWebsitesFeeds = [
 				path: 		'/cyber-security/websites/connected-blog-community',
 				website:	'https://community.connection.com/',
 				url: 			'https://community.connection.com/feed-connection/',
-				
 			},
 			// Empty
 			/* {
@@ -420,7 +409,6 @@ export const CyberSecurityWebsitesFeeds = [
 				facebook: '',
 				twitter: 	'',
 				youtube: 	'',
-				gplus: 		'',
 				linkedin:	'',
 				url: 			'',
 			}, */
@@ -448,6 +436,15 @@ export const CyberSecurityWebsitesFeeds = [
 				url: 'https://www.kingpin.cc/feed/'
 			}, */
 			{
+				label: 'Brian Krebs',
+				title: 'Brian Krebs on Security RSS Feed',
+				path: '/cyber-security/websites/krebs-security',
+				facebook: 'http://www.facebook.com/pages/Brian-Krebs/119740914725557',
+				twitter: 'http://www.twitter.com/briankrebs',
+				website: 'http://www.krebsonsecurity.com/',
+				url: 'http://krebsonsecurity.com/feed/'
+			},
+			{
 				label: 'Bruce Schneier',
 				title: 'Schneier on Security RSS Feed',
 				path: '/cyber-security/websites/bruce-schneier',
@@ -464,7 +461,6 @@ export const CyberSecurityWebsitesFeeds = [
 				website: 'https://www.grahamcluley.com/',
 				twitter: 'https://twitter.com/gcluley',
 				youtube: 'https://www.youtube.com/subscription_center?add_user=GrahamCluleyCom',
-				gplus: 'https://plus.google.com/+GrahamCluleyCom',
 				linkedin: 'http://uk.linkedin.com/in/grahamcluley',
 				url: 'https://www.grahamcluley.com/feed'
 			},
@@ -483,7 +479,6 @@ export const CyberSecurityWebsitesFeeds = [
 				facebook: 'https://www.facebook.com/troyahunt',
 				twitter: 'https://twitter.com/troyhunt',
 				youtube: 'https://www.youtube.com/user/troyhuntdotcom',
-				gplus: 'https://plus.google.com/+TroyHunt',
 				linkedin: 'https://www.linkedin.com/in/troyhunt',
 				url: 'https://feeds.feedburner.com/TroyHunt?format=xml'
 			},
@@ -519,7 +514,6 @@ export const CyberSecurityWebsitesFeeds = [
 				website: 'http://ykileo.blogspot.com/',
 				facebook: 'https://www.facebook.com/KileoCyber/',
 				twitter: 'https://twitter.com/YUSUPHKILEO',
-				gplus: 'https://plus.google.com/u/0/+KILEOY',
 				linkedin: 'http://www.linkedin.com/in/yusuphkileo',
 				url: 'http://ykileo.blogspot.com/feeds/posts/default?alt=rss'
 			},
@@ -560,7 +554,6 @@ export const CyberSecurityWebsitesFeeds = [
 				facebook: 'https://www.facebook.com/defcon',
 				twitter: 'https://twitter.com/defcon',
 				youtube: 'https://www.youtube.com/user/DEFCONConference',
-				gplus: 'https://plus.google.com/+DefconOrgplus',
 				url: 'https://www.defcon.org/defconrss.xml'
 			},
 		]
