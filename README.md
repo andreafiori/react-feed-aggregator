@@ -1,7 +1,5 @@
 # News Feed Aggregator
 
-## UNDER CONSTRUCTION!
-
 News Feed Reader with ReactJS. Actually the project is under construction.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
@@ -26,6 +24,14 @@ Disable CORS if you want to run successful REST calls to all feed URLs: on Visua
 ## Run the tests
 
 	npm test
+
+OR
+
+    npm run test
+
+Generate code coverage reports
+
+    npm run test -- --coverage
 
 ## Build project
 

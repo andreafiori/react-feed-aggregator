@@ -400,6 +400,7 @@ export const CyberSecurityWebsitesFeeds = [
 				website:	'https://community.connection.com/',
 				url: 			'https://community.connection.com/feed-connection/',
 			},
+			// Security through education https://www.social-engineer.org/feed/
 			// Empty
 			/* {
 				label: 		'',

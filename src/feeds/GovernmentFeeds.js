@@ -161,7 +161,7 @@ export const GovernmentNewsFeeds = [
 			},
 			{
 				label: 'Speeches',
-				title: '',
+				title: 'DoD Speeches RSS feed',
 				path: '/cyber-security/government/dod-speeches',
 				url: 'https://dod.defense.gov/DesktopModules/ArticleCS/RSS.ashx?max=10&ContentType=11&Site=727',
 			},
