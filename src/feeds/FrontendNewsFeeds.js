@@ -32,12 +32,6 @@ export const FrontendNewsFeeds = [
 				path: '/software-development/frontend-news/sitepoint',
 				url: 'https://www.sitepoint.com/feed'
 			},
-			/* {
-				label: 'Sitepoint Javascript',
-				title: 'Sitepoint Javascript',
-				path: '/software-development/frontend-news/sitepoint-javascript',
-				url: ''
-			}, */
 			{
 				label: 'Codrops',
 				title: 'Codrops | Useful resources and inspiration for creative minds',
@@ -76,6 +70,12 @@ export const FrontendNewsFeeds = [
 				url: 'https://blog.codinghorror.com/feed'
 			},
 			{
+				label: 'Angular in Depth',
+				title: 'Latest articles on Angular in Depth',
+				path: '/software-development/frontend-news/angular-in-depth',
+				url: 'https://blog.angularindepth.com/feed'
+			},
+			{
 				label: 'CSS Tricks',
 				title: 'Latest articles on CSS Tricks',
 				path: '/software-development/frontend-news/css-tricks',
@@ -86,6 +86,12 @@ export const FrontendNewsFeeds = [
 				title: 'Latest articles on Tutsplus',
 				path: '/software-development/frontend-news/tutsplus',
 				url: 'https://css-tricks.com/feed'
+			},
+			{
+				label: 'Mosh Hamedani',
+				title: 'Mosh Hamedani - programmingwithmosh.com',
+				path: '/software-development/frontend-news/mosh-hamedani',
+				url: 'https://programmingwithmosh.com/feed'
 			},
 		]
 	},
