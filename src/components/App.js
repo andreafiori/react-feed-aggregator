@@ -166,17 +166,17 @@ class App extends Component {
 
         <Navbar color="dark mb-2" dark expand="md">
           <Container>
-          <NavbarBrand tag={Link} to="/"><i className="fa fa-bullhorn"></i> News Feed Aggregator</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav navbar>
-              { this.state.routes.map((link, i) =>
-                <NavItem key={i}>
-                  <NavLink tag={Link} replace to={link.path} title={link.title}>{link.text}</NavLink>
-                </NavItem>
-              )}
-            </Nav>
-          </Collapse>
+            <NavbarBrand tag={Link} to="/"><i className="fa fa-bullhorn"></i> News Feed Aggregator</NavbarBrand>
+            <NavbarToggler onClick={this.toggle} />
+            <Collapse isOpen={this.state.isOpen} navbar>
+              <Nav navbar>
+                { this.state.routes.map((link, i) =>
+                  <NavItem key={i}>
+                    <NavLink tag={Link} replace to={link.path} title={link.title}>{link.text}</NavLink>
+                  </NavItem>
+                )}
+              </Nav>
+            </Collapse>
           </Container>
         </Navbar>
 

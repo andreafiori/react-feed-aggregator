@@ -8,7 +8,16 @@ class Breadcrumbs extends Component {
     elements: []
   };
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate() {
+    
+  }
+
+  /**
+   * Check state and update it if needed
+   * 
+   * @param {*} prevProps 
+   */
+  getSnapshotBeforeUpdate(prevProps) {
     // NOT working because of async calls...
     if (this.props.elements !== prevProps.elements) {
       this.setState({

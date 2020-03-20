@@ -36,7 +36,7 @@ class CyberSecurityGroupDetails extends Component {
       { label: 'Cyber Security', href: '/cyber-security', title: 'Back to the Cyber Security news list', active: false },
       { label: newsGroup.title, href: newsGroup.path ? newsGroup.path : '', title: newsGroup.title, active: false },
       { label: newsFeed.label, href: null, title: '', active: true },
-    ]
+    ];
   }
 
   handleUpdateFeed() {
@@ -46,11 +46,8 @@ class CyberSecurityGroupDetails extends Component {
     });
   }
 
-  /**
-   * Load first data on loading page
-   */
-  componentWillMount() {
-    this.setupCurrentNewsGroup();
+  componentDidUpdate() {
+    
   }
 
   /**
@@ -58,7 +55,7 @@ class CyberSecurityGroupDetails extends Component {
    * 
    * @param {*} prevProps 
    */
-  componentDidUpdate(prevProps) {
+  getSnapshotBeforeUpdate(prevProps) {
     // This is the initial render without a previous prop change
     if (prevProps === undefined) {
       return false;
@@ -80,7 +77,7 @@ class CyberSecurityGroupDetails extends Component {
       let self = this;
       rssParser.callPromise(currentFeedsList.url)
         .then(function (response) {
-          let newsFromApi = rssParser.parseFeedRss(response.data)
+          let newsFromApi = rssParser.parseFeedRss(response.data);
           self.setState({
             group: group,
             slug: slug,
@@ -126,7 +123,7 @@ class CyberSecurityGroupDetails extends Component {
                 <div className="alert alert-danger">
                   <h3>Error occurred</h3>
                   <p>{ error.message }</p>
-                  <a href={currentFeed.url} className="btn btn-sm btn-warning" target="_blank" rel="" title={currentFeed.label + ' RSS feed'}>
+                  <a href={currentFeed.url} className="btn btn-sm btn-warning" target="_blank" rel="noopener noreferrer" title={currentFeed.label + ' RSS feed'}>
                     <i className="fa fa-rss"></i> RSS
                   </a>
                 </div>

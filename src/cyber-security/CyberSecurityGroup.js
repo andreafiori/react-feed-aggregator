@@ -7,7 +7,7 @@ import { CyberSecurityNewsGroups, CyberSecurityNewsFeeds } from '../feeds/CyberS
 import NewsGroupError from '../components/NewsGroupError';
 
 class CyberSecurityGroup extends Component {
-	constructor(props) {
+  constructor(props) {
     super(props);
 
     let currentNewsGroup = FeedManager.getNewsGroupByKey(CyberSecurityNewsGroups, props.match.params.group);

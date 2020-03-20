@@ -54,18 +54,11 @@ class SportGroupDetails extends Component {
   }
 
   /**
-   * Load first data on loading page
-   */
-  componentWillMount() {
-    this.setupCurrentNewsGroup();
-  }
-
-  /**
    * Check state and update it if needed
    * 
    * @param {*} prevProps 
    */
-  componentDidUpdate(prevProps) {
+  getSnapshotBeforeUpdate(prevProps) {
     // This is the initial render without a previous prop change
     if (prevProps === undefined) {
       return false;

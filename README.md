@@ -1,119 +1,68 @@
-# News Feed Aggregator
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-News Feed Reader with ReactJS. Actually the project is under construction.
+## Available Scripts
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+In the project directory, you can run:
 
-Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+### `yarn start`
 
-## Installation
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Install NodeJS and the dependencies with NPM:
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-	npm install
+### `yarn test`
 
-## Run the project
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Run:
+### `yarn build`
 
-	npm start
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Disable CORS if you want to run successful REST calls to all feed URLs: on Visual Studio Code you can launch a Chrome instance with the configured debugger (.vscode/launch.json).
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-## Run the tests
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-	npm test
+### `yarn eject`
 
-OR
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-    npm run test
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Generate code coverage reports
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-    npm run test -- --coverage
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Build project
+## Learn More
 
-Builds static files to deploy on server:
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-	npm run build
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-## Code Linter
-
-Launch ESLint from the local installation:
-
-### Windows:
-
-All JS files:
-
-	node_modules\.bin\eslint src\components\*.js
-
-Single file:
-
-	node_modules\.bin\eslint src\components\<filename.js>
-
-### Linux:
-
-All JS files:
-
-	./node_modules/.bin/eslint src/components/*.js
-
-Single file:
-
-	./node_modules/.bin/eslint src/components/<filename.js>
-
-## Browsers
-
-- Chrome
-- Firefox
-- Opera
-- IE 11
-
-## Resources
-
-- [ReactJS](https://reactjs.org/)
-- [Jest](https://jestjs.io/)
-- [Javascript standard](https://standardjs.com/)
-- [DOMParser usages](https://github.com/hongkiat/js-rss-reader/blob/master/rss.js)
-- [DOMParser Query selector](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector)
-- Routing https://www.turtle-techies.com/post/react-navbar-with-bootstrap-4/
-- Compare JS objects http://xahlee.info/js/js_comparison_equality_test_objects.html
 ### Code Splitting
 
-- React Loadable
-- [Code Splitting Dynamic Import](https://tylermcginnis.com/react-router-code-splitting/)
-- [Code Splitting](https://reactjs.org/docs/code-splitting.html)
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### HTTP requests
+### Analyzing the Bundle Size
 
-- XMLHttpRequest https://www.xml.com/pub/a/2006/09/13/rss-and-ajax-a-simple-news-reader.html
-- XMLHttpRequest HTML5Rocks https://www.html5rocks.com/en/tutorials/cors/
-- [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
-- [Axios Cheat Sheet](https://kapeli.com/cheat_sheets/Axios.docset/Contents/Resources/Documents/index)
-- [HTTP requests in JS](https://medium.freecodecamp.org/here-is-the-most-popular-ways-to-make-an-http-request-in-javascript-954ce8c95aaa)
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### RSS formats
+### Making a Progressive Web App
 
-- [RSS format fields](https://feedforall.com/rss-fields.htm)
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-## Additional dependencies
+### Advanced Configuration
 
-- [React Loadable](https://github.com/jamiebuilds/react-loadable)
-- [Reactstrap](https://reactstrap.github.io/)
-- [Font Awesome](https://fontawesome.com/)
-- [Axios HTTP client](https://github.com/axios/axios)
-- [ESLint](https://eslint.org/)
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-## TODO
+### Deployment
 
-- Generalize Atom \ Classsic feed parser
-- Optimize feed list fetch in case of error...
-- Scroll to top \ Back to top links
-- New Favicon\s
-- Meta tags?!
-- Testing
-- Linting
-- Github deploy "homepage": "https://www.andreafiori.net/projects/feed-aggregator",
-- Travis
-- Deploy and demo on shared hosting
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `yarn build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
