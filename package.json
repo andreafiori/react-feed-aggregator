@@ -20,7 +20,9 @@
   },
   "resolutions": {
     "acorn": "7.1.1",
-    "minimist": "^1.2.2"
+    "minimist": "^1.2.2",
+    "serialize-javascript": "^3.1.0",
+    "lodash": "4.17.19"
   },
   "scripts": {
     "start": "react-scripts start",
