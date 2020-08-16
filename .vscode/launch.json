@@ -9,8 +9,7 @@
             "url": "http://localhost:3000",
             "webRoot": "${workspaceRoot}/src",
             "runtimeArgs": [
-                "--disable-web-security",
-                "--user-data-dir"
+                "--disable-web-security"
             ]
         },
     ]

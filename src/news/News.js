@@ -6,6 +6,10 @@ import Breadcrumbs from '../components/Breadcrumbs';
 
 class News extends Component {
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return true;
+  }
+
   render() {
     const newsGroupsList = FeedManager.getAllNewsGroupsAsArray(newsGroups);
     const breadcrumbs = [

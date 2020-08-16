@@ -66,41 +66,55 @@ class SportGroupDetails extends Component {
 
     // Set new state
     this.setupCurrentNewsGroup();
+
+    return null;
+  }
+
+  componentDidUpdate() {
+  }
+
+  componentDidMount() {
+    const {slug, group} = this.props.match.params;
+
+    this.setupCurrentFeed(slug, group);
+  }
+
+  setupCurrentFeed(slug, group) {
+    const rssParser = new RssParser();
+
+    const currentFeedsList = FeedManager.getNewsFeedBySlug(this.state.currentFeedsList, slug);
+    const currentNewsGroup = FeedManager.getNewsGroupByKey(SportFeedNewsGroup, group);
+
+    const self = this;
+    rssParser.callPromise(currentFeedsList.url)
+      .then(function (response) {
+        self.setState({
+          group: group,
+          slug: slug,
+          newsFromApi: rssParser.parseRssXmlString(response.data, currentFeedsList.isAtom),
+          currentNewsGroup: currentNewsGroup,
+          currentFeed: currentFeedsList,
+          breadcrumbs: self.setupBreadcrumbs(currentNewsGroup, currentFeedsList),
+          error: null,
+        });
+      })
+      .catch(function (error) {
+        self.setState({
+          group: group,
+          slug: slug,
+          currentNewsGroup: currentNewsGroup,
+          currentFeed: currentFeedsList,
+          newsFromApi: null,
+          error: error
+        });
+      });
   }
 
   setupCurrentNewsGroup() {
     const {slug, group} = this.props.match.params;
-    const rssParser = new RssParser();
-
+  
     if ( (slug !== this.state.slug || this.state.newsFromApi === null) && this.state.error === null) {
-
-      const currentFeedsList = FeedManager.getNewsFeedBySlug(this.state.currentFeedsList, slug);
-      const currentNewsGroup = FeedManager.getNewsGroupByKey(SportFeedNewsGroup, group);
-
-      const self = this;
-      rssParser.callPromise(currentFeedsList.url)
-        .then(function (response) {
-          self.setState({
-            group: group,
-            slug: slug,
-            newsFromApi: rssParser.parseRssXmlString(response.data, currentFeedsList.isAtom),
-            currentNewsGroup: currentNewsGroup,
-            currentFeed: currentFeedsList,
-            breadcrumbs: self.setupBreadcrumbs(currentNewsGroup, currentFeedsList),
-            error: null,
-          });
-        })
-        .catch(function (error) {
-          self.setState({
-            group: group,
-            slug: slug,
-            currentNewsGroup: currentNewsGroup,
-            currentFeed: currentFeedsList,
-            newsFromApi: null,
-            error: error
-          });
-        });
-
+      this.setupCurrentFeed(slug, group);
     }
 
     // Scroll to top
@@ -108,7 +122,6 @@ class SportGroupDetails extends Component {
   }
 
   render() {
-
     const { currentFeed, currentNewsGroup, currentFeedsList, newsFromApi, breadcrumbs, error } = this.state;
 
     return (
@@ -141,7 +154,6 @@ class SportGroupDetails extends Component {
         </div>
 
       </div>
-
     );
   }
 }

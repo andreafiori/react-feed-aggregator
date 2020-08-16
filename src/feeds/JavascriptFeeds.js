@@ -19,12 +19,6 @@ export const JavascriptNewsFeeds = [
   {
     title: 'Websites',
     feeds: [
-      /* {
-          label: 'Reddit Javascript',
-          title: 'Reddit Javascript',
-          path: '/software-development/javascript/reddit-js',
-          url: 'https://www.reddit.com/r/javascript/.rss?format=xml',
-      }, */
       {
         label: 'Sitepoint',
         title: 'Sitepoint Javascript',
@@ -47,7 +41,7 @@ export const JavascriptNewsFeeds = [
         website: 'https://echojs.com/',
         url: 'https://echojs.com/rss',
       }, {
-        label: 'EchoJS.com',
+        label: 'Angular in depth',
         title: 'Angular in depth',
         hideDescription: true,
         path: '/software-development/javascript/angular-in-depth',

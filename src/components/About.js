@@ -9,7 +9,7 @@ class About extends Component {
 
     return (
       <div>
-        <Breadcrumbs elements={breadcrumbs} />
+        {/* <Breadcrumbs elements={breadcrumbs} /> */}
 
         <h2>News Feed Aggregator</h2>
         <p>This project will join multiple news feeds for various categories. You can read all the latest news on the most popular websites.</p>

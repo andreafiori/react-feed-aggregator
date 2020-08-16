@@ -6,11 +6,11 @@ import { CyberSecurityNewsGroups } from '../feeds/CyberSecurityFeedManager';
 
 class CyberSecurity extends Component {
 
+  // TODO export feeds in a list, optimize rendering and make it more dynamic
   attackMaps = [
-    { label: 'Norse Attack Map', href: 'http://map.norsecorp.com/', title: 'Real-time visibility into global cyber attacks from the world\'s largest dedicated threat intelligence network'},
     { label: 'Fortinet Threat Map', href: 'https://threatmap.fortiguard.com/', title: 'Fortinet Real time threat map'},
     { label: 'Digital Attack Map', href: 'http://www.digitalattackmap.com/', title: 'Digital Attack Map'},
-    { label: 'Threat Cloud Attack Map', href: 'https://threatmap.checkpoint.com/ThreatPortal/livemap.html', title: 'Threat Cloud Attack Map'},
+    { label: 'Threat Cloud Attack Map', href: 'https://threatmap.checkpoint.com/', title: 'Threat Cloud Attack Map'},
   ];
 
   training = [

@@ -22,11 +22,9 @@ export class RssParser {
       return StringUtils.stripTagsAndCData( i(tag).textContent );
     } catch(e) {
       // Log error
-      /*
       console.log('CheckTagItem error:');
       console.log('Tag: ' + tag);
       console.log(e);
-      */
     }
   }
 

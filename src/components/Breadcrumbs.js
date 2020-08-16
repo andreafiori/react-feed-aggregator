@@ -9,7 +9,7 @@ class Breadcrumbs extends Component {
   };
 
   componentDidUpdate() {
-    
+    return true;
   }
 
   /**
@@ -24,10 +24,11 @@ class Breadcrumbs extends Component {
         elements: this.props.elements,
       });
     }
+
+    return null;
   }
 
   render() {
-
     const { elements } = this.props;
 
     return (

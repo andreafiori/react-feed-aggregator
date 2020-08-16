@@ -112,7 +112,7 @@ class SoftwareDevelopmentGroupDetails extends Component {
     return (
       <div>
 
-        <Breadcrumbs elements={breadcrumbs} />
+        {/* <Breadcrumbs elements={breadcrumbs} /> */}
 
         <div className="row">
           <div className="col-sm-12 col-md-8 col-lg-9">
