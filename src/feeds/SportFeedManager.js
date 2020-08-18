@@ -3,10 +3,16 @@ import { FoxSportNewsGroup, FoxSportNewsFeeds } from './FoxSportFeeds';
 import { AutoSportNewsGroup, AutoSportNewsFeeds } from './AutosportFeeds';
 
 export const SportFeedNewsGroup = {
-	'fox-sports': 		FoxSportNewsGroup,
-	'autosport':			AutoSportNewsGroup,
-	'gazzetta-it': 		GazzettaItNewsGroup,
+  'fox-sports': 	FoxSportNewsGroup,
+  'autosport':		AutoSportNewsGroup,
+  'gazzetta-it': 	GazzettaItNewsGroup,
 }
+
+export const SportFeedNewsFeeds = {
+	'fox-sports':		FoxSportNewsFeeds,
+	'autosport':		AutoSportNewsFeeds,
+	'gazzetta-it': 	GazzettaItNewsFeeds,
+};
 
 /**
 	ESPN
@@ -18,9 +24,3 @@ export const SportFeedNewsGroup = {
 	https://www.mirror.co.uk/
 	The Sun https://www.thesun.co.uk/sport/football/
 */
-
-export const SportFeedNewsFeeds = {
-	'fox-sports':			FoxSportNewsFeeds,
-	'autosport':			AutoSportNewsFeeds,
-	'gazzetta-it': 		GazzettaItNewsFeeds,
-};

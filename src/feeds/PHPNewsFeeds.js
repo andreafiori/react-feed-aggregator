@@ -12,7 +12,7 @@ export const PHPNewsGroup = {
 	twitter: 			'',
 	wikipedia: 		'',
 	linkedin:			'',
-	rss:					'http://php.net/releases/feed.php',
+	rss:			    'http://php.net/releases/feed.php',
 };
 
 // List https://blog.feedspot.com/php_rss_feeds/
@@ -34,17 +34,11 @@ export const PHPNewsFeeds = [
 				url: 'http://feeds.feedburner.com/PhpRoundtable?format=xml'
 			},
 			{
-				label: 'Sitepoint PHP',
-				title: 'Latest news from Sitepoint',
-				path: '/software-development/php-news/sitepoint-php',
-				url: 'https://www.sitepoint.com/php/feed/'
-			},
-			{
 				label: 'Reddit PHP',
 				title: 'Latest news from Reddit',
 				path: '/software-development/php-news/reddit-php',
 				isAtom: true,
-				url: 'https://www.reddit.com/r/PHP/.rss' // http://feeds.feedburner.com/phpclassesblog-xml?format=xml
+				url: 'https://www.reddit.com/r/PHP/.rss'
 			},
 			{
 				label: 'PHP UK conference',

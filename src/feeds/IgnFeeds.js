@@ -38,11 +38,16 @@ export const IgnNewsFeeds = [
         path: '/videogames/ign/main-news',
         url: 'http://feeds.ign.com/ign/main-news?format=xml'
       },
-      {
-        label: 'FAQs (Walkthroughs)',
-        path: '/videogames/ign/main-faq-walkthroughs',
-        url: 'http://feeds.ign.com/ignfeeds/faqs?format=xml'
-      },
+      // {
+      //   label: 'FAQs (Walkthroughs)',
+      //   path: '/videogames/ign/main-faq-walkthroughs',
+      //   url: 'http://feeds.ign.com/ignfeeds/faqs?format=xml' // NOT working
+      // },
+    ]
+  },
+  {
+    title: 'Video',
+    feeds: [
       {
         label: 'Video Reviews',
         path: '/videogames/ign/main-video-reviews',
@@ -59,7 +64,7 @@ export const IgnNewsFeeds = [
         url: 'http://feeds.ign.com/ign/video-guides?format=xml'
       },
     ]
-	},
+  },
 	{
     title: 'Gaming',
     feeds: [

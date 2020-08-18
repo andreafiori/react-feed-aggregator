@@ -26,28 +26,29 @@ export const JavascriptNewsFeeds = [
         website: 'https://www.sitepoint.com/',
         url: 'https://www.sitepoint.com/javascript/feed',
       },
-      {
-        label: 'JSFeeds.com',
-        title: 'JSFeeds.com from Sitepoint Javascript',
-        path: '/software-development/javascript/sitepoint-javascript',
-        website: 'http://www.jsfeeds.com/',
-        url: 'http://jsfeeds.com/feed',
-      },
-      {
-        label: 'EchoJS.com',
-        title: 'EchoJS.com',
-        hideDescription: true,
-        path: '/software-development/javascript/echojs-com',
-        website: 'https://echojs.com/',
-        url: 'https://echojs.com/rss',
-      }, {
-        label: 'Angular in depth',
-        title: 'Angular in depth',
-        hideDescription: true,
-        path: '/software-development/javascript/angular-in-depth',
-        website: 'https://blog.angularindepth.com/',
-        url: 'https://blog.angularindepth.com/feed',
-      },
+      // {
+      //   label: 'JSFeeds.com',
+      //   title: 'JSFeeds.com from Sitepoint Javascript',
+      //   path: '/software-development/javascript/sitepoint-javascript',
+      //   website: 'http://www.jsfeeds.com/',
+      //   url: 'http://jsfeeds.com/feed', // SLOW
+      // },
+      // {
+      //   label: 'EchoJS.com',
+      //   title: 'EchoJS.com',
+      //   hideDescription: true,
+      //   path: '/software-development/javascript/echojs-com',
+      //   website: 'https://echojs.com/',
+      //   url: 'https://echojs.com/rss', // SLOW
+      // },
+      // {
+      //   label: 'Angular in depth',
+      //   title: 'Angular in depth',
+      //   hideDescription: true,
+      //   path: '/software-development/javascript/angular-in-depth',
+      //   website: 'https://blog.angularindepth.com/',
+      //   url: 'https://blog.angularindepth.com/feed', // Error 526
+      // },
       {
         label: 'David Walsh Blog',
         title: 'Latest article from David Walsh Blog',

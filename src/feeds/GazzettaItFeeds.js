@@ -150,6 +150,7 @@ export const GazzettaItNewsFeeds = [
         path: '/sport/gazzetta-it/milano-lombardia',
         url: 'https://www.gazzetta.it/rss/milano.xml'
       },
+      // TO REMOVE:
       {
         label: 'Video',
         path: '/sport/gazzetta-it/video',

@@ -110,14 +110,14 @@ export const FoxSportNewsFeeds = [
         path: '/sport/fox-sports/olympics',
         url: 'http://api.foxsports.com/v1/rss?partnerKey=zBaFxRyGKCfxBagJG9b8pqLyndmvo7UU&tag=olympics'
       },
-      {
-        label: 'Tennis',
-        path: '/sport/fox-sports/tennis',
-        url: 'http://api.foxsports.com/v1/rss?partnerKey=zBaFxRyGKCfxBagJG9b8pqLyndmvo7UU&tag=tennis'
-      },
+      // {
+      //   label: 'Tennis',
+      //   path: '/sport/fox-sports/tennis',
+      //   url: 'http://api.foxsports.com/v1/rss?partnerKey=zBaFxRyGKCfxBagJG9b8pqLyndmvo7UU&tag=tennis'
+      // },
       {
         label: 'Horseracing',
-        path: '/sport/fox-sports/tennis',
+        path: '/sport/fox-sports/horseracing',
         url: 'http://api.foxsports.com/v1/rss?partnerKey=zBaFxRyGKCfxBagJG9b8pqLyndmvo7UU&tag=horse-racing'
       },
       {

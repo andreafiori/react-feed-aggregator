@@ -16,7 +16,7 @@ const SoftwareDevelopment = lazy(() => import('./../software-development/Softwar
 const SoftwareDevelopmentGroup = lazy(() => import('./../software-development/SoftwareDevelopmentGroup'));
 const SoftwareDevelopmentGroupDetails = lazy(() => import('./../software-development/SoftwareDevelopmentGroupDetails'));
 
-const OpenWeatherContainer = lazy(() => import('../components/OpenWeather'));
+const OpenWeatherContainer = lazy(() => import('../components/OpenWeatherContainer'));
 
 const Jobs = lazy(() => import('../jobs/Jobs'));
 const JobsGroup = lazy(() => import('../jobs/JobsGroup'));
@@ -114,6 +114,6 @@ export const routes = [
 ];
 
 export const navBarRoutes = routes.filter((route) => {
-  const navBarRouteKeys = ['News', 'SoftwareDevelopment', 'Sport', 'Videogames', 'Jobs', 'OpenWeather'];
+  const navBarRouteKeys = ['News', 'SoftwareDevelopment', 'CyberSecurity', 'Sport', 'Videogames', 'Jobs', 'OpenWeather'];
   return (navBarRouteKeys.indexOf(route.key) !== -1);
 });

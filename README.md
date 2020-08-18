@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.com/andreafiori/feed-aggregator.svg?branch=master)](https://travis-ci.com/andreafiori/feed-aggregator)
+
+RSS feed aggregator with React.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

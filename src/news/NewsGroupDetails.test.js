@@ -8,7 +8,7 @@ describe('NewsGroupDetails test', () => {
   const route = {
     location: {},
     match: {
-      params: {group: ''}
+      params: { group: '' }
     }
   }
 

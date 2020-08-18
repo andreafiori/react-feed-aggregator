@@ -4,7 +4,6 @@ import { DarkreadingNewsGroup, DarkreadingNewsFeeds } from './DarkReadingFeeds';
 import { WeLiveSecurityNewsGroup, WeLiveSecurityNewsFeeds } from './WeLiveSecurityFeeds';
 import { ThreatPostNewsGroup, ThreatPostNewsFeeds } from './ThreatPostFeeds';
 import { GovernmentNewsGroup, GovernmentNewsFeeds } from './GovernmentFeeds';
-import { TechWorldNewsGroup, TechWorldNewsFeeds } from './TechWorldFeeds';
 import { IsacaNewsGroup, IsacaNewsFeeds } from './IsacaFeeds';
 import { AntivirusNewsGroup, AntivirusNewsFeeds } from './AntivirusFeeds';
 
@@ -14,7 +13,6 @@ export const CyberSecurityNewsGroups = {
 	'we-live-security':		WeLiveSecurityNewsGroup,
 	'government': 				GovernmentNewsGroup,
 	'darkreading': 				DarkreadingNewsGroup,
-	'tech-world': 				TechWorldNewsGroup,
 	'threat-post': 				ThreatPostNewsGroup,
 	'sans': 							SansNewsGroup,
 	'isaca': 							IsacaNewsGroup,
@@ -27,7 +25,6 @@ export const CyberSecurityNewsFeeds = {
 	'we-live-security': 	WeLiveSecurityNewsFeeds,
 	'government': 				GovernmentNewsFeeds,
 	'darkreading': 				DarkreadingNewsFeeds,
-	'tech-world': 				TechWorldNewsFeeds,
 	'threat-post': 				ThreatPostNewsFeeds,
 	'sans': 							SansNewsFeeds,
 	'isaca': 							IsacaNewsFeeds,
